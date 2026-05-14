@@ -173,21 +173,6 @@
       </div>
     </section>
 
-    <!-- Infrastructure — compact, different visual rhythm -->
-    <section class="border-y border-zinc-200 bg-zinc-50/60">
-      <div class="mx-auto max-w-5xl px-6 py-20">
-        <h2 class="font-[Goga] text-3xl tracking-tight">One server, everything connected.</h2>
-        <p class="mt-4 max-w-lg text-sm leading-relaxed text-zinc-600">
-          The suite runs on a single VPS behind Traefik. Dokploy handles deployments, Netdata watches resources, and every tool authenticates through one SSO provider.
-        </p>
-        <div class="mt-10 flex flex-wrap gap-x-8 gap-y-3">
-          {#each ['Traefik', 'Dokploy', 'Netdata', 'n8n', 'DocuSeal', 'Nextcloud', 'Vaultwarden'] as name}
-            <span class="text-sm text-zinc-500">{name}</span>
-          {/each}
-        </div>
-      </div>
-    </section>
-
     <section class="mx-auto max-w-5xl px-6 py-24 text-center">
       <h2 class="font-[Goga] text-3xl tracking-tight">Built by a team of four.</h2>
       <p class="mt-3 text-zinc-600">
