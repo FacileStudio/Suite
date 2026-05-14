@@ -68,8 +68,8 @@
           Auto-hébergé &middot; Open source &middot; Intégré
         </p>
         <h1 class="max-w-3xl font-[Goga] text-5xl leading-[1.08] font-black tracking-tight md:text-7xl">
-          Arrêtez de jongler.<br />
-          <span class="text-zinc-400">Commencez à bosser.</span>
+          On simplifie.<br />
+          <span class="text-zinc-400">Vous bossez.</span>
         </h1>
         <p class="mt-8 max-w-lg text-lg leading-relaxed text-zinc-500">
           Huit outils qui se parlent, sur votre serveur.
@@ -106,8 +106,8 @@
           <span class="font-[Goga] text-2xl font-semibold tracking-tight">Perception</span>
         </div>
         <h2 use:reveal={{ delay: 100 }} class="max-w-2xl font-[Goga] text-4xl leading-[1.1] font-black tracking-tight md:text-6xl">
-          Posez une question.<br />
-          <span class="text-zinc-500">Obtenez la réponse.</span>
+          Posez la question.<br />
+          <span class="text-zinc-500">On a tout vu.</span>
         </h2>
         <p use:reveal={{ delay: 200 }} class="mt-8 max-w-xl text-lg leading-relaxed text-zinc-400">
           Perception connecte tous vos outils en un seul cerveau. Clients, contrats, projets, heures — tout est lié. Demandez n'importe quoi en langage naturel, obtenez une réponse sourcée en temps réel.
@@ -137,7 +137,7 @@
 
       <div class="grid gap-y-0 md:grid-cols-2">
 
-        <div use:reveal={{ delay: 0 }} class="group border-t border-zinc-200 py-8 pr-8 transition-colors hover:bg-zinc-50 md:border-r md:px-8 first:md:pl-0">
+        <div use:reveal={{ delay: 0 }} class="group border-t border-zinc-200 py-8 transition-colors hover:bg-zinc-50 md:border-r md:pr-8">
           <div class="mb-4 flex items-center gap-3">
             <svg class="size-6 text-zinc-900" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill="currentColor" fill-rule="evenodd" d="M12 2C7.867 2 5.8 2 5.198 3.3a2.5 2.5 0 0 0-.13.346c-.41 1.387 1.052 2.995 3.974 6.21L11 12h2l1.958-2.143c2.922-3.216 4.383-4.824 3.974-6.21a2.5 2.5 0 0 0-.13-.348C18.2 2 16.133 2 12 2" clip-rule="evenodd"/>
@@ -150,7 +150,7 @@
           </p>
         </div>
 
-        <div use:reveal={{ delay: 80 }} class="group border-t border-zinc-200 py-8 pl-0 transition-colors hover:bg-zinc-50 md:px-8 md:last:pr-0">
+        <div use:reveal={{ delay: 80 }} class="group border-t border-zinc-200 py-8 transition-colors hover:bg-zinc-50 md:pl-8">
           <div class="mb-4 flex items-center gap-3">
             <svg class="size-6 text-zinc-900" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill="currentColor" d="M6 8c0-2.828 0-4.243.879-5.121C7.757 2 9.172 2 12 2s4.243 0 5.121.879C18 3.757 18 5.172 18 8v8c0 2.828 0 4.243-.879 5.121C16.243 22 14.828 22 12 22s-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/>
@@ -163,7 +163,7 @@
           </p>
         </div>
 
-        <div use:reveal={{ delay: 0 }} class="group border-t border-zinc-200 py-8 pr-8 transition-colors hover:bg-zinc-50 md:border-r md:px-8 first:md:pl-0">
+        <div use:reveal={{ delay: 0 }} class="group border-t border-zinc-200 py-8 transition-colors hover:bg-zinc-50 md:border-r md:pr-8">
           <div class="mb-4 flex items-center gap-3">
             <svg class="size-6 text-zinc-900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path fill="currentColor" fill-rule="evenodd" d="M18.448 3.073c-1.06-.332-2.03.514-2.03 1.547v3.626c-1.296.252-2.804.397-4.418.397s-3.122-.145-4.419-.397V4.62c0-1.033-.97-1.879-2.028-1.547c-.982.307-1.831.697-2.45 1.17C2.495 4.705 2 5.338 2 6.13v11.95q.002.323.104.614q.091.262.244.493c.324.491.841.894 1.44 1.223c.609.334 1.351.62 2.185.852C7.64 21.727 9.737 22 12 22c1.9 0 3.682-.192 5.189-.529c1.493-.333 2.773-.82 3.63-1.445c.208-.152.405-.322.576-.511c.36-.398.605-.877.605-1.436V6.13c0-.792-.494-1.425-1.103-1.889c-.619-.472-1.468-.862-2.45-1.169m2.157 5.154l-.081.052c-.823.516-1.952.93-3.254 1.227c-1.524.347-3.335.547-5.27.547s-3.745-.2-5.27-.547c-1.302-.297-2.431-.71-3.254-1.227l-.08-.052v9.162l2.83-2.675l1.276-1.08a2.39 2.39 0 0 1 3.192.105l3.09 2.985a.786.786 0 0 0 .975.078l.215-.145a2.91 2.91 0 0 1 3.532.207l1.9 1.653c.157-.188.199-.337.199-.438z" clip-rule="evenodd"/>
@@ -176,7 +176,7 @@
           </p>
         </div>
 
-        <div use:reveal={{ delay: 80 }} class="group border-t border-zinc-200 py-8 pl-0 transition-colors hover:bg-zinc-50 md:px-8 md:last:pr-0">
+        <div use:reveal={{ delay: 80 }} class="group border-t border-zinc-200 py-8 transition-colors hover:bg-zinc-50 md:pl-8">
           <div class="mb-4 flex items-center gap-3">
             <Icon icon="solar:magnet-bold-duotone" class="size-6 text-zinc-900" />
             <h3 class="font-[Goga] text-lg font-bold tracking-tight">Glouton</h3>
@@ -186,7 +186,7 @@
           </p>
         </div>
 
-        <div use:reveal={{ delay: 0 }} class="group border-t border-zinc-200 py-8 pr-8 transition-colors hover:bg-zinc-50 md:border-r md:px-8 first:md:pl-0">
+        <div use:reveal={{ delay: 0 }} class="group border-t border-zinc-200 py-8 transition-colors hover:bg-zinc-50 md:border-r md:pr-8">
           <div class="mb-4 flex items-center gap-3">
             <svg class="size-6 text-zinc-900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path fill="currentColor" d="M10.31 17.344c.767-.876 1.151-1.314 1.625-1.342q.065-.004.13 0c.474.028.858.466 1.625 1.342c1.67 1.906 2.505 2.858 2.271 3.68q-.03.107-.074.206C15.543 22 14.362 22 12 22s-3.543 0-3.887-.77a2 2 0 0 1-.074-.206c-.234-.822.6-1.774 2.27-3.68M14.5 12.5a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0"/>
@@ -200,7 +200,7 @@
           </p>
         </div>
 
-        <div use:reveal={{ delay: 80 }} class="group border-t border-zinc-200 py-8 pl-0 transition-colors hover:bg-zinc-50 md:px-8 md:last:pr-0">
+        <div use:reveal={{ delay: 80 }} class="group border-t border-zinc-200 py-8 transition-colors hover:bg-zinc-50 md:pl-8">
           <div class="mb-4 flex items-center gap-3">
             <svg class="size-6 text-zinc-900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path fill="currentColor" d="M7.245 2h9.51c1.159 0 1.738 0 2.206.163a3.05 3.05 0 0 1 1.881 1.936C21 4.581 21 5.177 21 6.37v14.004c0 .858-.985 1.314-1.608.744a.946.946 0 0 0-1.284 0l-.483.442a1.657 1.657 0 0 1-2.25 0a1.657 1.657 0 0 0-2.25 0a1.657 1.657 0 0 1-2.25 0a1.657 1.657 0 0 0-2.25 0a1.657 1.657 0 0 1-2.25 0l-.483-.442a.946.946 0 0 0-1.284 0c-.623.57-1.608.114-1.608-.744V6.37c0-1.193 0-1.79.158-2.27c.3-.913.995-1.629 1.881-1.937C5.507 2 6.086 2 7.245 2" opacity=".5"/>
@@ -213,7 +213,7 @@
           </p>
         </div>
 
-        <div use:reveal={{ delay: 0 }} class="group border-t border-b border-zinc-200 py-8 pr-8 transition-colors hover:bg-zinc-50 md:border-r md:px-8 first:md:pl-0">
+        <div use:reveal={{ delay: 0 }} class="group border-y border-zinc-200 py-8 transition-colors hover:bg-zinc-50 md:border-r md:pr-8">
           <div class="mb-4 flex items-center gap-3">
             <Icon icon="solar:home-angle-bold-duotone" class="size-6 text-zinc-900" />
             <h3 class="font-[Goga] text-lg font-bold tracking-tight">Portail</h3>
@@ -223,10 +223,10 @@
           </p>
         </div>
 
-        <div use:reveal={{ delay: 80 }} class="group border-t border-b border-zinc-200 py-8 pl-0 transition-colors hover:bg-zinc-50 md:px-8 md:last:pr-0">
+        <div use:reveal={{ delay: 80 }} class="group border-y border-zinc-200 py-8 transition-colors hover:bg-zinc-50 md:pl-8">
           <div class="mb-4 flex items-center gap-3">
             <Icon icon="solar:widget-5-bold-duotone" class="size-6 text-zinc-900" />
-            <h3 class="font-[Goga] text-lg font-bold tracking-tight">Et tout est connecté</h3>
+            <h3 class="font-[Goga] text-lg font-bold tracking-tight">Et tout communique</h3>
           </div>
           <p class="text-sm leading-relaxed text-zinc-500">
             Un seul serveur. Un seul système d'auth. Chaque outil partage événements et utilisateurs. Pas de silos, pas de double saisie, pas de SaaS qui vous prend en otage.
@@ -238,7 +238,7 @@
 
     <section class="bg-zinc-950 text-white">
       <div class="mx-auto max-w-5xl px-6 py-28 md:py-36">
-        <h2 use:reveal={{ delay: 0 }} class="font-[Goga] text-4xl font-black tracking-tight md:text-5xl">Quatre personnes.<br /><span class="text-zinc-500">Zéro bullshit.</span></h2>
+        <h2 use:reveal={{ delay: 0 }} class="font-[Goga] text-4xl font-black tracking-tight md:text-5xl">Quatre humains.<br /><span class="text-zinc-500">Zero bullshit.</span></h2>
         <p use:reveal={{ delay: 100 }} class="mt-6 max-w-md text-lg leading-relaxed text-zinc-400">
           Deux devs, deux designers. On construit les outils qu'on utilise tous les jours. Pas de roadmap à rallonge, pas de features pour les investisseurs — juste ce qui marche.
         </p>
