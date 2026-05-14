@@ -3,8 +3,8 @@
 </script>
 
 <svelte:head>
-  <title>Facile Suite — Tools for small studios</title>
-  <meta name="description" content="An integrated suite of self-hosted tools for small design and development studios. Time tracking, project management, lead generation, operational intelligence, and more." />
+  <title>Facile Suite — Outils pour petits studios</title>
+  <meta name="description" content="Une suite intégrée d'outils auto-hébergés pour les petits studios de design et de développement. Suivi du temps, gestion de projet, génération de leads, intelligence opérationnelle, et plus encore." />
 </svelte:head>
 
 <div class="min-h-screen bg-white text-zinc-900">
@@ -31,21 +31,21 @@
     <section class="mx-auto max-w-5xl px-6 py-28 md:py-36">
       <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-zinc-200 px-3.5 py-1 text-xs text-zinc-600">
         <Icon icon="solar:server-square-linear" class="size-3" />
-        Self-hosted &middot; Open source &middot; Integrated
+        Auto-hébergé &middot; Open source &middot; Intégré
       </p>
       <h1 class="max-w-3xl font-[Goga] text-5xl leading-[1.08] tracking-tight md:text-6xl">
-        Everything a small studio<br class="hidden sm:block" />
-        needs to run.
+        Tout ce qu'un petit studio<br class="hidden sm:block" />
+        a besoin pour tourner.
       </h1>
       <p class="mt-6 max-w-xl text-lg leading-relaxed text-zinc-600">
-        Seven tools that share events, users, and infrastructure.
-        One server, one login, full control.
+        Sept outils qui partagent événements, utilisateurs et infrastructure.
+        Un serveur, un login, contrôle total.
       </p>
       <a
         href="#perception"
         class="mt-10 inline-flex items-center gap-2 rounded-md bg-zinc-900 px-6 py-3 text-base font-medium text-white transition-colors hover:bg-zinc-800"
       >
-        Explore the suite
+        Explorer la suite
         <Icon icon="solar:arrow-down-linear" class="size-4" />
       </a>
     </section>
@@ -61,19 +61,19 @@
           <span class="font-[Goga] text-2xl font-semibold tracking-tight">Perception</span>
         </div>
         <h2 class="max-w-2xl font-[Goga] text-4xl leading-[1.1] tracking-tight md:text-5xl">
-          Operational intelligence<br class="hidden sm:block" />
-          that thinks ahead.
+          L'intelligence opérationnelle<br class="hidden sm:block" />
+          qui anticipe.
         </h2>
         <p class="mt-6 max-w-xl leading-relaxed text-zinc-400">
-          Ingests events from the entire stack. Builds a knowledge graph linking clients, contracts, projects, and services across providers. Answers grounded questions via streaming chat.
+          Ingère les événements de toute la stack. Construit un graphe de connaissances reliant clients, contrats, projets et services entre les fournisseurs. Répond à des questions contextualisées via un chat en streaming.
         </p>
 
         <dl class="mt-14 grid gap-x-16 gap-y-8 sm:grid-cols-2">
           {#each [
-            { term: 'Hybrid retrieval', def: 'Twelve parallel lanes — vector, full-text, SQL, entity graph, community summaries. Every answer cites its evidence.' },
-            { term: 'Entity resolution', def: 'A client in Opus, a signer in DocuSeal, and a timer in Sablier automatically merge into one entity.' },
-            { term: 'Bayesian forecasting', def: 'Calibrated confidence intervals and ensemble strategies that track their own accuracy over time.' },
-            { term: 'Anomaly detection', def: 'BOCPD surfaces regime shifts in real time. Granger causality reveals which signals drive downstream effects.' },
+            { term: 'Recherche hybride', def: 'Douze voies parallèles — vectorielle, full-text, SQL, graphe d\'entités, résumés communautaires. Chaque réponse cite ses sources.' },
+            { term: 'Résolution d\'entités', def: 'Un client dans Opus, un signataire dans DocuSeal et un timer dans Sablier fusionnent automatiquement en une seule entité.' },
+            { term: 'Prévision bayésienne', def: 'Intervalles de confiance calibrés et stratégies d\'ensemble qui suivent leur propre précision au fil du temps.' },
+            { term: 'Détection d\'anomalies', def: 'BOCPD détecte les changements de régime en temps réel. La causalité de Granger révèle quels signaux entraînent des effets en aval.' },
           ] as item}
             <div>
               <dt class="text-sm font-semibold text-white">{item.term}</dt>
@@ -86,7 +86,7 @@
 
     <!-- Toolkit — 2-col, each tool has its real logo + tight description -->
     <section class="mx-auto max-w-5xl px-6 py-24">
-      <h2 class="mb-14 font-[Goga] text-3xl tracking-tight">The toolkit.</h2>
+      <h2 class="mb-14 font-[Goga] text-3xl tracking-tight">La boîte à outils.</h2>
 
       <div class="grid gap-x-16 gap-y-12 md:grid-cols-2">
 
@@ -100,7 +100,7 @@
             <h3 class="font-[Goga] text-lg font-semibold tracking-tight">Sablier</h3>
           </div>
           <p class="text-sm leading-relaxed text-zinc-600">
-            Time tracking for billable teams. One-click timers, manual entries, per-project breakdowns, and shared sessions. OIDC SSO across the studio.
+            Suivi du temps pour équipes facturables. Chronomètres en un clic, saisies manuelles, ventilation par projet et sessions partagées. SSO OIDC pour tout le studio.
           </p>
         </div>
 
@@ -115,7 +115,7 @@
             <h3 class="font-[Goga] text-lg font-semibold tracking-tight">Opus</h3>
           </div>
           <p class="text-sm leading-relaxed text-zinc-600">
-            Project management that stays out of the way. Kanban boards, task relations, labels, activity feeds. Clean interface, fast search, no feature bloat.
+            Gestion de projet qui ne gêne pas. Tableaux Kanban, relations entre tâches, labels, fils d'activité. Interface épurée, recherche rapide, pas de surplus fonctionnel.
           </p>
         </div>
 
@@ -129,7 +129,7 @@
             <h3 class="font-[Goga] text-lg font-semibold tracking-tight">Vision</h3>
           </div>
           <p class="text-sm leading-relaxed text-zinc-600">
-            Lightweight web analytics. Single script tag, real-time pageviews, referrers, countries. Domain-locked events prevent spoofing. Privacy-first.
+            Analytique web légère. Une seule balise script, pages vues en temps réel, référents, pays. Événements verrouillés par domaine contre le spoofing. Vie privée d'abord.
           </p>
         </div>
 
@@ -140,7 +140,7 @@
             <h3 class="font-[Goga] text-lg font-semibold tracking-tight">Glouton</h3>
           </div>
           <p class="text-sm leading-relaxed text-zinc-600">
-            Automated lead generation. Crawls websites, scrapes freelance platforms, detects tech stacks, and scores prospects HOT/WARM/COLD with real-time WebSocket updates.
+            Génération de leads automatisée. Crawl de sites web, scraping de plateformes freelance, détection de stacks techniques et scoring HOT/WARM/COLD des prospects avec mises à jour WebSocket en temps réel.
           </p>
         </div>
 
@@ -155,7 +155,7 @@
             <h3 class="font-[Goga] text-lg font-semibold tracking-tight">Nook</h3>
           </div>
           <p class="text-sm leading-relaxed text-zinc-600">
-            Centralized alert relay. Monitors uptime, ingests webhooks from Dokploy, DocuSeal, and Uptime Kuma, then broadcasts to Matrix, Discord, SMTP, ntfy, or Perception.
+            Relais d'alertes centralisé. Surveille l'uptime, ingère les webhooks de Dokploy, DocuSeal et Uptime Kuma, puis diffuse vers Matrix, Discord, SMTP, ntfy ou Perception.
           </p>
         </div>
 
@@ -166,7 +166,7 @@
             <h3 class="font-[Goga] text-lg font-semibold tracking-tight">Portail</h3>
           </div>
           <p class="text-sm leading-relaxed text-zinc-600">
-            The team's front door. A static portal linking every service — deployments, monitoring, storage, docs, passwords — generated from a single YAML file.
+            La porte d'entrée de l'équipe. Un portail statique reliant chaque service — déploiements, monitoring, stockage, docs, mots de passe — généré à partir d'un seul fichier YAML.
           </p>
         </div>
 
@@ -174,9 +174,9 @@
     </section>
 
     <section class="mx-auto max-w-5xl px-6 py-24 text-center">
-      <h2 class="font-[Goga] text-3xl tracking-tight">Built by a team of four.</h2>
+      <h2 class="font-[Goga] text-3xl tracking-tight">Construit par une équipe de quatre.</h2>
       <p class="mt-3 text-zinc-600">
-        Two developers. Two designers. One shared infrastructure.
+        Deux développeurs. Deux designers. Une infrastructure partagée.
       </p>
       <a
         href="https://facile.studio"
@@ -184,7 +184,7 @@
         rel="noopener noreferrer"
         class="mt-8 inline-flex items-center gap-2 rounded-md bg-zinc-900 px-6 py-3 text-base font-medium text-white transition-colors hover:bg-zinc-800"
       >
-        Visit facile.studio
+        Visiter facile.studio
         <Icon icon="solar:arrow-right-up-linear" class="size-4" />
       </a>
     </section>
