@@ -38,7 +38,7 @@
         a besoin pour tourner.
       </h1>
       <p class="mt-6 max-w-xl text-lg leading-relaxed text-zinc-600">
-        Sept outils qui partagent événements, utilisateurs et infrastructure.
+        Huit outils qui partagent événements, utilisateurs et infrastructure.
         Un serveur, un login, contrôle total.
       </p>
       <a
@@ -156,6 +156,17 @@
           </div>
           <p class="text-sm leading-relaxed text-zinc-600">
             Relais d'alertes centralisé. Surveille l'uptime, ingère les webhooks de Dokploy, DocuSeal et Uptime Kuma, puis diffuse vers Matrix, Discord, SMTP, ntfy ou Perception.
+          </p>
+        </div>
+
+        <!-- Charles -->
+        <div>
+          <div class="mb-3 flex items-center gap-3">
+            <Icon icon="solar:card-send-bold-duotone" class="size-6 text-zinc-900" />
+            <h3 class="font-[Goga] text-lg font-semibold tracking-tight">Charles</h3>
+          </div>
+          <p class="text-sm leading-relaxed text-zinc-600">
+            Paiement et facturation. Création de demandes de paiement, intégration Stripe, notifications email automatiques, gestion des clients et téléchargement de reçus.
           </p>
         </div>
 
