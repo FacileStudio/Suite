@@ -38,7 +38,7 @@
 
 <svelte:head>
   <title>Facile Suite — Votre studio tourne tout seul</title>
-  <meta name="description" content="Dix outils intégrés qui gèrent le temps, les projets, les leads, la signature, la facturation et l'intelligence de votre studio. Auto-hébergé, open source, un seul serveur." />
+  <meta name="description" content="Onze outils intégrés qui gèrent le temps, les projets, les leads, la signature, la facturation et l'intelligence de votre studio. Auto-hébergé, open source, un seul serveur." />
 </svelte:head>
 
 <div class="min-h-screen bg-white text-zinc-900">
@@ -72,7 +72,7 @@
           <span class="text-zinc-400">Vous bossez.</span>
         </h1>
         <p class="mt-8 max-w-lg text-lg leading-relaxed text-zinc-500">
-          Dix outils qui se parlent, sur votre serveur.
+          Onze outils qui se parlent, sur votre serveur.
           Temps, projets, leads, signatures, factures, monitoring — un seul login, zéro dépendance cloud.
         </p>
         <div class="mt-10 flex flex-wrap items-center gap-4">
