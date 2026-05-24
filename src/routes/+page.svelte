@@ -38,7 +38,7 @@
 
 <svelte:head>
   <title>Facile Suite — Votre studio tourne tout seul</title>
-  <meta name="description" content="Huit outils intégrés qui gèrent le temps, les projets, les leads, la facturation et l'intelligence de votre studio. Auto-hébergé, open source, un seul serveur." />
+  <meta name="description" content="Dix outils intégrés qui gèrent le temps, les projets, les leads, la signature, la facturation et l'intelligence de votre studio. Auto-hébergé, open source, un seul serveur." />
 </svelte:head>
 
 <div class="min-h-screen bg-white text-zinc-900">
@@ -72,8 +72,8 @@
           <span class="text-zinc-400">Vous bossez.</span>
         </h1>
         <p class="mt-8 max-w-lg text-lg leading-relaxed text-zinc-500">
-          Huit outils qui se parlent, sur votre serveur.
-          Temps, projets, leads, factures, monitoring — un seul login, zéro dépendance cloud.
+          Dix outils qui se parlent, sur votre serveur.
+          Temps, projets, leads, signatures, factures, monitoring — un seul login, zéro dépendance cloud.
         </p>
         <div class="mt-10 flex flex-wrap items-center gap-4">
           <a
@@ -213,7 +213,17 @@
           </p>
         </div>
 
-        <div use:reveal={{ delay: 0 }} class="group border-y border-zinc-200 py-8 transition-colors hover:bg-zinc-50 md:border-r md:pr-8">
+        <div use:reveal={{ delay: 0 }} class="group border-t border-zinc-200 py-8 transition-colors hover:bg-zinc-50 md:border-r md:pr-8">
+          <div class="mb-4 flex items-center gap-3">
+            <Icon icon="solar:pen-new-square-bold-duotone" class="size-6 text-zinc-900" />
+            <h3 class="font-[Goga] text-lg font-bold tracking-tight">Plume</h3>
+          </div>
+          <p class="text-sm leading-relaxed text-zinc-500">
+            La signature électronique sans usine à gaz. Déposez un PDF, placez les champs, envoyez le lien, recevez la preuve signée avec audit trail et webhooks.
+          </p>
+        </div>
+
+        <div use:reveal={{ delay: 80 }} class="group border-t border-zinc-200 py-8 transition-colors hover:bg-zinc-50 md:pl-8">
           <div class="mb-4 flex items-center gap-3">
             <Icon icon="solar:home-angle-bold-duotone" class="size-6 text-zinc-900" />
             <h3 class="font-[Goga] text-lg font-bold tracking-tight">Portail</h3>
@@ -223,7 +233,27 @@
           </p>
         </div>
 
-        <div use:reveal={{ delay: 80 }} class="group border-y border-zinc-200 py-8 transition-colors hover:bg-zinc-50 md:pl-8">
+        <div use:reveal={{ delay: 0 }} class="group border-t border-zinc-200 py-8 transition-colors hover:bg-zinc-50 md:border-r md:pr-8">
+          <div class="mb-4 flex items-center gap-3">
+            <Icon icon="solar:cloud-bold-duotone" class="size-6 text-zinc-900" />
+            <h3 class="font-[Goga] text-lg font-bold tracking-tight">Nuage</h3>
+          </div>
+          <p class="text-sm leading-relaxed text-zinc-500">
+            Le stockage fichiers du studio. Upload, dossiers, recherche — un drive interne connecté à tous vos outils via API. Vos fichiers restent sur votre serveur, pas chez Google.
+          </p>
+        </div>
+
+        <div use:reveal={{ delay: 80 }} class="group border-t border-zinc-200 py-8 transition-colors hover:bg-zinc-50 md:pl-8">
+          <div class="mb-4 flex items-center gap-3">
+            <Icon icon="solar:videocamera-record-bold-duotone" class="size-6 text-zinc-900" />
+            <h3 class="font-[Goga] text-lg font-bold tracking-tight">Echo</h3>
+          </div>
+          <p class="text-sm leading-relaxed text-zinc-500">
+            Visioconférence simple et sécurisée. Créez une salle, partagez le lien, c'est tout.
+          </p>
+        </div>
+
+        <div use:reveal={{ delay: 0 }} class="group border-y border-zinc-200 py-8 transition-colors hover:bg-zinc-50 md:col-span-2">
           <div class="mb-4 flex items-center gap-3">
             <Icon icon="solar:widget-5-bold-duotone" class="size-6 text-zinc-900" />
             <h3 class="font-[Goga] text-lg font-bold tracking-tight">Et tout communique</h3>
