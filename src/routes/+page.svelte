@@ -38,7 +38,7 @@
 
 <svelte:head>
   <title>Facile Suite — Votre studio tourne tout seul</title>
-  <meta name="description" content="Onze outils intégrés qui gèrent le temps, les projets, les leads, la signature, la facturation et l'intelligence de votre studio. Auto-hébergé, open source, un seul serveur." />
+  <meta name="description" content="Douze outils intégrés qui gèrent le temps, les projets, les leads, la signature, la facturation et l'intelligence de votre studio. Auto-hébergé, open source, un seul serveur." />
 </svelte:head>
 
 <div class="min-h-screen bg-white text-zinc-900">
@@ -72,7 +72,7 @@
           <span class="text-zinc-400">Vous bossez.</span>
         </h1>
         <p class="mt-8 max-w-lg text-lg leading-relaxed text-zinc-500">
-          Onze outils qui se parlent, sur votre serveur.
+          Douze outils qui se parlent, sur votre serveur.
           Temps, projets, leads, signatures, factures, monitoring — un seul login, zéro dépendance cloud.
         </p>
         <div class="mt-10 flex flex-wrap items-center gap-4">
@@ -250,6 +250,16 @@
           </div>
           <p class="text-sm leading-relaxed text-zinc-500">
             Visioconférence simple et sécurisée. Créez une salle, partagez le lien, c'est tout.
+          </p>
+        </div>
+
+        <div use:reveal={{ delay: 0 }} class="group border-t border-zinc-200 py-8 transition-colors hover:bg-zinc-50 md:border-r md:pr-8">
+          <div class="mb-4 flex items-center gap-3">
+            <Icon icon="solar:pill-bold-duotone" class="size-6 text-zinc-900" />
+            <h3 class="font-[Goga] text-lg font-bold tracking-tight">Capsule</h3>
+          </div>
+          <p class="text-sm leading-relaxed text-zinc-500">
+            Partagez un secret qui s'autodétruit. Chiffrement de bout en bout dans le navigateur, zero-knowledge côté serveur. Un lien, une ouverture, puis rien.
           </p>
         </div>
 
