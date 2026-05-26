@@ -39,6 +39,10 @@
       }
     };
   };
+
+  const card = 'group relative overflow-hidden rounded-2xl border border-zinc-200 p-6 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:border-zinc-300 hover:shadow-xl motion-reduce:transition-none';
+  const glow = 'pointer-events-none absolute -right-20 -top-20 size-40 rounded-full bg-zinc-100 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-70';
+  const ico = 'transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-110';
 </script>
 
 <svelte:head>
@@ -142,10 +146,10 @@
 
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
 
-        <div use:reveal={{ delay: 0 }} class="tool-card group sm:col-span-2 md:p-8">
-          <div class="tool-card-glow"></div>
+        <div use:reveal={{ delay: 0 }} class="{card} sm:col-span-2 md:p-8">
+          <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
-            <div class="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-110">
+            <div class={ico}>
               <svg class="size-6 text-zinc-900" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill="currentColor" fill-rule="evenodd" d="M12 2C7.867 2 5.8 2 5.198 3.3a2.5 2.5 0 0 0-.13.346c-.41 1.387 1.052 2.995 3.974 6.21L11 12h2l1.958-2.143c2.922-3.216 4.383-4.824 3.974-6.21a2.5 2.5 0 0 0-.13-.348C18.2 2 16.133 2 12 2" clip-rule="evenodd"/>
                 <path fill="currentColor" d="M5.198 20.7C5.8 22 7.867 22 12 22s6.2 0 6.802-1.3a2.5 2.5 0 0 0 .13-.346c.41-1.387-1.052-2.995-3.974-6.21L13 12h-2l-1.958 2.143c-2.922 3.216-4.383 4.824-3.974 6.21q.052.18.13.348" opacity=".5"/>
@@ -158,10 +162,10 @@
           </p>
         </div>
 
-        <div use:reveal={{ delay: 70 }} class="tool-card group">
-          <div class="tool-card-glow"></div>
+        <div use:reveal={{ delay: 70 }} class={card}>
+          <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
-            <div class="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-110">
+            <div class={ico}>
               <svg class="size-6 text-zinc-900" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill="currentColor" d="M6 8c0-2.828 0-4.243.879-5.121C7.757 2 9.172 2 12 2s4.243 0 5.121.879C18 3.757 18 5.172 18 8v8c0 2.828 0 4.243-.879 5.121C16.243 22 14.828 22 12 22s-4.243 0-5.121-.879C6 20.243 6 18.828 6 16z"/>
                 <path fill="currentColor" d="M6.141 4.5C6 5.343 6 6.462 6 8v8c0 1.538 0 2.657.141 3.5H6c-1.4 0-2.1 0-2.635-.273a2.5 2.5 0 0 1-1.093-1.092C2 17.6 2 16.9 2 15.5v-7c0-1.4 0-2.1.272-2.635a2.5 2.5 0 0 1 1.093-1.093C3.9 4.5 4.6 4.5 6 4.5zm11.718 0C18 5.343 18 6.462 18 8v8c0 1.538 0 2.657-.141 3.5H18c1.4 0 2.1 0 2.635-.273a2.5 2.5 0 0 0 1.092-1.092C22 17.6 22 16.9 22 15.5v-7c0-1.4 0-2.1-.273-2.635a2.5 2.5 0 0 0-1.092-1.093C20.1 4.5 19.4 4.5 18 4.5z" opacity=".5"/>
@@ -174,10 +178,10 @@
           </p>
         </div>
 
-        <div use:reveal={{ delay: 140 }} class="tool-card group">
-          <div class="tool-card-glow"></div>
+        <div use:reveal={{ delay: 140 }} class={card}>
+          <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
-            <div class="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-110">
+            <div class={ico}>
               <svg class="size-6 text-zinc-900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path fill="currentColor" fill-rule="evenodd" d="M18.448 3.073c-1.06-.332-2.03.514-2.03 1.547v3.626c-1.296.252-2.804.397-4.418.397s-3.122-.145-4.419-.397V4.62c0-1.033-.97-1.879-2.028-1.547c-.982.307-1.831.697-2.45 1.17C2.495 4.705 2 5.338 2 6.13v11.95q.002.323.104.614q.091.262.244.493c.324.491.841.894 1.44 1.223c.609.334 1.351.62 2.185.852C7.64 21.727 9.737 22 12 22c1.9 0 3.682-.192 5.189-.529c1.493-.333 2.773-.82 3.63-1.445c.208-.152.405-.322.576-.511c.36-.398.605-.877.605-1.436V6.13c0-.792-.494-1.425-1.103-1.889c-.619-.472-1.468-.862-2.45-1.169m2.157 5.154l-.081.052c-.823.516-1.952.93-3.254 1.227c-1.524.347-3.335.547-5.27.547s-3.745-.2-5.27-.547c-1.302-.297-2.431-.71-3.254-1.227l-.08-.052v9.162l2.83-2.675l1.276-1.08a2.39 2.39 0 0 1 3.192.105l3.09 2.985a.786.786 0 0 0 .975.078l.215-.145a2.91 2.91 0 0 1 3.532.207l1.9 1.653c.157-.188.199-.337.199-.438z" clip-rule="evenodd"/>
                 <path fill="currentColor" d="M19.21 12.84c0 .778-.625 1.41-1.396 1.41s-1.395-.632-1.395-1.41s.625-1.41 1.395-1.41s1.396.632 1.396 1.41" opacity=".5"/>
@@ -190,10 +194,10 @@
           </p>
         </div>
 
-        <div use:reveal={{ delay: 210 }} class="tool-card group">
-          <div class="tool-card-glow"></div>
+        <div use:reveal={{ delay: 210 }} class={card}>
+          <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
-            <div class="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-110">
+            <div class={ico}>
               <Icon icon="solar:magnet-bold-duotone" class="size-6 text-zinc-900" />
             </div>
             <h3 class="font-[Goga] text-lg font-bold tracking-tight">Glouton</h3>
@@ -203,10 +207,10 @@
           </p>
         </div>
 
-        <div use:reveal={{ delay: 280 }} class="tool-card group">
-          <div class="tool-card-glow"></div>
+        <div use:reveal={{ delay: 280 }} class={card}>
+          <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
-            <div class="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-110">
+            <div class={ico}>
               <svg class="size-6 text-zinc-900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path fill="currentColor" d="M10.31 17.344c.767-.876 1.151-1.314 1.625-1.342q.065-.004.13 0c.474.028.858.466 1.625 1.342c1.67 1.906 2.505 2.858 2.271 3.68q-.03.107-.074.206C15.543 22 14.362 22 12 22s-3.543 0-3.887-.77a2 2 0 0 1-.074-.206c-.234-.822.6-1.774 2.27-3.68M14.5 12.5a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0"/>
                 <path fill="currentColor" fill-rule="evenodd" d="M12 8.035c-2.697 0-4.884 2.151-4.884 4.806a4.75 4.75 0 0 0 1.43 3.398a.68.68 0 0 1 0 .97a.706.706 0 0 1-.986 0a6.1 6.1 0 0 1-1.84-4.368c0-3.413 2.812-6.18 6.28-6.18s6.279 2.767 6.279 6.18a6.1 6.1 0 0 1-1.84 4.369a.706.706 0 0 1-.986 0a.68.68 0 0 1 0-.971a4.75 4.75 0 0 0 1.43-3.398c0-2.655-2.186-4.806-4.883-4.806" clip-rule="evenodd" opacity=".7"/>
@@ -220,10 +224,10 @@
           </p>
         </div>
 
-        <div use:reveal={{ delay: 350 }} class="tool-card group">
-          <div class="tool-card-glow"></div>
+        <div use:reveal={{ delay: 350 }} class={card}>
+          <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
-            <div class="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-110">
+            <div class={ico}>
               <svg class="size-6 text-zinc-900" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path fill="currentColor" d="M7.245 2h9.51c1.159 0 1.738 0 2.206.163a3.05 3.05 0 0 1 1.881 1.936C21 4.581 21 5.177 21 6.37v14.004c0 .858-.985 1.314-1.608.744a.946.946 0 0 0-1.284 0l-.483.442a1.657 1.657 0 0 1-2.25 0a1.657 1.657 0 0 0-2.25 0a1.657 1.657 0 0 1-2.25 0a1.657 1.657 0 0 0-2.25 0a1.657 1.657 0 0 1-2.25 0l-.483-.442a.946.946 0 0 0-1.284 0c-.623.57-1.608.114-1.608-.744V6.37c0-1.193 0-1.79.158-2.27c.3-.913.995-1.629 1.881-1.937C5.507 2 6.086 2 7.245 2" opacity=".5"/>
                 <path fill="currentColor" d="M7 6.75a.75.75 0 0 0 0 1.5h.5a.75.75 0 0 0 0-1.5zm3.5 0a.75.75 0 0 0 0 1.5H17a.75.75 0 0 0 0-1.5zM7 10.25a.75.75 0 0 0 0 1.5h.5a.75.75 0 0 0 0-1.5zm3.5 0a.75.75 0 0 0 0 1.5H17a.75.75 0 0 0 0-1.5zM7 13.75a.75.75 0 0 0 0 1.5h.5a.75.75 0 0 0 0-1.5zm3.5 0a.75.75 0 0 0 0 1.5H17a.75.75 0 0 0 0-1.5z"/>
@@ -236,10 +240,10 @@
           </p>
         </div>
 
-        <div use:reveal={{ delay: 420 }} class="tool-card group">
-          <div class="tool-card-glow"></div>
+        <div use:reveal={{ delay: 420 }} class={card}>
+          <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
-            <div class="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-110">
+            <div class={ico}>
               <Icon icon="solar:pen-new-square-bold-duotone" class="size-6 text-zinc-900" />
             </div>
             <h3 class="font-[Goga] text-lg font-bold tracking-tight">Plume</h3>
@@ -249,10 +253,10 @@
           </p>
         </div>
 
-        <div use:reveal={{ delay: 490 }} class="tool-card group">
-          <div class="tool-card-glow"></div>
+        <div use:reveal={{ delay: 490 }} class={card}>
+          <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
-            <div class="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-110">
+            <div class={ico}>
               <Icon icon="solar:home-angle-bold-duotone" class="size-6 text-zinc-900" />
             </div>
             <h3 class="font-[Goga] text-lg font-bold tracking-tight">Portail</h3>
@@ -262,10 +266,10 @@
           </p>
         </div>
 
-        <div use:reveal={{ delay: 560 }} class="tool-card group">
-          <div class="tool-card-glow"></div>
+        <div use:reveal={{ delay: 560 }} class={card}>
+          <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
-            <div class="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-110">
+            <div class={ico}>
               <Icon icon="solar:cloud-bold-duotone" class="size-6 text-zinc-900" />
             </div>
             <h3 class="font-[Goga] text-lg font-bold tracking-tight">Nuage</h3>
@@ -275,10 +279,10 @@
           </p>
         </div>
 
-        <div use:reveal={{ delay: 630 }} class="tool-card group">
-          <div class="tool-card-glow"></div>
+        <div use:reveal={{ delay: 630 }} class={card}>
+          <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
-            <div class="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-110">
+            <div class={ico}>
               <Icon icon="solar:videocamera-record-bold-duotone" class="size-6 text-zinc-900" />
             </div>
             <h3 class="font-[Goga] text-lg font-bold tracking-tight">Echo</h3>
@@ -288,10 +292,10 @@
           </p>
         </div>
 
-        <div use:reveal={{ delay: 700 }} class="tool-card group">
-          <div class="tool-card-glow"></div>
+        <div use:reveal={{ delay: 700 }} class={card}>
+          <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
-            <div class="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-110">
+            <div class={ico}>
               <Icon icon="solar:pill-bold-duotone" class="size-6 text-zinc-900" />
             </div>
             <h3 class="font-[Goga] text-lg font-bold tracking-tight">Capsule</h3>
@@ -301,10 +305,13 @@
           </p>
         </div>
 
-        <div use:reveal={{ delay: 770 }} class="tool-banner group sm:col-span-2 lg:col-span-3 md:p-8">
+        <div
+          use:reveal={{ delay: 770 }}
+          class="group relative overflow-hidden rounded-2xl bg-zinc-950 p-6 text-white transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:shadow-2xl sm:col-span-2 lg:col-span-3 md:p-8 bg-[linear-gradient(110deg,transparent_30%,rgba(255,255,255,0.03)_50%,transparent_70%)] [background-size:250%_100%] animate-[shimmer_6s_ease-in-out_infinite] motion-reduce:animate-none motion-reduce:transition-none"
+        >
           <div class="pointer-events-none absolute -right-24 -top-24 size-48 rounded-full bg-zinc-800 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-60"></div>
           <div class="mb-4 flex items-center gap-3">
-            <div class="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-110">
+            <div class={ico}>
               <Icon icon="solar:widget-5-bold-duotone" class="size-6" />
             </div>
             <h3 class="font-[Goga] text-lg font-bold tracking-tight">Et tout communique</h3>
@@ -344,82 +351,8 @@
 </div>
 
 <style>
-  .tool-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 1rem;
-    border: 1px solid #e4e4e7;
-    padding: 1.5rem;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .tool-card:hover {
-    transform: translateY(-4px);
-    border-color: #d4d4d8;
-    box-shadow:
-      0 20px 25px -5px rgba(0, 0, 0, 0.05),
-      0 8px 10px -6px rgba(0, 0, 0, 0.04);
-  }
-
-  .tool-card-glow {
-    pointer-events: none;
-    position: absolute;
-    right: -5rem;
-    top: -5rem;
-    width: 10rem;
-    height: 10rem;
-    border-radius: 9999px;
-    background: #f4f4f5;
-    opacity: 0;
-    filter: blur(48px);
-    transition: opacity 0.5s ease;
-  }
-
-  .tool-card:hover .tool-card-glow {
-    opacity: 0.7;
-  }
-
-  .tool-banner {
-    position: relative;
-    overflow: hidden;
-    border-radius: 1rem;
-    background-color: #09090b;
-    color: white;
-    padding: 1.5rem;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    background-image: linear-gradient(
-      110deg,
-      transparent 30%,
-      rgba(255, 255, 255, 0.03) 50%,
-      transparent 70%
-    );
-    background-size: 250% 100%;
-    animation: shimmer 6s ease-in-out infinite;
-  }
-
-  .tool-banner:hover {
-    transform: translateY(-4px);
-    box-shadow:
-      0 20px 25px -5px rgba(0, 0, 0, 0.2),
-      0 8px 10px -6px rgba(0, 0, 0, 0.15);
-  }
-
   @keyframes shimmer {
-    0%, 100% {
-      background-position: 200% 0;
-    }
-    50% {
-      background-position: -200% 0;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .tool-banner {
-      animation: none;
-    }
-    .tool-card:hover,
-    .tool-banner:hover {
-      transform: none;
-    }
+    0%, 100% { background-position: 200% 0; }
+    50% { background-position: -200% 0; }
   }
 </style>
