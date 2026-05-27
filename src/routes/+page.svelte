@@ -334,7 +334,7 @@
             </div>
             <h2 use:reveal={{ delay: 100 }} class="font-[Goga] text-4xl font-black tracking-tight md:text-5xl">
               Connectez-vous une fois.<br />
-              <span class="text-zinc-400">Accédez à tout.</span>
+              <span class="text-zinc-400">Accedez a tout.</span>
             </h2>
             <p use:reveal={{ delay: 200 }} class="mt-8 max-w-lg text-lg leading-relaxed text-zinc-500">
               Chaque outil de la suite partage le même système d'authentification. Un compte, un mot de passe, et vous passez de Sablier à Opus à Charles sans jamais vous reconnecter.
@@ -342,10 +342,10 @@
           </div>
           <div use:reveal={{ delay: 300 }} class="grid gap-6 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
             {#each [
-              { icon: 'solar:shield-check-bold-duotone', title: 'SSO intégré', desc: 'OpenID Connect natif. Un seul jeton, toute la suite.' },
-              { icon: 'solar:users-group-rounded-bold-duotone', title: 'Gestion centralisée', desc: 'Ajoutez un membre une fois, il a accès partout. Retirez-le, c\'est fini partout.' },
-              { icon: 'solar:key-bold-duotone', title: 'Zéro friction', desc: 'Pas de page de login entre les outils. Vous naviguez, ça marche.' },
-              { icon: 'solar:server-bold-duotone', title: 'Votre serveur, vos règles', desc: 'Aucun tiers dans la boucle. Vos identifiants ne quittent jamais votre infra.' },
+              { icon: 'solar:shield-check-bold-duotone', title: 'SSO integre', desc: 'OpenID Connect natif. Un seul jeton, toute la suite.' },
+              { icon: 'solar:users-group-rounded-bold-duotone', title: 'Gestion centralisee', desc: 'Ajoutez un membre une fois, il a accès partout. Retirez-le, c\'est fini partout.' },
+              { icon: 'solar:key-bold-duotone', title: 'Zero friction', desc: 'Pas de page de login entre les outils. Vous naviguez, ça marche.' },
+              { icon: 'solar:server-bold-duotone', title: 'Votre serveur, vos regles', desc: 'Aucun tiers dans la boucle. Vos identifiants ne quittent jamais votre infra.' },
             ] as item, i}
               <div class="rounded-xl border border-zinc-200 bg-white p-5 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 hover:shadow-lg">
                 <Icon icon={item.icon} class="mb-3 size-6 text-zinc-900" />
