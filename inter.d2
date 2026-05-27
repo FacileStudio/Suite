@@ -1,0 +1,322 @@
+direction: down
+
+title: {
+  label: Facile Suite — Nook Event Bus Architecture
+  near: top-center
+  shape: text
+  style.font-size: 28
+  style.bold: true
+  style.font-color: "#1a1a1a"
+}
+
+# ── Apps layer ──────────────────────────────────────────
+
+apps: {
+  label: "Facile Apps"
+  style.fill: transparent
+  style.stroke: transparent
+
+  sablier: {
+    label: |md
+      **Sablier**
+      Time Tracking
+      Go / PostgreSQL
+    |
+    shape: rectangle
+    style.fill: "#e8f4f8"
+    style.stroke: "#2196F3"
+    style.border-radius: 8
+  }
+
+  opus: {
+    label: |md
+      **Opus**
+      Project Management
+      Node / PostgreSQL
+    |
+    shape: rectangle
+    style.fill: "#e8f4f8"
+    style.stroke: "#2196F3"
+    style.border-radius: 8
+  }
+
+  ardoise: {
+    label: |md
+      **Ardoise**
+      Invoicing & Payments
+      Node / PostgreSQL
+    |
+    shape: rectangle
+    style.fill: "#e8f4f8"
+    style.stroke: "#2196F3"
+    style.border-radius: 8
+  }
+
+  plume: {
+    label: |md
+      **Plume**
+      Digital Signatures
+      Go / PostgreSQL
+    |
+    shape: rectangle
+    style.fill: "#e8f4f8"
+    style.stroke: "#2196F3"
+    style.border-radius: 8
+  }
+
+  glouton: {
+    label: |md
+      **Glouton**
+      Lead Generation
+      Node / PostgreSQL
+    |
+    shape: rectangle
+    style.fill: "#e8f4f8"
+    style.stroke: "#2196F3"
+    style.border-radius: 8
+  }
+
+  vision: {
+    label: |md
+      **Vision**
+      Web Analytics
+    |
+    shape: rectangle
+    style.fill: "#e8f4f8"
+    style.stroke: "#2196F3"
+    style.border-radius: 8
+  }
+}
+
+# ── Canonical contract ──────────────────────────────────
+
+contract: {
+  label: |md
+    **@facile/events**
+    Canonical event envelope
+    {app, object, action, facile_id, payload, ts, idempotency_key}
+  |
+  shape: page
+  style.fill: "#fff9c4"
+  style.stroke: "#f9a825"
+  style.border-radius: 4
+  style.font-size: 13
+}
+
+# ── Nook ────────────────────────────────────────────────
+
+nook: {
+  label: "Nook — Universal Event Bus"
+  style.fill: "#f3e5f5"
+  style.stroke: "#7B1FA2"
+  style.border-radius: 12
+  style.font-size: 16
+  style.bold: true
+
+  registry: {
+    label: |md
+      **Registry**
+      Which apps are active
+      What objects they sync
+    |
+    shape: cylinder
+    style.fill: "#e1bee7"
+    style.stroke: "#7B1FA2"
+  }
+
+  queue: {
+    label: |md
+      **Event Queue**
+      SQLite-backed
+      Persist / Retry / Order
+    |
+    shape: queue
+    style.fill: "#e1bee7"
+    style.stroke: "#7B1FA2"
+  }
+
+  router: {
+    label: |md
+      **Router**
+      Registry-based fan-out
+      Idempotent delivery
+    |
+    shape: hexagon
+    style.fill: "#e1bee7"
+    style.stroke: "#7B1FA2"
+  }
+
+  event-log: {
+    label: |md
+      **Event Log**
+      Append-only
+      All events ever
+    |
+    shape: cylinder
+    style.fill: "#e1bee7"
+    style.stroke: "#7B1FA2"
+  }
+
+  dlq: {
+    label: |md
+      **Dead Letter Queue**
+      Failed deliveries
+      Admin visibility
+    |
+    shape: cylinder
+    style.fill: "#ffcdd2"
+    style.stroke: "#c62828"
+  }
+
+  registry -> router: lookup
+  queue -> router: dequeue
+  router -> event-log: log
+  router -> dlq: on failure
+}
+
+# ── Perception ──────────────────────────────────────────
+
+perception: {
+  label: |md
+    **Perception**
+    Intelligence Layer (read-only)
+  |
+  style.fill: "#e8f5e9"
+  style.stroke: "#388E3C"
+  style.border-radius: 12
+
+  analytics: {
+    label: "Cross-app analytics"
+    shape: rectangle
+    style.fill: "#c8e6c9"
+    style.stroke: "#388E3C"
+    style.border-radius: 4
+  }
+
+  anomalies: {
+    label: "Anomaly detection"
+    shape: rectangle
+    style.fill: "#c8e6c9"
+    style.stroke: "#388E3C"
+    style.border-radius: 4
+  }
+
+  dashboards: {
+    label: "Unified dashboards"
+    shape: rectangle
+    style.fill: "#c8e6c9"
+    style.stroke: "#388E3C"
+    style.border-radius: 4
+  }
+
+  nl-queries: {
+    label: "Natural language queries"
+    shape: rectangle
+    style.fill: "#c8e6c9"
+    style.stroke: "#388E3C"
+    style.border-radius: 4
+  }
+}
+
+# ── Suite / Portail ─────────────────────────────────────
+
+suite: {
+  label: |md
+    **Suite**
+    Landing page
+    Marketing / showcase
+  |
+  shape: rectangle
+  style.fill: "#fce4ec"
+  style.stroke: "#c2185b"
+  style.border-radius: 8
+}
+
+portail: {
+  label: |md
+    **Portail**
+    Employee portal
+    Links to all services
+  |
+  shape: rectangle
+  style.fill: "#fce4ec"
+  style.stroke: "#c2185b"
+  style.border-radius: 8
+}
+
+# ── Connections: Apps -> Nook ───────────────────────────
+
+apps.sablier -> nook: {
+  label: "emit + receive"
+  style.stroke: "#2196F3"
+  style.animated: true
+}
+apps.opus -> nook: {
+  label: "emit + receive"
+  style.stroke: "#2196F3"
+  style.animated: true
+}
+apps.ardoise -> nook: {
+  label: "emit + receive"
+  style.stroke: "#2196F3"
+  style.animated: true
+}
+apps.plume -> nook: {
+  label: "emit + receive"
+  style.stroke: "#2196F3"
+  style.animated: true
+}
+apps.glouton -> nook: {
+  label: "emit + receive"
+  style.stroke: "#2196F3"
+  style.animated: true
+}
+apps.vision -> nook: {
+  label: "emit only"
+  style.stroke: "#90CAF9"
+  style.stroke-dash: 5
+}
+
+# ── Connection: Contract ────────────────────────────────
+
+apps -> contract: {
+  label: "all apps conform to"
+  style.stroke: "#f9a825"
+  style.stroke-dash: 3
+}
+contract -> nook: {
+  label: "envelope format"
+  style.stroke: "#f9a825"
+  style.stroke-dash: 3
+}
+
+# ── Connection: Nook -> Perception ──────────────────────
+
+nook.event-log -> perception: {
+  label: "tap (read-only stream)"
+  style.stroke: "#388E3C"
+  style.stroke-dash: 5
+  style.animated: true
+}
+
+# ── Example sync flow ──────────────────────────────────
+
+example: {
+  label: |md
+    **Example: Opus -> Sablier project sync**
+
+    1. User creates project "Acme" in Opus
+    2. Opus emits `{app: "opus", object: "project", action: "created", facile_id: "fac_xyz"}`
+    3. Nook persists event in queue
+    4. Router checks registry: Sablier registered for "project" events
+    5. Nook delivers to `POST sablier.internal/webhooks/nook`
+    6. Sablier creates mirror project, stores `facile_id: "fac_xyz"`
+    7. Event logged — Perception observes for analytics
+  |
+  shape: page
+  near: bottom-center
+  style.fill: "#f5f5f5"
+  style.stroke: "#bdbdbd"
+  style.border-radius: 8
+  style.font-size: 13
+}

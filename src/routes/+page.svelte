@@ -233,7 +233,7 @@
                 <path fill="currentColor" d="M7 6.75a.75.75 0 0 0 0 1.5h.5a.75.75 0 0 0 0-1.5zm3.5 0a.75.75 0 0 0 0 1.5H17a.75.75 0 0 0 0-1.5zM7 10.25a.75.75 0 0 0 0 1.5h.5a.75.75 0 0 0 0-1.5zm3.5 0a.75.75 0 0 0 0 1.5H17a.75.75 0 0 0 0-1.5zM7 13.75a.75.75 0 0 0 0 1.5h.5a.75.75 0 0 0 0-1.5zm3.5 0a.75.75 0 0 0 0 1.5H17a.75.75 0 0 0 0-1.5z"/>
               </svg>
             </div>
-            <h3 class="font-[Goga] text-lg font-bold tracking-tight">Charles</h3>
+            <h3 class="font-[Goga] text-lg font-bold tracking-tight">Ardoise</h3>
           </div>
           <p class="text-sm leading-relaxed text-zinc-500">
             Facturez, encaissez, oubliez. Stripe intégré, emails automatiques, reçus téléchargeables. Vos clients paient, vous êtes notifié, point.
@@ -337,7 +337,7 @@
               <span class="text-zinc-400">Accedez a tout.</span>
             </h2>
             <p use:reveal={{ delay: 200 }} class="mt-8 max-w-lg text-lg leading-relaxed text-zinc-500">
-              Chaque outil de la suite partage le même système d'authentification. Un compte, un mot de passe, et vous passez de Sablier à Opus à Charles sans jamais vous reconnecter.
+              Chaque outil de la suite partage le même système d'authentification. Un compte, un mot de passe, et vous passez de Sablier à Opus à Ardoise sans jamais vous reconnecter.
             </p>
           </div>
           <div use:reveal={{ delay: 300 }} class="grid gap-6 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
