@@ -158,7 +158,7 @@
             <h3 class="font-[Goga] text-lg font-bold tracking-tight">Sablier</h3>
           </div>
           <p class="max-w-md text-sm leading-relaxed text-zinc-500">
-            Vos heures facturables, tracées sans friction. Un clic pour lancer, un clic pour arrêter. Ventilation par projet, sessions partagées, et tout le studio connecté via SSO.
+            Vos heures facturables, tracées sans friction. Un clic pour lancer, un clic pour arrêter. Ventilation par projet et sessions partagées.
           </p>
         </div>
 
@@ -321,6 +321,40 @@
           </p>
         </div>
 
+      </div>
+    </section>
+
+    <section class="border-y border-zinc-200 bg-zinc-50">
+      <div class="mx-auto max-w-5xl px-6 py-28 md:py-36">
+        <div class="grid items-center gap-16 md:grid-cols-2">
+          <div>
+            <div use:reveal={{ delay: 0 }} class="mb-10 flex items-center gap-3">
+              <Icon icon="solar:lock-keyhole-bold-duotone" class="size-8 text-zinc-900" />
+              <span class="font-[Goga] text-2xl font-semibold tracking-tight">Un seul login</span>
+            </div>
+            <h2 use:reveal={{ delay: 100 }} class="font-[Goga] text-4xl font-black tracking-tight md:text-5xl">
+              Connectez-vous une fois.<br />
+              <span class="text-zinc-400">Accédez à tout.</span>
+            </h2>
+            <p use:reveal={{ delay: 200 }} class="mt-8 max-w-lg text-lg leading-relaxed text-zinc-500">
+              Chaque outil de la suite partage le même système d'authentification. Un compte, un mot de passe, et vous passez de Sablier à Opus à Charles sans jamais vous reconnecter.
+            </p>
+          </div>
+          <div use:reveal={{ delay: 300 }} class="grid gap-6 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
+            {#each [
+              { icon: 'solar:shield-check-bold-duotone', title: 'SSO intégré', desc: 'OpenID Connect natif. Un seul jeton, toute la suite.' },
+              { icon: 'solar:users-group-rounded-bold-duotone', title: 'Gestion centralisée', desc: 'Ajoutez un membre une fois, il a accès partout. Retirez-le, c\'est fini partout.' },
+              { icon: 'solar:key-bold-duotone', title: 'Zéro friction', desc: 'Pas de page de login entre les outils. Vous naviguez, ça marche.' },
+              { icon: 'solar:server-bold-duotone', title: 'Votre serveur, vos règles', desc: 'Aucun tiers dans la boucle. Vos identifiants ne quittent jamais votre infra.' },
+            ] as item, i}
+              <div class="rounded-xl border border-zinc-200 bg-white p-5 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 hover:shadow-lg">
+                <Icon icon={item.icon} class="mb-3 size-6 text-zinc-900" />
+                <h3 class="font-[Goga] text-sm font-bold tracking-tight">{item.title}</h3>
+                <p class="mt-1.5 text-sm leading-relaxed text-zinc-500">{item.desc}</p>
+              </div>
+            {/each}
+          </div>
+        </div>
       </div>
     </section>
 
