@@ -2,6 +2,7 @@
 	let container: HTMLElement;
 	let started = $state(false);
 	let activeStep = $state(-1);
+	let showPayoff = $state(false);
 
 	const steps = [
 		{ phase: 'Trouver', tools: ['Glouton'] },
@@ -17,6 +18,9 @@
 	const HOLD_MS = 2500;
 	const RESET_MS = 1200;
 	const INITIAL_DELAY = 300;
+	const PAYOFF_DELAY = 500;
+	const PAYOFF_DURATION = 2000;
+	const PAYOFF_FADE = 500;
 
 	let timers: ReturnType<typeof setTimeout>[] = [];
 
@@ -28,6 +32,7 @@
 	function runFlow() {
 		clearTimers();
 		activeStep = -1;
+		showPayoff = false;
 
 		for (let i = 0; i < steps.length; i++) {
 			timers.push(
@@ -37,12 +42,24 @@
 			);
 		}
 
-		const endTime = INITIAL_DELAY + (steps.length - 1) * STEP_MS + HOLD_MS;
+		const lastStepTime = INITIAL_DELAY + (steps.length - 1) * STEP_MS;
+
 		timers.push(
 			setTimeout(() => {
-				activeStep = -1;
-				timers.push(setTimeout(() => runFlow(), RESET_MS));
-			}, endTime)
+				showPayoff = true;
+			}, lastStepTime + PAYOFF_DELAY)
+		);
+
+		timers.push(
+			setTimeout(() => {
+				showPayoff = false;
+				timers.push(
+					setTimeout(() => {
+						activeStep = -1;
+						timers.push(setTimeout(() => runFlow(), RESET_MS));
+					}, PAYOFF_FADE)
+				);
+			}, lastStepTime + PAYOFF_DELAY + PAYOFF_DURATION)
 		);
 	}
 
@@ -56,6 +73,7 @@
 		if (reducedMotion) {
 			started = true;
 			activeStep = steps.length - 1;
+			showPayoff = true;
 			return;
 		}
 
@@ -131,6 +149,18 @@
 			{/each}
 		</ol>
 	</div>
+
+	<div class="payoff" class:payoff-visible={showPayoff}>
+		<div class="payoff-card">
+			<svg class="size-5 shrink-0 text-emerald-500" viewBox="0 0 24 24" fill="none">
+				<circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.12" />
+				<path d="M7.5 12.5l3 3 6-6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+			<span class="font-[Goga] text-sm font-semibold tracking-tight text-zinc-900">
+				Du premier contact au paiement — sans friction.
+			</span>
+		</div>
+	</div>
 </div>
 
 <style>
@@ -185,6 +215,35 @@
 		color: #18181b;
 	}
 
+	.payoff {
+		display: flex;
+		justify-content: center;
+		margin-top: 2rem;
+		opacity: 0;
+		transform: translateY(10px) scale(0.97);
+		transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+			transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+		pointer-events: none;
+	}
+
+	.payoff-visible {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+		pointer-events: auto;
+	}
+
+	.payoff-card {
+		display: flex;
+		align-items: center;
+		gap: 0.625rem;
+		padding: 0.625rem 1.25rem;
+		border-radius: 9999px;
+		border: 1px solid #d1fae5;
+		background-color: #ecfdf5;
+		box-shadow: 0 0 20px rgba(52, 211, 153, 0.15),
+			0 1px 3px rgba(0, 0, 0, 0.06);
+	}
+
 	@media (prefers-reduced-motion: reduce) {
 		.workflow .step {
 			transition: none !important;
@@ -199,6 +258,11 @@
 		}
 		.progress-line {
 			display: none !important;
+		}
+		.payoff {
+			transition: none !important;
+			opacity: 1 !important;
+			transform: none !important;
 		}
 	}
 </style>
