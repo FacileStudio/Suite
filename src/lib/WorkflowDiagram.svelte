@@ -19,8 +19,6 @@
 	const RESET_MS = 1200;
 	const INITIAL_DELAY = 300;
 	const PAYOFF_DELAY = 500;
-	const PAYOFF_DURATION = 2000;
-	const PAYOFF_FADE = 500;
 
 	let timers: ReturnType<typeof setTimeout>[] = [];
 
@@ -32,7 +30,6 @@
 	function runFlow() {
 		clearTimers();
 		activeStep = -1;
-		showPayoff = false;
 
 		for (let i = 0; i < steps.length; i++) {
 			timers.push(
@@ -44,22 +41,19 @@
 
 		const lastStepTime = INITIAL_DELAY + (steps.length - 1) * STEP_MS;
 
-		timers.push(
-			setTimeout(() => {
-				showPayoff = true;
-			}, lastStepTime + PAYOFF_DELAY)
-		);
+		if (!showPayoff) {
+			timers.push(
+				setTimeout(() => {
+					showPayoff = true;
+				}, lastStepTime + PAYOFF_DELAY)
+			);
+		}
 
 		timers.push(
 			setTimeout(() => {
-				showPayoff = false;
-				timers.push(
-					setTimeout(() => {
-						activeStep = -1;
-						timers.push(setTimeout(() => runFlow(), RESET_MS));
-					}, PAYOFF_FADE)
-				);
-			}, lastStepTime + PAYOFF_DELAY + PAYOFF_DURATION)
+				activeStep = -1;
+				timers.push(setTimeout(() => runFlow(), RESET_MS));
+			}, lastStepTime + HOLD_MS)
 		);
 	}
 
