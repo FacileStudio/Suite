@@ -338,7 +338,7 @@
         </div>
         <h2 use:reveal={{ delay: 100 }} class="max-w-2xl font-[Goga] text-4xl leading-[1.1] font-black tracking-tight md:text-6xl">
           Tout passe par Nook.<br />
-          <span class="text-zinc-500">Zéro configuration.</span>
+          <span class="text-zinc-500">Zero configuration.</span>
         </h2>
         <p use:reveal={{ delay: 200 }} class="mt-8 max-w-xl text-lg leading-relaxed text-zinc-400">
           Chaque outil émet et reçoit des événements via un bus central. Opus crée un projet, Sablier le reçoit. Plume signe un document, Ardoise le facture. Les apps s'enregistrent — ajoutez-en une, elle rejoint le réseau toute seule.
@@ -349,15 +349,15 @@
         <div use:reveal={{ delay: 400 }} class="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-xs text-zinc-500">
           <span class="flex items-center gap-2">
             <span class="inline-block h-px w-5 bg-white/25"></span>
-            Synchronisé
+            Synchronise
           </span>
           <span class="flex items-center gap-2">
             <span class="inline-block h-px w-5 bg-white/18"></span>
-            Émission seule
+            Emission seule
           </span>
           <span class="flex items-center gap-2">
             <span class="inline-block h-px w-5 bg-white/10"></span>
-            Prévu
+            Prevu
           </span>
         </div>
       </div>
