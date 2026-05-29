@@ -26,8 +26,8 @@
 		const a = -Math.PI / 2 + ((2 * Math.PI) / defs.length) * i;
 		const x = Math.round(CX + R * Math.cos(a));
 		const y = Math.round(CY + R * Math.sin(a));
-		const lx = Math.round(CX + (R + 22) * Math.cos(a));
-		const ly = Math.round(CY + (R + 22) * Math.sin(a));
+		const lx = Math.round(CX + (R + 24) * Math.cos(a));
+		const ly = Math.round(CY + (R + 24) * Math.sin(a));
 		const c = Math.cos(a);
 		const anchor = Math.abs(c) < 0.25 ? ('middle' as const) : c > 0 ? ('start' as const) : ('end' as const);
 		return { name, conn, x, y, lx, ly, anchor, i };
@@ -136,7 +136,7 @@
 						? 'rgba(255,255,255,0.25)'
 						: 'rgba(255,255,255,0.85)'}
 					font-family="Goga, sans-serif"
-					font-size="11"
+					font-size="13"
 					font-weight="600"
 					letter-spacing="0.02em">{n.name}</text
 				>

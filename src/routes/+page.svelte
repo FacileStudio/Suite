@@ -2,6 +2,7 @@
   import Icon from '@iconify/svelte';
   import type { Action } from 'svelte/action';
   import InterconnectivityGraph from '$lib/InterconnectivityGraph.svelte';
+  import WorkflowDiagram from '$lib/WorkflowDiagram.svelte';
 
   let visible = $state(false);
 
@@ -124,8 +125,10 @@
         <p use:reveal={{ delay: 200 }} class="mt-8 max-w-xl text-lg leading-relaxed text-zinc-400">
           Chaque outil émet et reçoit des événements via un bus central. Opus crée un projet, Sablier le reçoit. Plume signe un document, Ardoise le facture. Les apps s'enregistrent — ajoutez-en une, elle rejoint le réseau toute seule.
         </p>
-        <div class="mt-16">
-          <InterconnectivityGraph />
+        <div class="mt-16 -mx-6 overflow-x-auto px-6 sm:mx-0 sm:overflow-visible sm:px-0">
+          <div class="min-w-[480px]">
+            <InterconnectivityGraph />
+          </div>
         </div>
       </div>
     </section>
@@ -313,6 +316,25 @@
           </p>
         </div>
 
+      </div>
+    </section>
+
+    <section class="border-t border-zinc-200 bg-zinc-50">
+      <div class="mx-auto max-w-5xl px-6 py-28 md:py-36">
+        <div use:reveal={{ delay: 0 }} class="mb-10 flex items-center gap-3">
+          <Icon icon="solar:route-bold-duotone" class="size-8 text-zinc-900" />
+          <span class="font-[Goga] text-2xl font-semibold tracking-tight">Le parcours</span>
+        </div>
+        <h2 use:reveal={{ delay: 100 }} class="font-[Goga] text-4xl font-black tracking-tight md:text-5xl">
+          Du lead au paiement.<br />
+          <span class="text-zinc-400">Chaque etape, un outil.</span>
+        </h2>
+        <p use:reveal={{ delay: 200 }} class="mt-8 max-w-xl text-lg leading-relaxed text-zinc-500">
+          On a cartographié le parcours complet d'un studio créatif — du premier contact au suivi post-projet. Chaque étape a son outil, chaque outil fait le lien avec les autres.
+        </p>
+        <div class="mt-16">
+          <WorkflowDiagram />
+        </div>
       </div>
     </section>
 
