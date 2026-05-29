@@ -16,10 +16,10 @@
 		['Glouton', 'active'],
 		['Ardoise', 'active'],
 		['Plume', 'active'],
-		['Portail', 'future'],
-		['Nuage', 'future'],
-		['Echo', 'future'],
-		['Capsule', 'future']
+		['Portail', 'active'],
+		['Nuage', 'active'],
+		['Echo', 'active'],
+		['Capsule', 'active']
 	];
 
 	const nodes = defs.map(([name, conn], i) => {
