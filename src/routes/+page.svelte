@@ -87,7 +87,7 @@
         </p>
         <div class="mt-10 flex flex-wrap items-center gap-4">
           <a
-            href="#perception"
+            href="#interconnectivity"
             class="inline-flex items-center gap-2 rounded-md bg-zinc-900 px-6 py-3 text-base font-medium text-white transition-colors hover:bg-zinc-800"
           >
             Découvrir la suite
@@ -106,35 +106,26 @@
       </div>
     </section>
 
-    <section id="perception" class="border-y border-zinc-200 bg-zinc-950 text-white">
+    <section id="interconnectivity" class="border-y border-zinc-200 bg-zinc-950 text-white">
       <div class="mx-auto max-w-5xl px-6 py-28 md:py-36">
         <div use:reveal={{ delay: 0 }} class="mb-10 flex items-center gap-3">
-          <svg class="size-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill="currentColor" opacity=".5" d="M2 12c0 1.64.425 2.191 1.275 3.296C4.972 17.5 7.818 20 12 20s7.028-2.5 8.725-4.704C21.575 14.192 22 13.639 22 12c0-1.64-.425-2.191-1.275-3.296C19.028 6.5 16.182 4 12 4S4.972 6.5 3.275 8.704C2.425 9.81 2 10.361 2 12"/>
-            <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12a3.75 3.75 0 1 1 7.5 0a3.75 3.75 0 0 1-7.5 0m1.5 0a2.25 2.25 0 1 1 4.5 0a2.25 2.25 0 0 1-4.5 0"/>
+          <svg class="size-8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" d="M14.5 12.5a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0"/>
+            <path fill="currentColor" d="M10.31 17.344c.767-.876 1.151-1.314 1.625-1.342q.065-.004.13 0c.474.028.858.466 1.625 1.342c1.67 1.906 2.505 2.858 2.271 3.68q-.03.107-.074.206C15.543 22 14.362 22 12 22s-3.543 0-3.887-.77a2 2 0 0 1-.074-.206c-.234-.822.6-1.774 2.27-3.68M14.5 12.5a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0"/>
+            <path fill="currentColor" fill-rule="evenodd" d="M12 8.035c-2.697 0-4.884 2.151-4.884 4.806a4.75 4.75 0 0 0 1.43 3.398a.68.68 0 0 1 0 .97a.706.706 0 0 1-.986 0a6.1 6.1 0 0 1-1.84-4.368c0-3.413 2.812-6.18 6.28-6.18s6.279 2.767 6.279 6.18a6.1 6.1 0 0 1-1.84 4.369a.706.706 0 0 1-.986 0a.68.68 0 0 1 0-.971a4.75 4.75 0 0 0 1.43-3.398c0-2.655-2.186-4.806-4.883-4.806" clip-rule="evenodd" opacity=".7"/>
+            <path fill="currentColor" fill-rule="evenodd" d="M12 4.373c-4.752 0-8.605 3.791-8.605 8.468c0 2.338.963 4.454 2.52 5.987a.68.68 0 0 1 0 .97a.706.706 0 0 1-.986 0A9.73 9.73 0 0 1 2 12.842C2 7.406 6.477 3 12 3s10 4.406 10 9.84a9.73 9.73 0 0 1-2.929 6.959a.706.706 0 0 1-.987 0a.68.68 0 0 1 0-.971a8.37 8.37 0 0 0 2.52-5.987c0-4.677-3.852-8.468-8.604-8.468" clip-rule="evenodd" opacity=".4"/>
           </svg>
-          <span class="font-[Goga] text-2xl font-semibold tracking-tight">Perception</span>
+          <span class="font-[Goga] text-2xl font-semibold tracking-tight">Nook</span>
         </div>
         <h2 use:reveal={{ delay: 100 }} class="max-w-2xl font-[Goga] text-4xl leading-[1.1] font-black tracking-tight md:text-6xl">
-          Posez la question.<br />
-          <span class="text-zinc-500">On a tout vu.</span>
+          Tout passe par Nook.<br />
+          <span class="text-zinc-500">Zero configuration.</span>
         </h2>
         <p use:reveal={{ delay: 200 }} class="mt-8 max-w-xl text-lg leading-relaxed text-zinc-400">
-          Perception connecte tous vos outils en un seul cerveau. Clients, contrats, projets, heures — tout est lié. Demandez n'importe quoi en langage naturel, obtenez une réponse sourcée en temps réel.
+          Chaque outil émet et reçoit des événements via un bus central. Opus crée un projet, Sablier le reçoit. Plume signe un document, Ardoise le facture. Les apps s'enregistrent — ajoutez-en une, elle rejoint le réseau toute seule.
         </p>
-
-        <div class="mt-16 grid gap-x-16 gap-y-10 sm:grid-cols-2">
-          {#each [
-            { term: 'Recherche intelligente', def: 'Douze sources fouillées en parallèle. Chaque réponse cite d\'où elle vient.' },
-            { term: 'Connexion automatique', def: 'Un client dans Opus, un signataire dans DocuSeal, un timer dans Sablier — Perception sait que c\'est la même personne.' },
-            { term: 'Prévisions', def: 'Anticipe les tendances de votre activité avec des intervalles de confiance qui s\'affinent au fil du temps.' },
-            { term: 'Alertes anomalies', def: 'Détecte les changements de rythme avant que vous ne les remarquiez. Identifie les causes, pas juste les symptômes.' },
-          ] as item, i}
-            <div use:reveal={{ delay: 300 + i * 100 }} class="group">
-              <dt class="text-sm font-semibold text-white group-hover:text-zinc-300 transition-colors">{item.term}</dt>
-              <dd class="mt-2 text-sm leading-relaxed text-zinc-500">{item.def}</dd>
-            </div>
-          {/each}
+        <div class="mt-16">
+          <InterconnectivityGraph />
         </div>
       </div>
     </section>
@@ -325,40 +316,35 @@
       </div>
     </section>
 
-    <section id="interconnectivity" class="border-t border-zinc-200 bg-zinc-950 text-white">
+    <section id="perception" class="border-t border-zinc-200 bg-zinc-950 text-white">
       <div class="mx-auto max-w-5xl px-6 py-28 md:py-36">
         <div use:reveal={{ delay: 0 }} class="mb-10 flex items-center gap-3">
-          <svg class="size-8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path fill="currentColor" d="M14.5 12.5a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0"/>
-            <path fill="currentColor" d="M10.31 17.344c.767-.876 1.151-1.314 1.625-1.342q.065-.004.13 0c.474.028.858.466 1.625 1.342c1.67 1.906 2.505 2.858 2.271 3.68q-.03.107-.074.206C15.543 22 14.362 22 12 22s-3.543 0-3.887-.77a2 2 0 0 1-.074-.206c-.234-.822.6-1.774 2.27-3.68M14.5 12.5a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0"/>
-            <path fill="currentColor" fill-rule="evenodd" d="M12 8.035c-2.697 0-4.884 2.151-4.884 4.806a4.75 4.75 0 0 0 1.43 3.398a.68.68 0 0 1 0 .97a.706.706 0 0 1-.986 0a6.1 6.1 0 0 1-1.84-4.368c0-3.413 2.812-6.18 6.28-6.18s6.279 2.767 6.279 6.18a6.1 6.1 0 0 1-1.84 4.369a.706.706 0 0 1-.986 0a.68.68 0 0 1 0-.971a4.75 4.75 0 0 0 1.43-3.398c0-2.655-2.186-4.806-4.883-4.806" clip-rule="evenodd" opacity=".7"/>
-            <path fill="currentColor" fill-rule="evenodd" d="M12 4.373c-4.752 0-8.605 3.791-8.605 8.468c0 2.338.963 4.454 2.52 5.987a.68.68 0 0 1 0 .97a.706.706 0 0 1-.986 0A9.73 9.73 0 0 1 2 12.842C2 7.406 6.477 3 12 3s10 4.406 10 9.84a9.73 9.73 0 0 1-2.929 6.959a.706.706 0 0 1-.987 0a.68.68 0 0 1 0-.971a8.37 8.37 0 0 0 2.52-5.987c0-4.677-3.852-8.468-8.604-8.468" clip-rule="evenodd" opacity=".4"/>
+          <svg class="size-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" opacity=".5" d="M2 12c0 1.64.425 2.191 1.275 3.296C4.972 17.5 7.818 20 12 20s7.028-2.5 8.725-4.704C21.575 14.192 22 13.639 22 12c0-1.64-.425-2.191-1.275-3.296C19.028 6.5 16.182 4 12 4S4.972 6.5 3.275 8.704C2.425 9.81 2 10.361 2 12"/>
+            <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12a3.75 3.75 0 1 1 7.5 0a3.75 3.75 0 0 1-7.5 0m1.5 0a2.25 2.25 0 1 1 4.5 0a2.25 2.25 0 0 1-4.5 0"/>
           </svg>
-          <span class="font-[Goga] text-2xl font-semibold tracking-tight">Nook</span>
+          <span class="font-[Goga] text-2xl font-semibold tracking-tight">Perception</span>
         </div>
         <h2 use:reveal={{ delay: 100 }} class="max-w-2xl font-[Goga] text-4xl leading-[1.1] font-black tracking-tight md:text-6xl">
-          Tout passe par Nook.<br />
-          <span class="text-zinc-500">Zero configuration.</span>
+          Posez la question.<br />
+          <span class="text-zinc-500">On a tout vu.</span>
         </h2>
         <p use:reveal={{ delay: 200 }} class="mt-8 max-w-xl text-lg leading-relaxed text-zinc-400">
-          Chaque outil émet et reçoit des événements via un bus central. Opus crée un projet, Sablier le reçoit. Plume signe un document, Ardoise le facture. Les apps s'enregistrent — ajoutez-en une, elle rejoint le réseau toute seule.
+          Perception connecte tous vos outils en un seul cerveau. Clients, contrats, projets, heures — tout est lié. Demandez n'importe quoi en langage naturel, obtenez une réponse sourcée en temps réel.
         </p>
-        <div class="mt-16">
-          <InterconnectivityGraph />
-        </div>
-        <div use:reveal={{ delay: 400 }} class="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-xs text-zinc-500">
-          <span class="flex items-center gap-2">
-            <span class="inline-block h-px w-5 bg-white/25"></span>
-            Synchronise
-          </span>
-          <span class="flex items-center gap-2">
-            <span class="inline-block h-px w-5 bg-white/18"></span>
-            Emission seule
-          </span>
-          <span class="flex items-center gap-2">
-            <span class="inline-block h-px w-5 bg-white/10"></span>
-            Prevu
-          </span>
+
+        <div class="mt-16 grid gap-x-16 gap-y-10 sm:grid-cols-2">
+          {#each [
+            { term: 'Recherche intelligente', def: 'Douze sources fouillées en parallèle. Chaque réponse cite d\'où elle vient.' },
+            { term: 'Connexion automatique', def: 'Un client dans Opus, un signataire dans DocuSeal, un timer dans Sablier — Perception sait que c\'est la même personne.' },
+            { term: 'Prévisions', def: 'Anticipe les tendances de votre activité avec des intervalles de confiance qui s\'affinent au fil du temps.' },
+            { term: 'Alertes anomalies', def: 'Détecte les changements de rythme avant que vous ne les remarquiez. Identifie les causes, pas juste les symptômes.' },
+          ] as item, i}
+            <div use:reveal={{ delay: 300 + i * 100 }} class="group">
+              <dt class="text-sm font-semibold text-white group-hover:text-zinc-300 transition-colors">{item.term}</dt>
+              <dd class="mt-2 text-sm leading-relaxed text-zinc-500">{item.def}</dd>
+            </div>
+          {/each}
         </div>
       </div>
     </section>

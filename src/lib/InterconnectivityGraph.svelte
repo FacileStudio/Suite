@@ -6,16 +6,16 @@
 	const CY = 260;
 	const R = 185;
 
-	type Conn = 'sync' | 'emit' | 'tap' | 'future';
+	type Conn = 'active' | 'future';
 
 	const defs: [string, Conn][] = [
-		['Perception', 'tap'],
-		['Sablier', 'sync'],
-		['Opus', 'sync'],
-		['Vision', 'emit'],
-		['Glouton', 'sync'],
-		['Ardoise', 'sync'],
-		['Plume', 'sync'],
+		['Perception', 'active'],
+		['Sablier', 'active'],
+		['Opus', 'active'],
+		['Vision', 'active'],
+		['Glouton', 'active'],
+		['Ardoise', 'active'],
+		['Plume', 'active'],
 		['Portail', 'future'],
 		['Nuage', 'future'],
 		['Echo', 'future'],
@@ -92,7 +92,7 @@
 				x2={n.x}
 				y2={n.y}
 				stroke="white"
-				stroke-opacity={n.conn === 'sync' ? 0.25 : n.conn === 'future' ? 0.06 : 0.18}
+				stroke-opacity={n.conn === 'active' ? 0.25 : 0.06}
 				stroke-width={n.conn === 'future' ? 0.5 : 1}
 				class="conn"
 				style="--delay:{n.i * 80}ms"
@@ -100,7 +100,7 @@
 		{/each}
 
 		{#each nodes as n}
-			{#if n.conn === 'sync'}
+			{#if n.conn === 'active'}
 				<circle r="2.5" fill="white" class="particle">
 					<animateMotion
 						dur="{2.2 + n.i * 0.25}s"
@@ -111,22 +111,6 @@
 				<circle r="2" fill="white" class="particle dim">
 					<animateMotion
 						dur="{2.8 + n.i * 0.2}s"
-						repeatCount="indefinite"
-						path="M{CX},{CY} L{n.x},{n.y}"
-					/>
-				</circle>
-			{:else if n.conn === 'emit'}
-				<circle r="2.5" fill="white" class="particle">
-					<animateMotion
-						dur="{2.5 + n.i * 0.25}s"
-						repeatCount="indefinite"
-						path="M{n.x},{n.y} L{CX},{CY}"
-					/>
-				</circle>
-			{:else if n.conn === 'tap'}
-				<circle r="2" fill="white" class="particle dim">
-					<animateMotion
-						dur="3.5s"
 						repeatCount="indefinite"
 						path="M{CX},{CY} L{n.x},{n.y}"
 					/>
