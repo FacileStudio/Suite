@@ -61,7 +61,7 @@
 
 <div bind:this={container} class="graph" class:active>
 	<svg
-		viewBox="0 0 800 520"
+		viewBox="-40 0 880 520"
 		xmlns="http://www.w3.org/2000/svg"
 		class="mx-auto h-auto w-full"
 		aria-label="Schéma des connexions entre les outils Facile via Nook"

@@ -125,10 +125,8 @@
         <p use:reveal={{ delay: 200 }} class="mt-8 max-w-xl text-lg leading-relaxed text-zinc-400">
           Chaque outil émet et reçoit des événements via un bus central. Opus crée un projet, Sablier le reçoit. Plume signe un document, Ardoise le facture. Les apps s'enregistrent — ajoutez-en une, elle rejoint le réseau toute seule.
         </p>
-        <div class="mt-16 -mx-6 overflow-x-auto px-6 sm:mx-0 sm:overflow-visible sm:px-0">
-          <div class="min-w-[480px]">
-            <InterconnectivityGraph />
-          </div>
+        <div class="mt-16">
+          <InterconnectivityGraph />
         </div>
       </div>
     </section>
