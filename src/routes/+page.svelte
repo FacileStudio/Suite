@@ -330,7 +330,7 @@
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
-              <Icon icon="solar:document-text-bold-duotone" class="size-6 text-zinc-900" />
+              <Icon icon="solar:microphone-3-bold-duotone" class="size-6 text-zinc-900" />
             </div>
             <h3 class="font-[Goga] text-lg font-bold tracking-tight">Scribe</h3>
           </div>
