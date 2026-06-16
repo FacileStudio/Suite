@@ -139,7 +139,7 @@
 
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
 
-        <a href="https://github.com/FacileStudio/Sablier" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 0 }} class="{card} sm:col-span-2 md:p-8 block no-underline">
+        <a href="https://sablier.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 0 }} class="{card} sm:col-span-2 md:p-8 block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -155,7 +155,7 @@
           </p>
         </a>
 
-        <a href="https://github.com/FacileStudio/Opus" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 70 }} class="{card} block no-underline">
+        <a href="https://opus.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 70 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -171,7 +171,7 @@
           </p>
         </a>
 
-        <a href="https://github.com/FacileStudio/Vision" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 140 }} class="{card} block no-underline">
+        <a href="https://vision.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 140 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -187,7 +187,7 @@
           </p>
         </a>
 
-        <a href="https://github.com/FacileStudio/Glouton" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 210 }} class="{card} block no-underline">
+        <a href="https://glouton.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 210 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -200,7 +200,7 @@
           </p>
         </a>
 
-        <a href="https://github.com/FacileStudio/Nook" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 280 }} class="{card} block no-underline">
+        <a href="https://nook.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 280 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -217,7 +217,7 @@
           </p>
         </a>
 
-        <a href="https://github.com/FacileStudio/Ardoise" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 350 }} class="{card} block no-underline">
+        <a href="https://ardoise.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 350 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -233,7 +233,7 @@
           </p>
         </a>
 
-        <a href="https://github.com/FacileStudio/Plume" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 420 }} class="{card} block no-underline">
+        <a href="https://plume.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 420 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -246,7 +246,7 @@
           </p>
         </a>
 
-        <a href="https://github.com/FacileStudio/portail" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 490 }} class="{card} block no-underline">
+        <a href="https://portail.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 490 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -259,7 +259,7 @@
           </p>
         </a>
 
-        <a href="https://github.com/FacileStudio/Nuage" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 560 }} class="{card} block no-underline">
+        <a href="https://nuage.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 560 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -272,7 +272,7 @@
           </p>
         </a>
 
-        <a href="https://echo.facile.app" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 630 }} class="{card} block no-underline">
+        <a href="https://echo.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 630 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
