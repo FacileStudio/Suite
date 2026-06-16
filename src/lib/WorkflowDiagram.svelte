@@ -7,8 +7,8 @@
 	const steps = [
 		{ phase: 'Trouver', tools: ['Glouton'] },
 		{ phase: 'Signer', tools: ['Plume'] },
-		{ phase: 'Planifier', tools: ['Opus'] },
-		{ phase: 'Produire', tools: ['Sablier', 'Echo'] },
+		{ phase: 'Planifier', tools: ['Opus', 'Agenda'] },
+		{ phase: 'Produire', tools: ['Sablier', 'Echo', 'Courrier'] },
 		{ phase: 'Livrer', tools: ['Nuage', 'Capsule', 'Portail'] },
 		{ phase: 'Facturer', tools: ['Ardoise'] },
 		{ phase: 'Mesurer', tools: ['Vision', 'Nook', 'Perception'] }

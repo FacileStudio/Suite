@@ -19,7 +19,9 @@
 		['Portail', 'active'],
 		['Nuage', 'active'],
 		['Echo', 'active'],
-		['Capsule', 'active']
+		['Capsule', 'active'],
+		['Courrier', 'active'],
+		['Agenda', 'active']
 	];
 
 	const nodes = defs.map(([name, conn], i) => {
