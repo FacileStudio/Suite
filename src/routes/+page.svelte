@@ -139,7 +139,7 @@
 
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
 
-        <div use:reveal={{ delay: 0 }} class="{card} sm:col-span-2 md:p-8">
+        <a href="https://github.com/FacileStudio/Sablier" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 0 }} class="{card} sm:col-span-2 md:p-8 block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -153,9 +153,9 @@
           <p class="max-w-md text-sm leading-relaxed text-zinc-500">
             Vos heures facturables, tracées sans friction. Un clic pour lancer, un clic pour arrêter. Ventilation par projet et sessions partagées.
           </p>
-        </div>
+        </a>
 
-        <div use:reveal={{ delay: 70 }} class={card}>
+        <a href="https://github.com/FacileStudio/Opus" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 70 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -169,9 +169,9 @@
           <p class="text-sm leading-relaxed text-zinc-500">
             La gestion de projet qui ne vous ralentit pas. Kanban, relations entre tâches, recherche instantanée — le minimum qui fait le maximum.
           </p>
-        </div>
+        </a>
 
-        <div use:reveal={{ delay: 140 }} class={card}>
+        <a href="https://github.com/FacileStudio/Vision" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 140 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -185,9 +185,9 @@
           <p class="text-sm leading-relaxed text-zinc-500">
             L'analytique web qui respecte vos visiteurs. Un script, zéro cookie, données en temps réel. Vous savez d'où vient votre trafic sans vendre l'âme de vos utilisateurs.
           </p>
-        </div>
+        </a>
 
-        <div use:reveal={{ delay: 210 }} class={card}>
+        <a href="https://github.com/FacileStudio/Glouton" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 210 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -198,9 +198,9 @@
           <p class="text-sm leading-relaxed text-zinc-500">
             Vos prochains clients, trouvés pendant que vous dormez. Glouton crawle le web, détecte les stacks techniques, score les prospects et vous sert les meilleurs sur un plateau.
           </p>
-        </div>
+        </a>
 
-        <div use:reveal={{ delay: 280 }} class={card}>
+        <a href="https://github.com/FacileStudio/Nook" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 280 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -215,9 +215,9 @@
           <p class="text-sm leading-relaxed text-zinc-500">
             Quand quelque chose tombe, vous le savez en premier. Nook centralise les alertes de toute votre infra et les pousse où vous voulez — Discord, Matrix, email, push.
           </p>
-        </div>
+        </a>
 
-        <div use:reveal={{ delay: 350 }} class={card}>
+        <a href="https://github.com/FacileStudio/Ardoise" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 350 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -231,9 +231,9 @@
           <p class="text-sm leading-relaxed text-zinc-500">
             Facturez, encaissez, oubliez. Stripe intégré, emails automatiques, reçus téléchargeables. Vos clients paient, vous êtes notifié, point.
           </p>
-        </div>
+        </a>
 
-        <div use:reveal={{ delay: 420 }} class={card}>
+        <a href="https://github.com/FacileStudio/Plume" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 420 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -244,9 +244,9 @@
           <p class="text-sm leading-relaxed text-zinc-500">
             La signature électronique sans usine à gaz. Déposez un PDF, placez les champs, envoyez le lien, recevez la preuve signée avec audit trail et webhooks.
           </p>
-        </div>
+        </a>
 
-        <div use:reveal={{ delay: 490 }} class={card}>
+        <a href="https://github.com/FacileStudio/portail" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 490 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -257,9 +257,9 @@
           <p class="text-sm leading-relaxed text-zinc-500">
             Un fichier YAML, et toute votre équipe a une page d'accueil vers chaque service du studio. Déploiements, docs, monitoring, mots de passe — tout en un clic.
           </p>
-        </div>
+        </a>
 
-        <div use:reveal={{ delay: 560 }} class={card}>
+        <a href="https://github.com/FacileStudio/Nuage" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 560 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -270,9 +270,9 @@
           <p class="text-sm leading-relaxed text-zinc-500">
             Le stockage fichiers du studio. Upload, dossiers, recherche — un drive interne connecté à tous vos outils via API. Vos fichiers restent sur votre serveur, pas chez Google.
           </p>
-        </div>
+        </a>
 
-        <div use:reveal={{ delay: 630 }} class={card}>
+        <a href="https://github.com/FacileStudio/Echo" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 630 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -283,9 +283,9 @@
           <p class="text-sm leading-relaxed text-zinc-500">
             Visioconférence simple et sécurisée. Créez une salle, partagez le lien, c'est tout.
           </p>
-        </div>
+        </a>
 
-        <div use:reveal={{ delay: 700 }} class={card}>
+        <a href="https://github.com/FacileStudio/Capsule" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 700 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -296,9 +296,9 @@
           <p class="text-sm leading-relaxed text-zinc-500">
             Partagez un secret qui s'autodétruit. Chiffrement de bout en bout dans le navigateur, zero-knowledge côté serveur. Un lien, une ouverture, puis rien.
           </p>
-        </div>
+        </a>
 
-        <div use:reveal={{ delay: 770 }} class={card}>
+        <a href="https://github.com/FacileStudio/Courrier" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 770 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -309,9 +309,9 @@
           <p class="text-sm leading-relaxed text-zinc-500">
             Votre email, chez vous. IMAP et SMTP natifs, multi-comptes, interface épurée. Toute la correspondance du studio sans passer par Gmail.
           </p>
-        </div>
+        </a>
 
-        <div use:reveal={{ delay: 840 }} class={card}>
+        <a href="https://github.com/FacileStudio/Agenda" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 840 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -322,9 +322,9 @@
           <p class="text-sm leading-relaxed text-zinc-500">
             Le calendrier partagé du studio. Rendez-vous, deadlines, dispos — tout le monde voit la même chose, sans Google Calendar.
           </p>
-        </div>
+        </a>
 
-        <div use:reveal={{ delay: 910 }} class={card}>
+        <a href="https://scribe.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 910 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -335,7 +335,7 @@
           <p class="text-sm leading-relaxed text-zinc-500">
             Transcription de réunions par IA. Capturez l'audio, obtenez le transcript en temps réel et des notes structurées — sujets, décisions, actions.
           </p>
-        </div>
+        </a>
 
         <div
           use:reveal={{ delay: 980 }}
