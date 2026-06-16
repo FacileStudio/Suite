@@ -272,7 +272,7 @@
           </p>
         </a>
 
-        <a href="https://github.com/FacileStudio/Echo" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 630 }} class="{card} block no-underline">
+        <a href="https://echo.facile.app" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 630 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -285,7 +285,7 @@
           </p>
         </a>
 
-        <a href="https://github.com/FacileStudio/Capsule" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 700 }} class="{card} block no-underline">
+        <a href="https://capsule.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 700 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -298,7 +298,7 @@
           </p>
         </a>
 
-        <a href="https://github.com/FacileStudio/Courrier" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 770 }} class="{card} block no-underline">
+        <a href="https://courrier.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 770 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -311,7 +311,7 @@
           </p>
         </a>
 
-        <a href="https://github.com/FacileStudio/Agenda" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 840 }} class="{card} block no-underline">
+        <a href="https://agenda.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 840 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
