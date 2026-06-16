@@ -61,7 +61,7 @@ INTERCONNECTIVITY.md  Architecture doc on how Suite tools connect
 ## Notes
 
 - `.npmrc` sets `engine-strict=true`.
-- The page describes fourteen Facile tools: Perception, Sablier, Opus, Vision, Glouton, Nook, Ardoise, Plume, Portail, Nuage, Echo, Capsule, Courrier, Agenda.
+- The page describes fifteen Facile tools: Perception, Sablier, Opus, Vision, Glouton, Nook, Ardoise, Plume, Portail, Nuage, Echo, Capsule, Courrier, Agenda, Scribe.
 - `INTERCONNECTIVITY.md` documents the current (mostly disconnected) state of inter-tool communication and plans for unification.
 - No test framework is configured.
 - No linter is configured.

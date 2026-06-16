@@ -8,7 +8,7 @@
 		{ phase: 'Trouver', tools: ['Glouton'] },
 		{ phase: 'Signer', tools: ['Plume'] },
 		{ phase: 'Planifier', tools: ['Opus', 'Agenda'] },
-		{ phase: 'Produire', tools: ['Sablier', 'Echo', 'Courrier'] },
+		{ phase: 'Produire', tools: ['Sablier', 'Echo', 'Courrier', 'Scribe'] },
 		{ phase: 'Livrer', tools: ['Nuage', 'Capsule', 'Portail'] },
 		{ phase: 'Facturer', tools: ['Ardoise'] },
 		{ phase: 'Mesurer', tools: ['Vision', 'Nook', 'Perception'] }

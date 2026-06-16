@@ -21,7 +21,8 @@
 		['Echo', 'active'],
 		['Capsule', 'active'],
 		['Courrier', 'active'],
-		['Agenda', 'active']
+		['Agenda', 'active'],
+		['Scribe', 'active']
 	];
 
 	const nodes = defs.map(([name, conn], i) => {

@@ -49,7 +49,7 @@
 
 <svelte:head>
   <title>Facile Suite — Votre studio tourne tout seul</title>
-  <meta name="description" content="Quatorze outils intégrés qui gèrent le temps, les projets, les leads, la signature, la facturation et l'intelligence de votre studio. Auto-hébergé, open source, un seul serveur." />
+  <meta name="description" content="Quinze outils intégrés qui gèrent le temps, les projets, les leads, la signature, la facturation et l'intelligence de votre studio. Auto-hébergé, open source, un seul serveur." />
 </svelte:head>
 
 <div class="min-h-screen bg-white text-zinc-900">
@@ -83,7 +83,7 @@
           <span class="text-zinc-400">Vous bossez.</span>
         </h1>
         <p class="mt-8 max-w-lg text-lg leading-relaxed text-zinc-500">
-          Quatorze outils qui se parlent, sur votre serveur.
+          Quinze outils qui se parlent, sur votre serveur.
           Temps, projets, leads, signatures, factures, monitoring — un seul login, zéro dépendance cloud.
         </p>
         <div class="mt-10 flex flex-wrap items-center gap-4">
@@ -326,8 +326,21 @@
           </p>
         </div>
 
+        <div use:reveal={{ delay: 910 }} class={card}>
+          <div class={glow}></div>
+          <div class="mb-4 flex items-center gap-3">
+            <div class={ico}>
+              <Icon icon="solar:document-text-bold-duotone" class="size-6 text-zinc-900" />
+            </div>
+            <h3 class="font-[Goga] text-lg font-bold tracking-tight">Scribe</h3>
+          </div>
+          <p class="text-sm leading-relaxed text-zinc-500">
+            Transcription de réunions par IA. Capturez l'audio, obtenez le transcript en temps réel et des notes structurées — sujets, décisions, actions.
+          </p>
+        </div>
+
         <div
-          use:reveal={{ delay: 910 }}
+          use:reveal={{ delay: 980 }}
           class="group relative overflow-hidden rounded-2xl bg-zinc-950 p-6 text-white transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:shadow-2xl sm:col-span-2 lg:col-span-3 md:p-8 bg-[linear-gradient(110deg,transparent_30%,rgba(255,255,255,0.03)_50%,transparent_70%)] [background-size:250%_100%] animate-[shimmer_6s_ease-in-out_infinite] motion-reduce:animate-none motion-reduce:transition-none"
         >
           <div class="pointer-events-none absolute -right-24 -top-24 size-48 rounded-full bg-zinc-800 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-60"></div>
