@@ -436,7 +436,8 @@ All apps emit and consume the same envelope. Nook routes it without parsing the 
 
 ```json
 {
-  "app": "opus",
+  "version": 1,
+  "app": "Opus",
   "object": "project",
   "action": "created",
   "facile_id": "fac_cuid2xyz",
@@ -448,6 +449,8 @@ All apps emit and consume the same envelope. Nook routes it without parsing the 
   "idempotency_key": "opus_proj_created_fac_cuid2xyz_1716388200"
 }
 ```
+
+The `version` field is bumped on breaking envelope changes; additive changes keep the version. Consumers must ignore unknown fields.
 
 ### Canonical object shapes
 
@@ -517,14 +520,16 @@ The sync path is dumb and deterministic. Perception is smart and analytical. The
 
 ## Per-App Implementation Checklist
 
-Each app needs these additions to join the Nook mesh:
+Each app needs these additions to join the Nook mesh (Opus and Sablier implement all of these — copy their `nook-pool` / `nookpool` modules):
 
-1. **`facile_id` column** on synced tables (nullable, unique)
-2. **Event emitter** — emit `@facile/events` envelope on CRUD mutations
-3. **Webhook handler** — `POST /webhooks/nook` to receive incoming events
-4. **Adapter layer** — map between local model and canonical `@facile/events` shape
-5. **Settings toggle** — "Enable Nook Sync" that registers/unregisters with Nook
-6. **HMAC validation** — verify event signatures from Nook (same pattern Nook -> Perception already uses)
+1. **`facile_id` column** on synced tables (nullable, unique per tenant scope — Opus scopes it per workspace)
+2. **Event emitter through an outbox** — CRUD mutations write the envelope to an outbox table (`pool_outbox` / `nook_pool_outbox`); a background drainer emits to the pool while connected and stops (never skips) on failure. Direct fire-and-forget emits drop events during pool outages — don't do that.
+3. **Pool listener** — connect via the `pool` client library (WebSocket), which handles registration, replay from offsets, and acks
+4. **Idempotency ledger** — a `processed_events` table keyed by `idempotency_key` (plus tenant id for multi-tenant apps), checked before applying any incoming event. Delivery is at-least-once; without the ledger, non-idempotent handlers (invoices!) duplicate work.
+5. **Self-healing updates** — an `updated` event for an unknown `facile_id` creates the record instead of dropping the event
+6. **Adapter layer** — map between local model and the canonical `enveloppe` shape, always stamping `version`
+7. **Settings toggle** — "Enable Nook Sync" that connects/disconnects the pool client
+8. **Instance identity** — multi-tenant apps register with `instance_id` (Opus uses the workspace id), making the pool identity `app:instance_id`; single-tenant apps omit it
 
 ### Estimated effort per app
 
@@ -552,16 +557,18 @@ Each app needs these additions to join the Nook mesh:
 
 ---
 
+## Settled Decisions (from the Opus <-> Sablier PoC)
+
+- **Event schema versioning** — envelopes carry `version: 1`; breaking changes bump it, consumers ignore unknown fields.
+- **Multi-instance identity** — pool identity is `app:instance_id` (Opus registers each workspace as its own instance). Several instances of one app can share a pool; each mirrors the full peer space. Echo filtering keys on the full identity.
+- **Outage tolerance** — producers buffer through a DB outbox; Nook persists the log (SQLite) and replays from consumer ack cursors on reconnect; consumers dedupe via the idempotency ledger. Nook downtime delays sync, never loses it (within retention).
+- **Retention** — Nook keeps events until every active listener has acked them (48h floor, 30-day hard ceiling); listeners unseen for 14 days stop pinning the log, and ceiling-crossing loss is logged loudly.
+- **Users cross the wire by email** (`actor_email`, `user_email`) until shared SSO / user sync exists.
+
 ## Open Questions
 
-1. **Origin-only writes or delegated edits?** If a synced project is edited in the non-origin app, should the edit propagate back to the origin, or should synced copies be read-only?
+1. **Origin-only writes or delegated edits?** If a synced project is edited in the non-origin app, should the edit propagate back to the origin, or should synced copies be read-only? (Current behavior: edits propagate both ways; origin-wins is not enforced.)
 
-2. **Workspace mapping.** Opus has workspaces, Sablier doesn't. When Opus syncs a project, which Sablier "scope" does it land in? (Sablier is workspace-wide, so this may be a non-issue.)
+2. **Deletion semantics.** When the origin deletes a project, receiving apps currently hard-delete. Soft-delete or `facile_id` nullification may be safer once invoicing data references synced objects.
 
-3. **Deletion semantics.** When the origin deletes a project, should receiving apps hard-delete, soft-delete, or just nullify the `facile_id`?
-
-4. **Nook HA.** If Nook is the single event bus, what happens when Nook itself goes down? SQLite queue helps on restart, but prolonged downtime means no sync. Consider: is this acceptable for a self-hosted suite?
-
-5. **Event schema versioning.** When `@facile/events` shapes evolve, how do apps handle old vs new event formats? Additive-only changes? Version field in the envelope?
-
-6. **Shared auth.** Cross-app sync works best with shared SSO (OIDC). Sablier and Opus both support it but aren't connected yet. This should land before or alongside the sync work.
+3. **Shared auth.** Cross-app sync works best with shared SSO (OIDC). Sablier and Opus both support it but aren't connected yet; until then, actor mapping relies on matching emails.
