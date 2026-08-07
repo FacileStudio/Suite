@@ -5,7 +5,7 @@
 Every Facile app is a standalone island. No shared code, no shared database, no shared types. Each app owns its own project model, its own auth, its own schema. The only integration points that exist today are:
 
 - **Perception** ingests events from other apps via `perception-js` SDK
-- **Nook** relays webhooks between services (Plume -> Nook -> Perception)
+- **Antenne** relays webhooks between services (Plume -> Antenne -> Perception)
 - **Portail** links to all services via hardcoded URLs
 - **Suite** describes the vision but implements none of it
 
@@ -42,19 +42,19 @@ Sablier tracks time. Opus manages projects. These two share the most obvious ove
 
 ---
 
-## Chosen Architecture: Nook as Universal Event Bus
+## Chosen Architecture: Antenne as Universal Event Bus
 
-After evaluating lightweight linking, shared microservices, shared databases, and direct API calls, the chosen architecture is **event-driven sync through Nook**.
+After evaluating lightweight linking, shared microservices, shared databases, and direct API calls, the chosen architecture is **event-driven sync through Antenne**.
 
-Every app in the suite gets one toggle: **"Enable Nook Sync"**. Nook handles discovery, routing, and delivery. Apps that aren't running don't receive events. Apps added later join the mesh automatically.
+Every app in the suite gets one toggle: **"Enable Antenne Sync"**. Antenne handles discovery, routing, and delivery. Apps that aren't running don't receive events. Apps added later join the mesh automatically.
 
 ### Core Principles
 
-1. **One integration per app, forever.** Each app talks to Nook. Never to other apps directly.
-2. **Canonical event format.** All apps emit and consume a shared `@facile/events` shape. Nook routes envelopes, never parses payloads.
+1. **One integration per app, forever.** Each app talks to Antenne. Never to other apps directly.
+2. **Canonical event format.** All apps emit and consume a shared `@facile/events` shape. Antenne routes envelopes, never parses payloads.
 3. **Origin-wins conflict resolution.** The app where an object was created owns it. Other apps receive synced copies.
 4. **Perception observes, never decides.** Perception taps the event stream for analytics and dashboards. It is not in the sync hot path.
-5. **Graceful partial deployments.** Run 2 apps or 8 — Nook adapts. No config matrix.
+5. **Graceful partial deployments.** Run 2 apps or 8 — Antenne adapts. No config matrix.
 
 ---
 
@@ -66,7 +66,7 @@ Every app in the suite gets one toggle: **"Enable Nook Sync"**. Nook handles dis
 direction: down
 
 title: {
-  label: Facile Suite — Nook Event Bus Architecture
+  label: Facile Suite — Antenne Event Bus Architecture
   near: top-center
   shape: text
   style.font-size: 28
@@ -168,10 +168,10 @@ contract: {
   style.font-size: 13
 }
 
-# ── Nook ────────────────────────────────────────────────
+# ── Antenne ────────────────────────────────────────────────
 
-nook: {
-  label: "Nook — Universal Event Bus"
+antenne: {
+  label: "Antenne — Universal Event Bus"
   style.fill: "#f3e5f5"
   style.stroke: "#7B1FA2"
   style.border-radius: 12
@@ -309,34 +309,34 @@ portail: {
   style.border-radius: 8
 }
 
-# ── Connections: Apps -> Nook ───────────────────────────
+# ── Connections: Apps -> Antenne ───────────────────────────
 
-apps.sablier -> nook: {
+apps.sablier -> antenne: {
   label: "emit + receive"
   style.stroke: "#2196F3"
   style.animated: true
 }
-apps.opus -> nook: {
+apps.opus -> antenne: {
   label: "emit + receive"
   style.stroke: "#2196F3"
   style.animated: true
 }
-apps.ardoise -> nook: {
+apps.ardoise -> antenne: {
   label: "emit + receive"
   style.stroke: "#2196F3"
   style.animated: true
 }
-apps.plume -> nook: {
+apps.plume -> antenne: {
   label: "emit + receive"
   style.stroke: "#2196F3"
   style.animated: true
 }
-apps.glouton -> nook: {
+apps.glouton -> antenne: {
   label: "emit + receive"
   style.stroke: "#2196F3"
   style.animated: true
 }
-apps.vision -> nook: {
+apps.vision -> antenne: {
   label: "emit only"
   style.stroke: "#90CAF9"
   style.stroke-dash: 5
@@ -349,15 +349,15 @@ apps -> contract: {
   style.stroke: "#f9a825"
   style.stroke-dash: 3
 }
-contract -> nook: {
+contract -> antenne: {
   label: "envelope format"
   style.stroke: "#f9a825"
   style.stroke-dash: 3
 }
 
-# ── Connection: Nook -> Perception ──────────────────────
+# ── Connection: Antenne -> Perception ──────────────────────
 
-nook.event-log -> perception: {
+antenne.event-log -> perception: {
   label: "tap (read-only stream)"
   style.stroke: "#388E3C"
   style.stroke-dash: 5
@@ -372,9 +372,9 @@ example: {
 
     1. User creates project "Acme" in Opus
     2. Opus emits `{app: "opus", object: "project", action: "created", facile_id: "fac_xyz", payload: {name: "Acme"}}`
-    3. Nook persists event in queue
+    3. Antenne persists event in queue
     4. Router checks registry → Sablier is registered for "project" events
-    5. Nook delivers to `POST sablier.internal/webhooks/nook`
+    5. Antenne delivers to `POST sablier.internal/webhooks/antenne`
     6. Sablier creates mirror project, stores `facile_id: "fac_xyz"`
     7. Event logged. Perception observes for analytics.
   |
@@ -389,18 +389,18 @@ example: {
 
 ---
 
-## How Nook Becomes the Event Bus
+## How Antenne Becomes the Event Bus
 
 ### Current state
 
-Nook is a monitoring tool. It watches websites, receives webhooks, and forwards alerts to Discord/Matrix/ntfy. Fire-and-forget. No persistence, no retry, no ordering.
+Antenne is a monitoring tool. It watches websites, receives webhooks, and forwards alerts to Discord/Matrix/ntfy. Fire-and-forget. No persistence, no retry, no ordering.
 
 ### Required upgrades
 
 | Capability | Why it matters |
 |-----------|---------------|
-| **App registry** | Nook needs to know which apps are running and what objects they care about. `POST /api/register {app, url, objects, webhook_endpoint}` |
-| **Persistent queue** | If Sablier is down for 5 minutes, events must wait, not vanish. SQLite-backed queue inside Nook. |
+| **App registry** | Antenne needs to know which apps are running and what objects they care about. `POST /api/register {app, url, objects, webhook_endpoint}` |
+| **Persistent queue** | If Sablier is down for 5 minutes, events must wait, not vanish. SQLite-backed queue inside Antenne. |
 | **At-least-once delivery** | Every event reaches every registered consumer, with idempotency keys to prevent duplicates. |
 | **Retry with backoff** | Failed deliveries retry automatically (exponential backoff, configurable max attempts). |
 | **Ordering guarantees** | `project.created` must arrive before `project.updated`. Per-object FIFO ordering via `facile_id`. |
@@ -409,22 +409,22 @@ Nook is a monitoring tool. It watches websites, receives webhooks, and forwards 
 
 ### Registration flow
 
-When an app enables "Nook Sync" in its settings:
+When an app enables "Antenne Sync" in its settings:
 
 ```
-App -> POST nook.internal/api/register
+App -> POST antenne.internal/api/register
 {
   "app": "sablier",
   "url": "https://sablier.internal",
   "objects": ["project", "task", "time_entry", "user"],
-  "webhook_endpoint": "/webhooks/nook",
+  "webhook_endpoint": "/webhooks/antenne",
   "secret": "hmac-shared-secret"
 }
 
-Nook -> 200 OK { "registered": true, "sync_id": "..." }
+Antenne -> 200 OK { "registered": true, "sync_id": "..." }
 ```
 
-Nook maintains the registry. When Opus emits `project.created`, Nook checks: "who is registered for `project` events?" — fans out to Sablier, Ardoise, whoever's listening.
+Antenne maintains the registry. When Opus emits `project.created`, Antenne checks: "who is registered for `project` events?" — fans out to Sablier, Ardoise, whoever's listening.
 
 Apps that aren't registered don't receive anything. Add Ardoise next month, it joins the mesh by registering. Zero config in other apps.
 
@@ -432,7 +432,7 @@ Apps that aren't registered don't receive anything. Add Ardoise next month, it j
 
 ## Canonical Event Format: `@facile/events`
 
-All apps emit and consume the same envelope. Nook routes it without parsing the payload.
+All apps emit and consume the same envelope. Antenne routes it without parsing the payload.
 
 ```json
 {
@@ -474,7 +474,7 @@ Sablier: projects.facile_id TEXT UNIQUE NULL
 Opus:    project.facile_id  TEXT UNIQUE NULL
 ```
 
-Nook routes by `facile_id`. Apps resolve to their local ID internally. This solves the `int64` vs CUID2 mismatch permanently.
+Antenne routes by `facile_id`. Apps resolve to their local ID internally. This solves the `int64` vs CUID2 mismatch permanently.
 
 **Who generates it?** The origin app — the app where the object was first created. When Opus creates a project, it generates the `facile_id`. When Sablier receives the sync event, it stores that `facile_id` alongside its local `int64` ID.
 
@@ -487,7 +487,7 @@ The app where an object was created is its **origin**. The origin app is the sou
 | Scenario | Behavior |
 |----------|----------|
 | Opus creates project, syncs to Sablier | Opus is origin. Opus edits propagate to Sablier. |
-| User edits the project name in Sablier | Sablier emits `project.updated`. Nook routes to Opus. Opus accepts (origin can delegate edits) OR rejects (origin-only writes). |
+| User edits the project name in Sablier | Sablier emits `project.updated`. Antenne routes to Opus. Opus accepts (origin can delegate edits) OR rejects (origin-only writes). |
 | Both apps edit simultaneously | Origin's edit wins. Non-origin edit is overwritten on next sync cycle. |
 | Origin app deletes the object | Deletion propagates. Receiving apps soft-delete or nullify the `facile_id`. |
 
@@ -497,7 +497,7 @@ The app where an object was created is its **origin**. The origin app is the sou
 
 ## Perception's Role: Observe, Don't Route
 
-Perception taps Nook's event log. It does **not** sit in the sync hot path.
+Perception taps Antenne's event log. It does **not** sit in the sync hot path.
 
 ### What Perception does with the event stream
 
@@ -520,16 +520,16 @@ The sync path is dumb and deterministic. Perception is smart and analytical. The
 
 ## Per-App Implementation Checklist
 
-Each app needs these additions to join the Nook mesh (Opus and Sablier implement all of these — copy their `nook-pool` / `nookpool` modules):
+Each app needs these additions to join the Antenne mesh (Opus and Sablier implement all of these — copy their `antenne` modules):
 
 1. **`facile_id` column** on synced tables (nullable, unique per tenant scope — Opus scopes it per workspace)
-2. **Event emitter through an outbox** — CRUD mutations write the envelope to an outbox table (`pool_outbox` / `nook_pool_outbox`); a background drainer emits to the pool while connected and stops (never skips) on failure. Direct fire-and-forget emits drop events during pool outages — don't do that.
-3. **Pool listener** — connect via the `pool` client library (WebSocket), which handles registration, replay from offsets, and acks
+2. **Event emitter through an outbox** — CRUD mutations write the envelope to an outbox table (`pool_outbox` / `nook_pool_outbox`); a background drainer emits to Antenne while connected and stops (never skips) on failure. Direct fire-and-forget emits drop events during coupures du bus — don't do that.
+3. **Antenne listener** — connect via the `antenne-client` library (WebSocket), which handles registration, replay from offsets, and acks
 4. **Idempotency ledger** — a `processed_events` table keyed by `idempotency_key` (plus tenant id for multi-tenant apps), checked before applying any incoming event. Delivery is at-least-once; without the ledger, non-idempotent handlers (invoices!) duplicate work.
 5. **Self-healing updates** — an `updated` event for an unknown `facile_id` creates the record instead of dropping the event
 6. **Adapter layer** — map between local model and the canonical `enveloppe` shape, always stamping `version`
-7. **Settings toggle** — "Enable Nook Sync" that connects/disconnects the pool client
-8. **Instance identity** — multi-tenant apps register with `instance_id` (Opus uses the workspace id), making the pool identity `app:instance_id`; single-tenant apps omit it
+7. **Settings toggle** — "Enable Antenne Sync" that connects/disconnects the antenne-client
+8. **Instance identity** — multi-tenant apps register with `instance_id` (Opus uses the workspace id), making the bus identity `app:instance_id`; single-tenant apps omit it
 
 ### Estimated effort per app
 
@@ -541,8 +541,8 @@ Each app needs these additions to join the Nook mesh (Opus and Sablier implement
 | Plume | document, user | Low (already emits webhooks with HMAC) |
 | Glouton | lead, user | Low-medium |
 | Vision | pageview (emit-only) | Low (emit only, no incoming sync) |
-| Nook | (is the bus) | High (needs queue, registry, router, DLQ) |
-| Perception | (observes) | Low (already ingests from Nook) |
+| Antenne | (is the bus) | High (needs queue, registry, router, DLQ) |
+| Perception | (observes) | Low (already ingests from Antenne) |
 
 ---
 
@@ -550,7 +550,7 @@ Each app needs these additions to join the Nook mesh (Opus and Sablier implement
 
 - **Don't put Perception in the sync hot path.** CRUD sync must be deterministic, fast, and reliable. AI-powered routing introduces latency, cost, and non-determinism.
 - **Don't share a database table across ORMs.** GORM and Drizzle will fight. Migrations become a coordination nightmare.
-- **Don't build a shared project microservice.** Nook IS the shared infrastructure. Adding another service is redundant.
+- **Don't build a shared project microservice.** Antenne IS the shared infrastructure. Adding another service is redundant.
 - **Don't try to unify the project schemas.** Each app's model is intentionally shaped for its domain. The canonical shape is the intersection, not the union.
 - **Don't sync app-specific fields.** Opus's `slug`, `icon`, `is_public` stay in Opus. Sablier's `owner_id`, `rate` stay in Sablier. Only the canonical shape crosses the wire.
 - **Don't sync tasks between Opus and Sablier in v1.** Project-level sync is clean. Task-level sync between flat tasks (Sablier) and kanban columns (Opus) is a quagmire. Revisit after project sync is proven.
@@ -560,9 +560,9 @@ Each app needs these additions to join the Nook mesh (Opus and Sablier implement
 ## Settled Decisions (from the Opus <-> Sablier PoC)
 
 - **Event schema versioning** — envelopes carry `version: 1`; breaking changes bump it, consumers ignore unknown fields.
-- **Multi-instance identity** — pool identity is `app:instance_id` (Opus registers each workspace as its own instance). Several instances of one app can share a pool; each mirrors the full peer space. Echo filtering keys on the full identity.
-- **Outage tolerance** — producers buffer through a DB outbox; Nook persists the log (SQLite) and replays from consumer ack cursors on reconnect; consumers dedupe via the idempotency ledger. Nook downtime delays sync, never loses it (within retention).
-- **Retention** — Nook keeps events until every active listener has acked them (48h floor, 30-day hard ceiling); listeners unseen for 14 days stop pinning the log, and ceiling-crossing loss is logged loudly.
+- **Multi-instance identity** — l'identite sur le bus est `app:instance_id` (Opus registers each workspace as its own instance). Plusieurs instances d'une meme app peuvent partager une identite; each mirrors the full peer space. Echo filtering keys on the full identity.
+- **Outage tolerance** — producers buffer through a DB outbox; Antenne persists the log (SQLite) and replays from consumer ack cursors on reconnect; consumers dedupe via the idempotency ledger. Antenne downtime delays sync, never loses it (within retention).
+- **Retention** — Antenne keeps events until every active listener has acked them (48h floor, 30-day hard ceiling); listeners unseen for 14 days stop pinning the log, and ceiling-crossing loss is logged loudly.
 - **Users cross the wire by email** (`actor_email`, `user_email`) until shared SSO / user sync exists.
 
 ## Open Questions
