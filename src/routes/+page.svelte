@@ -142,7 +142,7 @@
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
 
         <!-- Sablier -->
-        <a href="https://sablier.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 0 }} class="{card} sm:col-span-2 md:p-8 block no-underline">
+        <a href="https://sablier.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 0 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -153,7 +153,7 @@
             </div>
             <h3 class="text-lg font-bold tracking-tight">Sablier</h3>
           </div>
-          <p class="max-w-md text-sm leading-relaxed text-fc-fg-muted">
+          <p class="text-sm leading-relaxed text-fc-fg-muted">
             Vos heures facturables, tracées sans friction. Un clic pour lancer, un clic pour arrêter. Ventilation par projet et sessions partagées.
           </p>
         </a>
@@ -423,7 +423,7 @@
     <section class="border-y border-fc-border bg-fc-accent text-fc-accent-fg">
       <div class="mx-auto max-w-5xl px-6 py-28 md:py-36">
         <div use:reveal={{ delay: 0 }} class="mb-10 flex items-center gap-3">
-          <Icon icon="solar:clock-circle-bold-duotone" class="size-8" />
+          <Icon icon="solar:hourglass-bold-duotone" class="size-8" />
           <span class="text-2xl font-semibold tracking-tight">Sablier</span>
         </div>
         <h2 use:reveal={{ delay: 100 }} class="max-w-2xl text-4xl leading-[1.1] font-black tracking-tight md:text-6xl">
@@ -454,7 +454,7 @@
     <section class="border-b border-fc-border bg-fc-surface">
       <div class="mx-auto max-w-5xl px-6 py-28 md:py-36">
         <div use:reveal={{ delay: 0 }} class="mb-10 flex items-center gap-3">
-          <Icon icon="solar:layers-bold-duotone" class="size-8 text-fc-fg" />
+          <Icon icon="solar:display-bold-duotone" class="size-8 text-fc-fg" />
           <span class="text-2xl font-semibold tracking-tight">Opus</span>
         </div>
         <h2 use:reveal={{ delay: 100 }} class="max-w-2xl text-4xl leading-[1.1] font-black tracking-tight md:text-6xl">
