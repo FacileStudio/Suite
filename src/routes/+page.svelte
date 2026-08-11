@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Icon from '@iconify/svelte';
   import type { Action } from 'svelte/action';
   import InterconnectivityGraph from '$lib/InterconnectivityGraph.svelte';
   import WorkflowDiagram from '$lib/WorkflowDiagram.svelte';
@@ -48,18 +49,14 @@
 
 <svelte:head>
   <title>Facile Suite — Votre studio tourne tout seul</title>
-  <meta name="description" content="Seize outils qui se parlent, sur votre serveur. Temps, projets, leads, signatures, factures, secrets — un seul login, zéro dépendance cloud." />
+  <meta name="description" content="Seize outils qui se parlent, sur votre serveur. Temps, projets, leads, signatures, factures, secrets, logs — un seul login, zéro dépendance cloud." />
 </svelte:head>
 
 <div class="min-h-screen bg-fc-page text-fc-fg">
   <header class="fixed top-0 z-50 w-full border-b border-fc-border bg-fc-page/90 backdrop-blur-sm">
     <div class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
       <a href="/" class="flex items-center gap-2.5">
-        <svg class="size-7 text-fc-fg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path fill="currentColor" d="M13 15.4c0-2.074 0-3.111.659-3.756S15.379 11 17.5 11s3.182 0 3.841.644C22 12.29 22 13.326 22 15.4v2.2c0 2.074 0 3.111-.659 3.756S19.621 22 17.5 22s-3.182 0-3.841-.644C13 20.71 13 19.674 13 17.6z" opacity=".5"/>
-          <path fill="currentColor" d="M2 8.6c0 2.074 0 3.111.659 3.756S4.379 13 6.5 13s3.182 0 3.841-.644C11 11.71 11 10.674 11 8.6V6.4c0-2.074 0-3.111-.659-3.756S8.621 2 6.5 2s-3.182 0-3.841.644C2 3.29 2 4.326 2 6.4zm11-3.1c0-1.087 0-1.63.171-2.06a2.3 2.3 0 0 1 1.218-1.262C14.802 2 15.327 2 16.375 2h2.25c1.048 0 1.573 0 1.986.178c.551.236.99.69 1.218 1.262c.171.43.171.973.171 2.06s0 1.63-.171 2.06a2.3 2.3 0 0 1-1.218 1.262C20.198 9 19.673 9 18.625 9h-2.25c-1.048 0-1.573 0-1.986-.178a2.3 2.3 0 0 1-1.218-1.262C13 7.13 13 6.587 13 5.5"/>
-          <path fill="currentColor" d="M2 18.5c0 1.087 0 1.63.171 2.06a2.3 2.3 0 0 0 1.218 1.262c.413.178.938.178 1.986.178h2.25c1.048 0 1.573 0 1.986-.178c.551-.236.99-.69 1.218-1.262c.171-.43.171-.973.171-2.06s0-1.63-.171-2.06a2.3 2.3 0 0 0-1.218-1.262C9.198 15 8.673 15 7.625 15h-2.25c-1.048 0-1.573 0-1.986.178c-.551.236-.99.69-1.218 1.262C2 16.87 2 17.413 2 18.5" opacity=".5"/>
-        </svg>
+        <Icon icon="solar:widget-5-bold-duotone" class="size-7 text-fc-fg" />
         <span class="text-xl font-black tracking-tight">Facile Suite</span>
       </a>
       <a
@@ -69,13 +66,14 @@
         class="inline-flex items-center gap-1.5 rounded-md bg-fc-accent px-4 py-2 text-sm font-medium text-fc-accent-fg transition-colors hover:bg-fc-fg/80"
       >
         facile.studio
-        <svg class="size-3.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm11-3v8h-2V6.413l-7.793 7.794l-1.414-1.414L17.585 5H13V3z"/></svg>
+        <Icon icon="solar:arrow-right-up-linear" class="size-3.5" />
       </a>
     </div>
   </header>
 
   <main>
 
+    <!-- Hero -->
     <section class="mx-auto max-w-5xl px-6 pt-36 pb-28 md:pt-44 md:pb-36">
       <div class="transition-all duration-700 ease-out {visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}">
         <p class="mb-6 inline-flex items-center gap-2 rounded-full border border-fc-border px-3.5 py-1 text-xs text-fc-fg-muted">
@@ -95,7 +93,7 @@
             class="inline-flex items-center gap-2 rounded-md bg-fc-accent px-6 py-3 text-base font-medium text-fc-accent-fg transition-colors hover:bg-fc-fg/80"
           >
             Découvrir la suite
-            <svg class="size-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" fill-rule="evenodd" d="M12 2.25a.75.75 0 0 1 .75.75v16.19l6.22-6.22a.75.75 0 1 1 1.06 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 1 1 1.06-1.06l6.22 6.22V3a.75.75 0 0 1 .75-.75" clip-rule="evenodd"/></svg>
+            <Icon icon="solar:arrow-down-linear" class="size-4" />
           </a>
           <a
             href="https://facile.studio"
@@ -104,12 +102,13 @@
             class="inline-flex items-center gap-2 rounded-md border border-fc-border px-6 py-3 text-base font-medium text-fc-fg-muted transition-colors hover:border-fc-ring hover:text-fc-fg"
           >
             Qui sommes-nous
-            <svg class="size-3.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm11-3v8h-2V6.413l-7.793 7.794l-1.414-1.414L17.585 5H13V3z"/></svg>
+            <Icon icon="solar:arrow-right-up-linear" class="size-3.5" />
           </a>
         </div>
       </div>
     </section>
 
+    <!-- Antenne -->
     <section id="interconnectivity" class="border-y border-fc-border bg-fc-accent text-fc-accent-fg">
       <div class="mx-auto max-w-5xl px-6 py-28 md:py-36">
         <div use:reveal={{ delay: 0 }} class="mb-10 flex items-center gap-3">
@@ -133,6 +132,7 @@
       </div>
     </section>
 
+    <!-- Tools Grid -->
     <section class="mx-auto max-w-5xl px-6 py-28 md:py-36">
       <div use:reveal={{ delay: 0 }} class="mb-16 max-w-lg">
         <h2 class="text-4xl font-black tracking-tight md:text-5xl">Chaque outil<br />fait une chose bien.</h2>
@@ -188,7 +188,7 @@
             <h3 class="text-lg font-bold tracking-tight">Vision</h3>
           </div>
           <p class="text-sm leading-relaxed text-fc-fg-muted">
-            L'analytique web qui respecte vos visiteurs. Un script, zéro cookie, données en temps réel. Vous savez d'où vient votre trafic sans vendre l'âme de vos utilisateurs.
+            L'analytique web qui respecte vos visiteurs. Un script, zéro cookie, données en temps réel.
           </p>
         </a>
 
@@ -207,7 +207,7 @@
             <h3 class="text-lg font-bold tracking-tight">Glouton</h3>
           </div>
           <p class="text-sm leading-relaxed text-fc-fg-muted">
-            Vos prochains clients, trouvés pendant que vous dormez. Glouton crawle le web, détecte les stacks techniques, score les prospects et vous sert les meilleurs sur un plateau.
+            Vos prochains clients, trouvés pendant que vous dormez. Glouton crawle le web, détecte les stacks techniques, score les prospects.
           </p>
         </a>
 
@@ -224,7 +224,7 @@
             <h3 class="text-lg font-bold tracking-tight">Ardoise</h3>
           </div>
           <p class="text-sm leading-relaxed text-fc-fg-muted">
-            Facturez, encaissez, oubliez. Stripe intégré, emails automatiques, reçus téléchargeables. Vos clients paient, vous êtes notifié, point.
+            Facturez, encaissez, oubliez. Stripe intégré, emails automatiques, reçus téléchargeables.
           </p>
         </a>
 
@@ -241,7 +241,7 @@
             <h3 class="text-lg font-bold tracking-tight">Plume</h3>
           </div>
           <p class="text-sm leading-relaxed text-fc-fg-muted">
-            La signature électronique sans usine à gaz. Déposez un PDF, placez les champs, envoyez le lien, recevez la preuve signée avec audit trail et webhooks.
+            La signature électronique sans usine à gaz. Déposez un PDF, placez les champs, envoyez le lien.
           </p>
         </a>
 
@@ -259,7 +259,7 @@
             <h3 class="text-lg font-bold tracking-tight">Casier</h3>
           </div>
           <p class="text-sm leading-relaxed text-fc-fg-muted">
-            Coffre-fort à secrets pour votre équipe. Chiffré AES-256-GCM, versionné, audit log complet. Injectez vos variables d'env en CLI, partagez par projet sans jamais les écrire en clair.
+            Coffre-fort à secrets pour votre équipe. Chiffré AES-256-GCM, versionné, audit log complet.
           </p>
         </a>
 
@@ -277,7 +277,7 @@
             <h3 class="text-lg font-bold tracking-tight">Antenne</h3>
           </div>
           <p class="text-sm leading-relaxed text-fc-fg-muted">
-            Le bus d'événements de la suite. Chaque outil émet et reçoit via Antenne — plus de silos, plus de double saisie. Centralisez les alertes de toute votre infra, poussez-les sur Discord, Matrix, email.
+            Le bus d'événements de la suite. Centralisez les alertes de toute votre infra, poussez-les sur Discord, Matrix, email.
           </p>
         </a>
 
@@ -294,7 +294,7 @@
             <h3 class="text-lg font-bold tracking-tight">Nuage</h3>
           </div>
           <p class="text-sm leading-relaxed text-fc-fg-muted">
-            Le stockage fichiers du studio. Upload, dossiers, recherche — un drive interne connecté à tous vos outils via API. Vos fichiers restent sur votre serveur.
+            Le stockage fichiers du studio. Upload, dossiers, recherche — un drive interne connecté à tous vos outils via API.
           </p>
         </a>
 
@@ -311,7 +311,7 @@
             <h3 class="text-lg font-bold tracking-tight">Courrier</h3>
           </div>
           <p class="text-sm leading-relaxed text-fc-fg-muted">
-            Votre email, chez vous. IMAP et SMTP natifs, multi-comptes, interface épurée. Toute la correspondance du studio sans passer par Gmail.
+            Votre email, chez vous. IMAP et SMTP natifs, multi-comptes, interface épurée.
           </p>
         </a>
 
@@ -329,7 +329,7 @@
             <h3 class="text-lg font-bold tracking-tight">Agenda</h3>
           </div>
           <p class="text-sm leading-relaxed text-fc-fg-muted">
-            Le calendrier partagé du studio. Rendez-vous, deadlines, dispos — tout le monde voit la même chose, sans Google Calendar. CalDAV natif.
+            Le calendrier partagé du studio. Rendez-vous, deadlines, dispos — sans Google Calendar. CalDAV natif.
           </p>
         </a>
 
@@ -338,16 +338,12 @@
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
-              <svg class="size-6 text-fc-fg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path fill="currentColor" d="M6 8a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z" opacity=".5"/>
-                <path fill="currentColor" fill-rule="evenodd" d="M13 8a4 4 0 0 1 4-4h.5a4.5 4.5 0 0 1 0 9H17a4 4 0 0 1-4-4zm4-1.5a1.5 1.5 0 0 0 0 3h.5a1.5 1.5 0 0 0 0-3z" clip-rule="evenodd"/>
-                <path fill="currentColor" d="M17 17a4 4 0 0 0 4-4v-.5a4.5 4.5 0 0 0-9 0V13a4 4 0 0 0 4 4zm-1.5-4a1.5 1.5 0 0 1 3 0v.5a1.5 1.5 0 0 1-3 0z"/>
-              </svg>
+              <Icon icon="solar:videocamera-record-bold-duotone" class="size-6 text-fc-fg" />
             </div>
             <h3 class="text-lg font-bold tracking-tight">Echo</h3>
           </div>
           <p class="text-sm leading-relaxed text-fc-fg-muted">
-            Visioconférence simple et sécurisée. Créez une salle, partagez le lien, c'est tout. Basé sur Jitsi, zéro compte à créer pour vos invités.
+            Visioconférence simple et sécurisée. Créez une salle, partagez le lien, c'est tout. Basé sur Jitsi.
           </p>
         </a>
 
@@ -364,7 +360,7 @@
             <h3 class="text-lg font-bold tracking-tight">Capsule</h3>
           </div>
           <p class="text-sm leading-relaxed text-fc-fg-muted">
-            Partagez un secret qui s'autodétruit. Chiffrement de bout en bout dans le navigateur, zero-knowledge côté serveur. Un lien, une ouverture, puis rien.
+            Partagez un secret qui s'autodétruit. Chiffrement de bout en bout dans le navigateur, zero-knowledge côté serveur.
           </p>
         </a>
 
@@ -382,7 +378,7 @@
             <h3 class="text-lg font-bold tracking-tight">Scribe</h3>
           </div>
           <p class="text-sm leading-relaxed text-fc-fg-muted">
-            Transcription de réunions par IA. Capturez l'audio, obtenez le transcript en temps réel et des notes structurées — sujets, décisions, actions.
+            Transcription de réunions par IA. Capturez l'audio, obtenez le transcript en temps réel et des notes structurées.
           </p>
         </a>
 
@@ -400,7 +396,7 @@
             <h3 class="text-lg font-bold tracking-tight">Journal</h3>
           </div>
           <p class="text-sm leading-relaxed text-fc-fg-muted">
-            Logs centralisés pour toute la suite. Cherchez, filtrez, créez des alertes sur vos seuils. Un SDK par langage, un collector Docker — vos apps loggent, vous dormez.
+            Logs centralisés pour toute la suite. Cherchez, filtrez, créez des alertes. Un SDK par langage, un collector Docker.
           </p>
         </a>
 
@@ -411,26 +407,85 @@
           <div class="pointer-events-none absolute -right-24 -top-24 size-48 rounded-full bg-fc-accent-fg opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-10"></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
-              <svg class="size-6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path fill="currentColor" d="M13 15.4c0-2.074 0-3.111.659-3.756S15.379 11 17.5 11s3.182 0 3.841.644C22 12.29 22 13.326 22 15.4v2.2c0 2.074 0 3.111-.659 3.756S19.621 22 17.5 22s-3.182 0-3.841-.644C13 20.71 13 19.674 13 17.6z" opacity=".5"/>
-                <path fill="currentColor" d="M2 8.6c0 2.074 0 3.111.659 3.756S4.379 13 6.5 13s3.182 0 3.841-.644C11 11.71 11 10.674 11 8.6V6.4c0-2.074 0-3.111-.659-3.756S8.621 2 6.5 2s-3.182 0-3.841.644C2 3.29 2 4.326 2 6.4zm11-3.1c0-1.087 0-1.63.171-2.06a2.3 2.3 0 0 1 1.218-1.262C14.802 2 15.327 2 16.375 2h2.25c1.048 0 1.573 0 1.986.178c.551.236.99.69 1.218 1.262c.171.43.171.973.171 2.06s0 1.63-.171 2.06a2.3 2.3 0 0 1-1.218 1.262C20.198 9 19.673 9 18.625 9h-2.25c-1.048 0-1.573 0-1.986-.178a2.3 2.3 0 0 1-1.218-1.262C13 7.13 13 6.587 13 5.5"/>
-                <path fill="currentColor" d="M2 18.5c0 1.087 0 1.63.171 2.06a2.3 2.3 0 0 0 1.218 1.262c.413.178.938.178 1.986.178h2.25c1.048 0 1.573 0 1.986-.178c.551-.236.99-.69 1.218-1.262c.171-.43.171-.973.171-2.06s0-1.63-.171-2.06a2.3 2.3 0 0 0-1.218-1.262C9.198 15 8.673 15 7.625 15h-2.25c-1.048 0-1.573 0-1.986.178c-.551.236-.99.69-1.218 1.262C2 16.87 2 17.413 2 18.5" opacity=".5"/>
-              </svg>
+              <Icon icon="solar:widget-5-bold-duotone" class="size-6" />
             </div>
             <h3 class="text-lg font-bold tracking-tight">Et tout communique</h3>
           </div>
           <p class="max-w-2xl text-sm leading-relaxed text-fc-accent-fg/65">
-            Un seul serveur. Un seul système d'auth. Chaque outil partage événements et utilisateurs via Antenne. Pas de silos, pas de double saisie, pas de SaaS qui vous prend en otage. Le bus d'événements est en production — la suite est connectée.
+            Un seul serveur. Un seul système d'auth. Chaque outil partage événements et utilisateurs via Antenne. Pas de silos, pas de double saisie, pas de SaaS qui vous prend en otage.
           </p>
         </div>
 
       </div>
     </section>
 
-    <section class="border-t border-fc-border bg-fc-surface">
+    <!-- Sablier — dedicated section -->
+    <section class="border-y border-fc-border bg-fc-accent text-fc-accent-fg">
       <div class="mx-auto max-w-5xl px-6 py-28 md:py-36">
         <div use:reveal={{ delay: 0 }} class="mb-10 flex items-center gap-3">
-          <svg class="size-8 text-fc-fg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M2 9.5a5.5 5.5 0 0 1 9.05-4.243A6 6 0 0 1 17.5 3a5.5 5.5 0 0 1 3.95 9.096A6 6 0 0 1 21.5 18a5.5 5.5 0 0 1-8.62 4.112A6 6 0 0 1 3 19.5a5.5 5.5 0 0 1 .862-2.962A6 6 0 0 1 2 9.5" opacity=".4"/><path fill="currentColor" fill-rule="evenodd" d="M8.467 7.03a2.47 2.47 0 0 1 2.331-1.78a2.47 2.47 0 0 1 1.936.954a.75.75 0 0 1-.176 1.046a.97.97 0 0 0-.367.703c-.739.113-1.404.49-1.924 1.05a2.43 2.43 0 0 0-.653 1.247a.75.75 0 0 1-1.014.586c-.43-.171-.86-.17-1.218.07a.97.97 0 0 0-.322 1.244a.75.75 0 0 1-1.259.816a2.47 2.47 0 0 1 .819-3.159a2.5 2.5 0 0 1 1.847-.433zm7.066 9.94a2.47 2.47 0 0 1-2.331 1.78a2.47 2.47 0 0 1-1.936-.954a.75.75 0 0 1 .176-1.046a.97.97 0 0 0 .367-.703c.739-.113 1.404-.49 1.924-1.05a2.43 2.43 0 0 0 .653-1.247a.75.75 0 0 1 1.014-.586c.43.171.86.17 1.218-.07a.97.97 0 0 0 .322-1.244a.75.75 0 0 1 1.259-.816a2.47 2.47 0 0 1-.819 3.159a2.5 2.5 0 0 1-1.847.433z" clip-rule="evenodd"/></svg>
+          <Icon icon="solar:clock-circle-bold-duotone" class="size-8" />
+          <span class="text-2xl font-semibold tracking-tight">Sablier</span>
+        </div>
+        <h2 use:reveal={{ delay: 100 }} class="max-w-2xl text-4xl leading-[1.1] font-black tracking-tight md:text-6xl">
+          Le temps, c'est de l'argent.<br />
+          <span class="text-fc-accent-fg/50">Traquez-le.</span>
+        </h2>
+        <p use:reveal={{ delay: 200 }} class="mt-8 max-w-xl text-lg leading-relaxed text-fc-accent-fg/65">
+          Le time tracking qui ne vous fait pas perdre de temps. Un clic pour démarrer, un clic pour arrêter. Les heures s'agrègent par projet, par tâche, par client — et parlent à Opus, Ardoise, et Perception sans que vous leviez le petit doigt.
+        </p>
+
+        <div class="mt-16 grid gap-x-16 gap-y-10 sm:grid-cols-2">
+          {#each [
+            { term: 'Chronométrage instantané', def: 'Lancez un timer depuis le dashboard, la CLI, ou automatiquement quand vous ouvrez un projet. Zéro friction.' },
+            { term: 'Sessions partagées', def: 'Votre équipe voit les timers en cours en temps réel. Transparence totale, zéro friction de synchronisation.' },
+            { term: 'Ventilation intelligente', def: 'Ventilez par projet, par tâche, par client. Les rapports s\'exportent pour la facturation dans Ardoise.' },
+            { term: 'Intégration native', def: 'Les timers Sablier deviennent des lignes de facture dans Ardoise et des métriques dans Perception, via Antenne.' },
+          ] as item, i}
+            <div use:reveal={{ delay: 300 + i * 100 }} class="group">
+              <dt class="text-sm font-semibold text-fc-accent-fg group-hover:text-fc-accent-fg/80 transition-colors">{item.term}</dt>
+              <dd class="mt-2 text-sm leading-relaxed text-fc-accent-fg/65">{item.def}</dd>
+            </div>
+          {/each}
+        </div>
+      </div>
+    </section>
+
+    <!-- Opus — dedicated section -->
+    <section class="border-b border-fc-border bg-fc-surface">
+      <div class="mx-auto max-w-5xl px-6 py-28 md:py-36">
+        <div use:reveal={{ delay: 0 }} class="mb-10 flex items-center gap-3">
+          <Icon icon="solar:layers-bold-duotone" class="size-8 text-fc-fg" />
+          <span class="text-2xl font-semibold tracking-tight">Opus</span>
+        </div>
+        <h2 use:reveal={{ delay: 100 }} class="max-w-2xl text-4xl leading-[1.1] font-black tracking-tight md:text-6xl">
+          Pilotez vos projets.<br />
+          <span class="text-fc-fg-muted">Sans vous noyer.</span>
+        </h2>
+        <p use:reveal={{ delay: 200 }} class="mt-8 max-w-xl text-lg leading-relaxed text-fc-fg-muted">
+          La gestion de projet qui respecte votre cerveau. Kanban, relations entre tâches, recherche instantanée — le minimum vital, impeccablement exécuté. Chaque projet créé dans Opus devient automatiquement disponible dans Sablier.
+        </p>
+
+        <div class="mt-16 grid gap-x-16 gap-y-10 sm:grid-cols-2">
+          {#each [
+            { term: 'Kanban sans limite', def: 'Colonnes personnalisables, swimlanes, filtres. Organisez vos projets comme vous pensez, pas comme l\'outil vous force.' },
+            { term: 'Relations entre tâches', def: 'Bloque, dépend de, duplique. Modélisez les dépendances réelles de votre projet sans feuille Excel.' },
+            { term: 'Recherche fulgurante', def: 'Tapez, trouvez. La recherche full-text indexe tout — titres, descriptions, commentaires. Instantané, à chaque frappe.' },
+            { term: 'Sync en temps réel', def: 'Les modifications apparaissent chez toute l\'équipe sans rechargement. WebSocket natif, pas de polling.' },
+          ] as item, i}
+            <div use:reveal={{ delay: 300 + i * 100 }} class="group">
+              <dt class="text-sm font-semibold text-fc-fg group-hover:text-fc-fg/80 transition-colors">{item.term}</dt>
+              <dd class="mt-2 text-sm leading-relaxed text-fc-fg-muted">{item.def}</dd>
+            </div>
+          {/each}
+        </div>
+      </div>
+    </section>
+
+    <!-- Workflow -->
+    <section class="border-b border-fc-border bg-fc-surface">
+      <div class="mx-auto max-w-5xl px-6 py-28 md:py-36">
+        <div use:reveal={{ delay: 0 }} class="mb-10 flex items-center gap-3">
+          <Icon icon="solar:route-bold-duotone" class="size-8 text-fc-fg" />
           <span class="text-2xl font-semibold tracking-tight">Le parcours</span>
         </div>
         <h2 use:reveal={{ delay: 100 }} class="text-4xl font-black tracking-tight md:text-5xl">
@@ -446,7 +501,8 @@
       </div>
     </section>
 
-    <section id="perception" class="border-t border-fc-border bg-fc-accent text-fc-accent-fg">
+    <!-- Perception -->
+    <section class="border-t border-fc-border bg-fc-accent text-fc-accent-fg">
       <div class="mx-auto max-w-5xl px-6 py-28 md:py-36">
         <div use:reveal={{ delay: 0 }} class="mb-10 flex items-center gap-3">
           <svg class="size-8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -480,12 +536,13 @@
       </div>
     </section>
 
-    <section class="border-y border-fc-border bg-fc-surface">
+    <!-- Auth -->
+    <section class="border-b border-fc-border bg-fc-surface">
       <div class="mx-auto max-w-5xl px-6 py-28 md:py-36">
         <div class="grid items-center gap-16 md:grid-cols-2">
           <div>
             <div use:reveal={{ delay: 0 }} class="mb-10 flex items-center gap-3">
-              <svg class="size-8 text-fc-fg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" fill-rule="evenodd" d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5zm3 1.5a.375.375 0 0 0-.375.375A3.75 3.75 0 0 1 4.5 7.125a.375.375 0 0 0-.375.375v13.125c0 .207.168.375.375.375h3.75V3z" clip-rule="evenodd" opacity=".5"/><path fill="currentColor" d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279a9.8 9.8 0 0 0-6.963-6.963"/></svg>
+              <Icon icon="solar:lock-keyhole-bold-duotone" class="size-8 text-fc-fg" />
               <span class="text-2xl font-semibold tracking-tight">Un seul login</span>
             </div>
             <h2 use:reveal={{ delay: 100 }} class="text-4xl font-black tracking-tight md:text-5xl">
@@ -513,6 +570,7 @@
       </div>
     </section>
 
+    <!-- About -->
     <section class="bg-fc-accent text-fc-accent-fg">
       <div class="mx-auto max-w-5xl px-6 py-28 md:py-36">
         <h2 use:reveal={{ delay: 0 }} class="text-4xl font-black tracking-tight md:text-5xl">Quatre humains.<br /><span class="text-fc-accent-fg/50">Zéro bullshit.</span></h2>
@@ -526,7 +584,7 @@
           class="mt-10 inline-flex items-center gap-2 rounded-md border border-fc-accent-fg/20 px-6 py-3 text-base font-medium text-fc-accent-fg transition-colors hover:border-fc-accent-fg/40 hover:bg-fc-accent-fg/10"
         >
           Découvrir Facile
-          <svg class="size-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm11-3v8h-2V6.413l-7.793 7.794l-1.414-1.414L17.585 5H13V3z"/></svg>
+          <Icon icon="solar:arrow-right-up-linear" class="size-4" />
         </a>
       </div>
     </section>
