@@ -41,14 +41,14 @@
     };
   };
 
-  const card = 'group relative overflow-hidden rounded-2xl border border-fc-border p-6 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:border-fc-ring hover:shadow-xl motion-reduce:transition-none bg-fc-component';
+  const card = 'group relative overflow-hidden rounded-2xl p-6 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:shadow-xl motion-reduce:transition-none bg-fc-component';
   const glow = 'pointer-events-none absolute -right-20 -top-20 size-40 rounded-full bg-fc-fg/5 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-70';
   const ico = 'transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-110';
 </script>
 
 <svelte:head>
   <title>Facile Suite — Votre studio tourne tout seul</title>
-  <meta name="description" content="Dix-sept outils qui se parlent, sur votre serveur. Temps, projets, leads, signatures, factures, monitoring — un seul login, zéro dépendance cloud." />
+  <meta name="description" content="Seize outils qui se parlent, sur votre serveur. Temps, projets, leads, signatures, factures, secrets — un seul login, zéro dépendance cloud." />
 </svelte:head>
 
 <div class="min-h-screen bg-fc-page text-fc-fg">
@@ -86,8 +86,8 @@
           <span class="text-fc-fg-muted">Vous bossez.</span>
         </h1>
         <p class="mt-8 max-w-lg text-lg leading-relaxed text-fc-fg-muted">
-          Dix-sept outils qui se parlent, sur votre serveur.
-          Temps, projets, leads, signatures, factures, secrets, canvas — un seul login, zéro dépendance cloud.
+          Seize outils qui se parlent, sur votre serveur.
+          Temps, projets, leads, signatures, factures, secrets, logs — un seul login, zéro dépendance cloud.
         </p>
         <div class="mt-10 flex flex-wrap items-center gap-4">
           <a
@@ -118,14 +118,14 @@
             <path fill="currentColor" fill-rule="evenodd" d="M12 8.035c-2.697 0-4.884 2.151-4.884 4.806a4.75 4.75 0 0 0 1.43 3.398a.68.68 0 0 1 0 .97a.706.706 0 0 1-.986 0a6.1 6.1 0 0 1-1.84-4.368c0-3.413 2.812-6.18 6.28-6.18s6.279 2.767 6.279 6.18a6.1 6.1 0 0 1-1.84 4.369a.706.706 0 0 1-.986 0a.68.68 0 0 1 0-.971a4.75 4.75 0 0 0 1.43-3.398c0-2.655-2.186-4.806-4.883-4.806" clip-rule="evenodd" opacity=".7"/>
             <path fill="currentColor" fill-rule="evenodd" d="M12 4.373c-4.752 0-8.605 3.791-8.605 8.468c0 2.338.963 4.454 2.52 5.987a.68.68 0 0 1 0 .97a.706.706 0 0 1-.986 0A9.73 9.73 0 0 1 2 12.842C2 7.406 6.477 3 12 3s10 4.406 10 9.84a9.73 9.73 0 0 1-2.929 6.959a.706.706 0 0 1-.987 0a.68.68 0 0 1 0-.971a8.37 8.37 0 0 0 2.52-5.987c0-4.677-3.852-8.468-8.604-8.468" clip-rule="evenodd" opacity=".4"/>
           </svg>
-          <span class="text-2xl font-semibold tracking-tight">Nook</span>
+          <span class="text-2xl font-semibold tracking-tight">Antenne</span>
         </div>
         <h2 use:reveal={{ delay: 100 }} class="max-w-2xl text-4xl leading-[1.1] font-black tracking-tight md:text-6xl">
-          Tout passe par Nook.<br />
-          <span class="text-fc-accent-fg/50">Zero configuration.</span>
+          Tout passe par Antenne.<br />
+          <span class="text-fc-accent-fg/50">Zéro configuration.</span>
         </h2>
         <p use:reveal={{ delay: 200 }} class="mt-8 max-w-xl text-lg leading-relaxed text-fc-accent-fg/65">
-          Chaque outil émet et reçoit des événements via un bus central en production. Opus crée un projet, Sablier le reçoit. Plume signe un document, Ardoise le facture. Les apps s'enregistrent — ajoutez-en une, elle rejoint le réseau toute seule.
+          Chaque outil émet et reçoit des événements via le bus central en production. Opus crée un projet, Sablier le reçoit. Plume signe un document, Ardoise le facture. Les apps s'enregistrent — ajoutez-en une, elle rejoint le réseau toute seule.
         </p>
         <div class="mt-16">
           <InterconnectivityGraph />
@@ -245,26 +245,8 @@
           </p>
         </a>
 
-        <!-- Toile -->
-        <a href="https://toile.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 420 }} class="{card} block no-underline">
-          <div class={glow}></div>
-          <div class="mb-4 flex items-center gap-3">
-            <div class={ico}>
-              <svg class="size-6 text-fc-fg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path fill="currentColor" fill-rule="evenodd" d="m20.83 10.715l-.518 1.932c-.605 2.255-.907 3.383-1.592 4.114a4 4 0 0 1-2.01 1.161q-.145.034-.295.052c-.915.113-2.032-.186-4.064-.73c-2.255-.605-3.383-.907-4.114-1.592a4 4 0 0 1-1.161-2.011c-.228-.976.074-2.103.679-4.358l.517-1.932l.244-.905c.455-1.666.761-2.583 1.348-3.21a4 4 0 0 1 2.01-1.16c.976-.228 2.104.074 4.36.679c2.254.604 3.382.906 4.113 1.59a4 4 0 0 1 1.161 2.012c.228.976-.075 2.103-.679 4.358m-9.778-.91a.75.75 0 0 1 .919-.53l4.83 1.295a.75.75 0 1 1-.389 1.448l-4.83-1.294a.75.75 0 0 1-.53-.918m-.776 2.898a.75.75 0 0 1 .918-.53l2.898.777a.75.75 0 1 1-.388 1.448l-2.898-.776a.75.75 0 0 1-.53-.919" clip-rule="evenodd"/>
-                <path fill="currentColor" d="M16.415 17.975a4 4 0 0 1-1.068 1.677c-.731.685-1.859.987-4.114 1.591s-3.383.907-4.358.679a4 4 0 0 1-2.011-1.161c-.685-.731-.988-1.859-1.592-4.114l-.517-1.932c-.605-2.255-.907-3.383-.68-4.358a4 4 0 0 1 1.162-2.011c.731-.685 1.859-.987 4.114-1.592q.638-.172 1.165-.309l-.244.906l-.517 1.932c-.605 2.255-.907 3.382-.68 4.358a4 4 0 0 0 1.162 2.011c.731.685 1.859.987 4.114 1.592c2.032.544 3.149.843 4.064.73" opacity=".5"/>
-              </svg>
-            </div>
-            <h3 class="text-lg font-bold tracking-tight">Toile</h3>
-            <span class="ml-auto rounded-full border border-fc-success/30 bg-fc-success/10 px-2 py-0.5 text-[10px] font-semibold text-fc-success">nouveau</span>
-          </div>
-          <p class="text-sm leading-relaxed text-fc-fg-muted">
-            Un canvas infini où chaque note est un fichier markdown sur votre disque. Dessin libre, média, liens — tout dans un dossier que vous gardez pour toujours.
-          </p>
-        </a>
-
         <!-- Casier -->
-        <a href="https://casier.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 490 }} class="{card} block no-underline">
+        <a href="https://casier.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 420 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -281,8 +263,8 @@
           </p>
         </a>
 
-        <!-- Nook -->
-        <a href="https://nook.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 560 }} class="{card} block no-underline">
+        <!-- Antenne -->
+        <a href="https://nook.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 490 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -292,15 +274,15 @@
                 <path fill="currentColor" fill-rule="evenodd" d="M12 4.373c-4.752 0-8.605 3.791-8.605 8.468c0 2.338.963 4.454 2.52 5.987a.68.68 0 0 1 0 .97a.706.706 0 0 1-.986 0A9.73 9.73 0 0 1 2 12.842C2 7.406 6.477 3 12 3s10 4.406 10 9.84a9.73 9.73 0 0 1-2.929 6.959a.706.706 0 0 1-.987 0a.68.68 0 0 1 0-.971a8.37 8.37 0 0 0 2.52-5.987c0-4.677-3.852-8.468-8.604-8.468" clip-rule="evenodd" opacity=".4"/>
               </svg>
             </div>
-            <h3 class="text-lg font-bold tracking-tight">Nook</h3>
+            <h3 class="text-lg font-bold tracking-tight">Antenne</h3>
           </div>
           <p class="text-sm leading-relaxed text-fc-fg-muted">
-            Quand quelque chose tombe, vous le savez en premier. Centralisez les alertes de toute votre infra, poussez-les où vous voulez — Discord, Matrix, email, push. Et maintenant, le bus d'événements de la suite.
+            Le bus d'événements de la suite. Chaque outil émet et reçoit via Antenne — plus de silos, plus de double saisie. Centralisez les alertes de toute votre infra, poussez-les sur Discord, Matrix, email.
           </p>
         </a>
 
         <!-- Nuage -->
-        <a href="https://nuage.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 630 }} class="{card} block no-underline">
+        <a href="https://nuage.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 560 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -317,7 +299,7 @@
         </a>
 
         <!-- Courrier -->
-        <a href="https://courrier.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 700 }} class="{card} block no-underline">
+        <a href="https://courrier.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 630 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -334,7 +316,7 @@
         </a>
 
         <!-- Agenda -->
-        <a href="https://agenda.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 770 }} class="{card} block no-underline">
+        <a href="https://agenda.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 700 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -352,7 +334,7 @@
         </a>
 
         <!-- Echo -->
-        <a href="https://echo.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 840 }} class="{card} block no-underline">
+        <a href="https://echo.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 770 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -370,7 +352,7 @@
         </a>
 
         <!-- Capsule -->
-        <a href="https://capsule.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 910 }} class="{card} block no-underline">
+        <a href="https://capsule.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 840 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -387,7 +369,7 @@
         </a>
 
         <!-- Scribe -->
-        <a href="https://scribe.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 980 }} class="{card} block no-underline">
+        <a href="https://scribe.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 910 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
@@ -404,26 +386,26 @@
           </p>
         </a>
 
-        <!-- Portail -->
-        <a href="https://portail.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 1050 }} class="{card} block no-underline">
+        <!-- Journal -->
+        <a href="https://journal.facile.studio" target="_blank" rel="noopener noreferrer" use:reveal={{ delay: 980 }} class="{card} block no-underline">
           <div class={glow}></div>
           <div class="mb-4 flex items-center gap-3">
             <div class={ico}>
               <svg class="size-6 text-fc-fg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path fill="currentColor" d="M2 12.204c0-1.873 0-2.81.398-3.54a3.5 3.5 0 0 1 1.498-1.348C4.6 7 5.542 7 7.424 7H12v17H7.424c-1.883 0-2.824 0-3.528-.316a3.5 3.5 0 0 1-1.498-1.348C2 21.607 2 20.67 2 18.796z" opacity=".5"/>
-                <path fill="currentColor" d="M12 2h4.576c1.883 0 2.824 0 3.528.316a3.5 3.5 0 0 1 1.498 1.348C22 4.393 22 5.33 22 7.204v2.592c0 1.873 0 2.81-.398 3.54a3.5 3.5 0 0 1-1.498 1.348C19.4 15 18.458 15 16.576 15H12z"/>
-                <path fill="currentColor" d="M12 17h-1.5v5H12zm3.5 0H14v5h1.5zm3.5 0H17.5v5H19zm-10.5 0H7v5h1.5z"/>
+                <path fill="currentColor" d="M3 8c0-2.828 0-4.243.879-5.121C4.757 2 6.172 2 9 2h6c2.828 0 4.243 0 5.121.879C21 3.757 21 5.172 21 8v8c0 2.828 0 4.243-.879 5.121C19.243 22 17.828 22 15 22H9c-2.828 0-4.243 0-5.121-.879C3 20.243 3 18.828 3 16z" opacity=".5"/>
+                <path fill="currentColor" fill-rule="evenodd" d="M8.75 2.012v20h-1.5v-20zM1.25 8A.75.75 0 0 1 2 7.25h2a.75.75 0 0 1 0 1.5H2A.75.75 0 0 1 1.25 8m0 4a.75.75 0 0 1 .75-.75h2a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1-.75-.75m0 4a.75.75 0 0 1 .75-.75h2a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/>
+                <path fill="currentColor" d="M10.75 6.5a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75m0 3.5a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75"/>
               </svg>
             </div>
-            <h3 class="text-lg font-bold tracking-tight">Portail</h3>
+            <h3 class="text-lg font-bold tracking-tight">Journal</h3>
           </div>
           <p class="text-sm leading-relaxed text-fc-fg-muted">
-            Un fichier YAML, et toute votre équipe a une page d'accueil vers chaque service du studio. Déploiements, docs, monitoring — tout en un clic.
+            Logs centralisés pour toute la suite. Cherchez, filtrez, créez des alertes sur vos seuils. Un SDK par langage, un collector Docker — vos apps loggent, vous dormez.
           </p>
         </a>
 
         <div
-          use:reveal={{ delay: 1120 }}
+          use:reveal={{ delay: 1050 }}
           class="group relative overflow-hidden rounded-2xl bg-fc-accent p-6 text-fc-accent-fg transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:shadow-2xl sm:col-span-2 lg:col-span-3 md:p-8 bg-[linear-gradient(110deg,transparent_30%,rgba(255,255,255,0.03)_50%,transparent_70%)] [background-size:250%_100%] animate-[shimmer_6s_ease-in-out_infinite] motion-reduce:animate-none motion-reduce:transition-none"
         >
           <div class="pointer-events-none absolute -right-24 -top-24 size-48 rounded-full bg-fc-accent-fg opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-10"></div>
@@ -438,7 +420,7 @@
             <h3 class="text-lg font-bold tracking-tight">Et tout communique</h3>
           </div>
           <p class="max-w-2xl text-sm leading-relaxed text-fc-accent-fg/65">
-            Un seul serveur. Un seul système d'auth. Chaque outil partage événements et utilisateurs via Nook. Pas de silos, pas de double saisie, pas de SaaS qui vous prend en otage. Le bus d'événements est en production — la suite est connectée.
+            Un seul serveur. Un seul système d'auth. Chaque outil partage événements et utilisateurs via Antenne. Pas de silos, pas de double saisie, pas de SaaS qui vous prend en otage. Le bus d'événements est en production — la suite est connectée.
           </p>
         </div>
 
@@ -479,12 +461,12 @@
           <span class="text-fc-accent-fg/50">On a tout vu.</span>
         </h2>
         <p use:reveal={{ delay: 200 }} class="mt-8 max-w-xl text-lg leading-relaxed text-fc-accent-fg/65">
-          Perception connecte tous vos outils en un seul cerveau. Clients, contrats, projets, heures — tout est lié. Demandez n'importe quoi en langage naturel, obtenez une réponse sourcée en temps réel.
+          Perception connecte tous vos outils en un seul cerveau. Clients, contrats, projets, heures, logs — tout est lié. Demandez n'importe quoi en langage naturel, obtenez une réponse sourcée en temps réel.
         </p>
 
         <div class="mt-16 grid gap-x-16 gap-y-10 sm:grid-cols-2">
           {#each [
-            { term: 'Recherche intelligente', def: 'Douze sources fouillées en parallèle. Chaque réponse cite d\'où elle vient.' },
+            { term: 'Recherche intelligente', def: 'Seize sources fouillées en parallèle. Chaque réponse cite d\'où elle vient.' },
             { term: 'Connexion automatique', def: 'Un client dans Opus, un signataire dans Plume, un timer dans Sablier — Perception sait que c\'est la même personne.' },
             { term: 'Prévisions', def: 'Anticipe les tendances de votre activité avec des intervalles de confiance qui s\'affinent au fil du temps.' },
             { term: 'Alertes anomalies', def: 'Détecte les changements de rythme avant que vous ne les remarquiez. Identifie les causes, pas juste les symptômes.' },

@@ -8,10 +8,10 @@
     { phase: 'Trouver', tools: ['Glouton'] },
     { phase: 'Signer', tools: ['Plume'] },
     { phase: 'Planifier', tools: ['Opus', 'Agenda'] },
-    { phase: 'Produire', tools: ['Sablier', 'Echo', 'Courrier', 'Scribe', 'Toile'] },
+    { phase: 'Produire', tools: ['Sablier', 'Echo', 'Courrier', 'Scribe'] },
     { phase: 'Sécuriser', tools: ['Casier', 'Capsule', 'Nuage'] },
     { phase: 'Facturer', tools: ['Ardoise'] },
-    { phase: 'Mesurer', tools: ['Vision', 'Nook', 'Perception'] }
+    { phase: 'Mesurer', tools: ['Vision', 'Journal', 'Perception'] }
   ];
 
   const STEP_MS = 900;
@@ -232,10 +232,9 @@
     gap: 0.625rem;
     padding: 0.625rem 1.25rem;
     border-radius: 9999px;
-    border: 1px solid oklch(0.52 0.12 150 / 0.2);
     background-color: oklch(0.52 0.12 150 / 0.08);
-    box-shadow: 0 0 20px oklch(0.52 0.12 150 / 0.15),
-      0 1px 3px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 20px oklch(0.52 0.12 150 / 0.12),
+      0 1px 3px rgba(0, 0, 0, 0.05);
   }
 
   @media (prefers-reduced-motion: reduce) {
