@@ -3,6 +3,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        PUBLIC_JOURNAL_URL: ${PUBLIC_JOURNAL_URL:-https://journal.facile.studio/api}
+        PUBLIC_JOURNAL_KEY: ${PUBLIC_JOURNAL_KEY:-journal_pub_suite_ayWEHUnTQODAlr6MTwyTYCJHMWHVXxoMUHe2U2MZfCQ}
+    labels:
+      - "journal.app=suite"
     expose:
       - "80"
     restart: unless-stopped

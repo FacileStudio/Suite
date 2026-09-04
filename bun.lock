@@ -4,6 +4,9 @@
   "workspaces": {
     "": {
       "name": "suite",
+      "dependencies": {
+        "@facile/journal": "github:FacileStudio/Journal#ts",
+      },
       "devDependencies": {
         "@iconify-json/solar": "^1.2.5",
         "@iconify/svelte": "^5.2.1",
@@ -26,6 +29,8 @@
     "@emnapi/runtime": ["@emnapi/runtime@1.10.0", "", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-ewvYlk86xUoGI0zQRNq/mC+16R1QeDlKQy21Ki3oSYXNgLb45GV1P6A0M+/s6nyCuNDqe5VpaY84BzXGwVbwFA=="],
 
     "@emnapi/wasi-threads": ["@emnapi/wasi-threads@1.2.1", "", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-uTII7OYF+/Mes/MrcIOYp5yOtSMLBWSIoLPpcgwipoiKbli6k322tcoFsxoIIxPDqW01SQGAgko4EzZi2BNv2w=="],
+
+    "@facile/journal": ["@facile/journal@github:FacileStudio/Journal#186d6d4", {}, "FacileStudio-Journal-186d6d4", "sha512-flNpkoQEl3EeXACjNZ0hL14+9d0UFvrlPlFzKG9aQCB4mvrZmgp47RvpytwlFzD9pvC+EzshrGGkIrgnMVEmZg=="],
 
     "@iconify-json/solar": ["@iconify-json/solar@1.2.5", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-WMAiNwchU8zhfrySww6KQBRIBbsQ6SvgIu2yA+CHGyMima/0KQwT5MXogrZPJGoQF+1Ye3Qj6K+1CiyNn3YkoA=="],
 
