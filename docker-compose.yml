@@ -4,5 +4,21 @@ services:
       context: .
       dockerfile: Dockerfile
     expose:
-      - "80"
+    - '80'
     restart: unless-stopped
+    healthcheck:
+      test:
+      - CMD
+      - nc
+      - -z
+      - localhost
+      - '80'
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    deploy:
+      update_config:
+        order: start-first
+        parallelism: 1
+      restart_policy:
+        condition: any
