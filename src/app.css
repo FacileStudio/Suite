@@ -1,46 +1,14 @@
-@import "tailwindcss";
-
-@theme {
-  --color-fc-page: oklch(1 0 0);
-  --color-fc-bg: oklch(1 0 0);
-  --color-fc-surface: oklch(0.97 0 0);
-  --color-fc-component: oklch(0.985 0 0);
-  --color-fc-fg: oklch(0.145 0 0);
-  --color-fc-fg-muted: oklch(0.556 0 0);
-  --color-fc-accent: oklch(0.145 0 0);
-  --color-fc-accent-fg: oklch(1 0 0);
-  --color-fc-border: oklch(0.9 0 0);
-  --color-fc-ring: oklch(0.4 0 0);
-  --color-fc-scrim: oklch(0 0 0 / 50%);
-  --color-fc-danger: oklch(0.55 0.22 29);
-  --color-fc-success: oklch(0.52 0.12 150);
-  --color-fc-info: oklch(0.52 0.14 255);
-  --color-fc-warning: oklch(0.55 0.13 75);
-  --font-fc-body: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-fc-title: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --radius-fc: 0.5rem;
-  --radius-fc-pill: 9999px;
-}
+@import '@facile/muse/styles';
+@source '../node_modules/@facile/muse/src';
 
 @layer base {
   html {
     scroll-behavior: smooth;
-    color-scheme: light;
   }
 
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
     }
-  }
-
-  body {
-    background-color: var(--color-fc-page);
-    color: var(--color-fc-fg);
-    font-family: var(--font-fc-body);
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-fc-title);
   }
 }

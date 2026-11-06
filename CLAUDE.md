@@ -6,7 +6,7 @@ Marketing and landing page for the Facile Suite — a collection of twelve self-
 
 - **Framework**: SvelteKit (Svelte 5, runes API)
 - **Language**: TypeScript
-- **Styling**: Tailwind CSS v4 (via `@tailwindcss/vite`)
+- **Styling**: Tailwind CSS v4 (via `@tailwindcss/vite`) with `@facile/muse` tokens and components
 - **Icons**: Iconify (`@iconify/svelte`, Solar icon set)
 - **Fonts**: Goga (custom, served from `static/fonts/`)
 - **Adapter**: `@sveltejs/adapter-static` — fully prerendered static site
@@ -52,7 +52,8 @@ INTERCONNECTIVITY.md  Architecture doc on how Suite tools connect
 ## Conventions
 
 - Svelte 5 runes only (`$state`, `$props`, `$derived`, `$effect`). Runes are enforced in `svelte.config.js` for all non-node_modules files.
-- Design tokens are defined as CSS custom properties in `app.css` (HSL values for `--background`, `--foreground`, `--primary`, etc.).
+- Design tokens come from `@facile/muse/styles`, imported in `app.css` with an `@source` on muse. Do not redefine `fc-*` tokens locally. `<html class="light">` pins the light theme.
+- Pricing is never hard-coded: the `#tarifs` section renders muse's `PricingPlans`, which reads Ardoise's public catalog in the browser.
 - The "Goga" font is used for headings; body uses Helvetica/system sans-serif.
 - All content is in French.
 - The site is a single page — all sections live in `+page.svelte`.
