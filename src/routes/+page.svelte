@@ -3,6 +3,7 @@
   import type { Action } from 'svelte/action';
   import InterconnectivityGraph from '$lib/InterconnectivityGraph.svelte';
   import WorkflowDiagram from '$lib/WorkflowDiagram.svelte';
+  import { PricingPlans } from '@facile/muse';
 
   let visible = $state(false);
 
@@ -59,15 +60,23 @@
         <Icon icon="solar:widget-5-bold-duotone" class="size-7 text-fc-fg" />
         <span class="text-xl font-black tracking-tight">Facile Suite</span>
       </a>
-      <a
-        href="https://facile.studio"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-1.5 rounded-md bg-fc-accent px-4 py-2 text-sm font-medium text-fc-accent-fg transition-colors hover:bg-fc-fg/80"
-      >
-        facile.studio
-        <Icon icon="solar:arrow-right-up-linear" class="size-3.5" />
-      </a>
+      <nav aria-label="Navigation principale" class="flex items-center gap-2 sm:gap-4">
+        <a
+          href="#tarifs"
+          class="inline-flex min-h-11 items-center rounded-md px-3 text-sm font-medium text-fc-fg-muted transition-colors hover:text-fc-fg"
+        >
+          Tarifs
+        </a>
+        <a
+          href="https://facile.studio"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 rounded-md bg-fc-accent px-4 py-2 text-sm font-medium text-fc-accent-fg transition-colors hover:bg-fc-fg/80"
+        >
+          facile.studio
+          <Icon icon="solar:arrow-right-up-linear" class="size-3.5" />
+        </a>
+      </nav>
     </div>
   </header>
 
@@ -567,6 +576,31 @@
             {/each}
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="tarifs" class="scroll-mt-20 border-b border-fc-border bg-fc-page">
+      <div class="mx-auto max-w-5xl px-6 py-28 md:py-36">
+        <div use:reveal={{ delay: 0 }} class="mb-10 flex items-center gap-3">
+          <Icon icon="solar:tag-price-bold-duotone" class="size-8 text-fc-fg" />
+          <span class="text-2xl font-semibold tracking-tight">Tarifs</span>
+        </div>
+        <h2 use:reveal={{ delay: 100 }} class="max-w-2xl text-4xl leading-[1.1] font-black tracking-tight md:text-6xl">
+          Un compte.<br />
+          <span class="text-fc-fg-muted">Toute la suite.</span>
+        </h2>
+        <p use:reveal={{ delay: 200 }} class="mt-8 max-w-xl text-lg leading-relaxed text-fc-fg-muted">
+          Votre compte Facile ouvre chaque outil de la suite. Choisissez l'offre de votre espace, changez-la quand vous voulez.
+        </p>
+        <a
+          use:reveal={{ delay: 300 }}
+          href="https://sso.facile.studio/spaces"
+          class="mt-10 inline-flex min-h-11 items-center gap-2 rounded-md bg-fc-accent px-6 py-3 text-base font-medium text-fc-accent-fg transition-colors hover:bg-fc-fg/80"
+        >
+          Créer mon espace
+          <Icon icon="solar:arrow-right-linear" class="size-4" />
+        </a>
+        <PricingPlans headingLevel={3} class="mt-16" />
       </div>
     </section>
 
