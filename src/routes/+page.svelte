@@ -63,7 +63,7 @@
       <nav aria-label="Navigation principale" class="flex items-center gap-2 sm:gap-4">
         <a
           href="#tarifs"
-          class="inline-flex min-h-11 items-center rounded-md px-3 text-sm font-medium text-fc-fg-muted transition-colors hover:text-fc-fg"
+          class="hidden min-h-11 items-center rounded-md px-3 text-sm font-medium text-fc-fg-muted sm:inline-flex transition-colors hover:text-fc-fg"
         >
           Tarifs
         </a>
@@ -590,7 +590,7 @@
           <span class="text-fc-fg-muted">Toute la suite.</span>
         </h2>
         <p use:reveal={{ delay: 200 }} class="mt-8 max-w-xl text-lg leading-relaxed text-fc-fg-muted">
-          Votre compte Facile ouvre chaque outil de la suite. Choisissez l'offre de votre espace, changez-la quand vous voulez.
+          Votre compte Facile ouvre chaque outil de la suite. Créer votre espace est gratuit et ne prend qu'une minute.
         </p>
         <a
           use:reveal={{ delay: 300 }}
