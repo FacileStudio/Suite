@@ -68,11 +68,6 @@ export const UI_ICONS = [
 	'solar:shield-user-bold-duotone'
 ];
 
-export const META = {
-	title: 'Facile Suite : vos outils, sur votre serveur',
-	description: `${COUNT} outils qui se parlent, sur votre serveur. Projets, temps, factures, signatures, fichiers, secrets et logs avec un seul compte et zéro dépendance cloud.`
-};
-
 export const NAV = [
 	{ label: 'Apps', href: '#apps' },
 	{ label: 'Connexions', href: '#connexions' },

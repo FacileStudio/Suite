@@ -1,7 +1,7 @@
 {
   "name": "Facile Suite",
   "short_name": "Facile Suite",
-  "description": "Quinze outils qui se parlent, sur votre serveur.",
+  "description": "Tools that talk to each other on your own server: time, projects, invoices and monitoring behind one login.",
   "icons": [
     {
       "src": "/icon-192.png",
@@ -12,15 +12,10 @@
       "src": "/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
-    },
-    {
-      "src": "/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
     }
   ],
-  "theme_color": "#0a0a0a",
-  "background_color": "#0a0a0a",
+  "theme_color": "#fafafa",
+  "background_color": "#fafafa",
   "display": "standalone",
   "start_url": "/"
 }
