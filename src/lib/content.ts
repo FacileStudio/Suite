@@ -81,7 +81,7 @@ export const NAV = [
 
 export const HERO = {
 	eyebrow: ['Auto-hébergé', 'Open source', 'Un seul compte'],
-	title: 'On simplifie. Vous bossez.',
+	title: 'On simplifie, vous créez.',
 	sub: `${COUNT} outils qui se parlent, sur votre serveur. Projets, temps, factures, signatures, fichiers et logs avec un seul compte.`,
 	primary: 'Voir les tarifs',
 	secondary: 'Parcourir les apps'
