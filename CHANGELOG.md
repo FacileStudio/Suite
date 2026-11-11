@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-11-11
+
+### Changed
+
+- New catalog icons for Prisme, Feuilles, Docs, Toile and Place in the apps grid and graph.
+- Favicons, touch icons, manifest and link preview now come from muse v0.19.0's brand generator. The link preview title and description are the English catalog values; the page copy stays French.
+- The hero uses the studio slogan.
+
+### Removed
+
+- The old interconnectivity docs and diagrams, and the unused adapter-auto dependency.
+
 ## [0.2.0] - 2026-11-11
 
 ### Added
