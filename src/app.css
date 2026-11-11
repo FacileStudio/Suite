@@ -1,14 +1,28 @@
 @import '@facile/muse/styles';
 @source '../node_modules/@facile/muse/src';
+@source '../node_modules/@facile/mise-en-scene/src';
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
+	html {
+		scroll-behavior: smooth;
+	}
 
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
-  }
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+	}
+}
+
+.reveal {
+	opacity: 0;
+	translate: 0 20px;
+	transition:
+		opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+		translate 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.revealed {
+	opacity: 1;
+	translate: 0 0;
 }

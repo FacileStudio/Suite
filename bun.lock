@@ -6,11 +6,11 @@
       "name": "suite",
       "dependencies": {
         "@facile/journal": "github:FacileStudio/Journal#ts",
-        "@facile/muse": "github:FacileStudio/muse#v0.11.0",
+        "@facile/mise-en-scene": "github:FacileStudio/mise-en-scene#v0.1.1",
+        "@facile/muse": "github:FacileStudio/muse#v0.18.1",
       },
       "devDependencies": {
-        "@iconify-json/solar": "^1.2.5",
-        "@iconify/svelte": "^5.2.1",
+        "@iconify-json/solar": "^1.2.14",
         "@sveltejs/adapter-auto": "^7.0.1",
         "@sveltejs/adapter-static": "^3.0.10",
         "@sveltejs/kit": "^2.70.4",
@@ -37,11 +37,11 @@
 
     "@facile/journal": ["@facile/journal@github:FacileStudio/Journal#186d6d4", {}, "FacileStudio-Journal-186d6d4", "sha512-flNpkoQEl3EeXACjNZ0hL14+9d0UFvrlPlFzKG9aQCB4mvrZmgp47RvpytwlFzD9pvC+EzshrGGkIrgnMVEmZg=="],
 
-    "@facile/muse": ["@facile/muse@github:FacileStudio/muse#a7b6b59", { "dependencies": { "gsap": "^3.13.0", "tailwind-merge": "^3.5.0" }, "peerDependencies": { "svelte": "^5.0.0", "tailwindcss": "^4.0.0" } }, "FacileStudio-muse-a7b6b59", "sha512-wPaDKlfWd6HcsTBi5AAneLQ8F/y64242/Sbiak4foiI37EMUHIXcp1zCJ0b/ai+jbb1prhBtR7W3tW7s07biCg=="],
+    "@facile/mise-en-scene": ["@facile/mise-en-scene@github:FacileStudio/mise-en-scene#8f20520", { "peerDependencies": { "svelte": "^5.29.0" } }, "FacileStudio-mise-en-scene-8f20520", "sha512-/y1jzWj1e0Ya+TrS2bLRhLp+jMU7oEIu+XLWIiMJ6UAe/rSEO44psYVf77Qb3AtMCfF8o07kGQJLPJ40vFeeDQ=="],
 
-    "@iconify-json/solar": ["@iconify-json/solar@1.2.5", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-WMAiNwchU8zhfrySww6KQBRIBbsQ6SvgIu2yA+CHGyMima/0KQwT5MXogrZPJGoQF+1Ye3Qj6K+1CiyNn3YkoA=="],
+    "@facile/muse": ["@facile/muse@github:FacileStudio/muse#e9e97cc", { "dependencies": { "gsap": "^3.13.0", "tailwind-merge": "^3.5.0" }, "peerDependencies": { "svelte": "^5.0.0", "tailwindcss": "^4.0.0" } }, "FacileStudio-muse-e9e97cc", "sha512-JLNrk+FljhDUT6VuMbBrVT9QekoNw6DlEeXvsNSh1hP/d/dK/aEwrcntMuBXczSy4ftejzCAPTEPCb//T4akZA=="],
 
-    "@iconify/svelte": ["@iconify/svelte@5.2.1", "", { "dependencies": { "@iconify/types": "^2.0.0" }, "peerDependencies": { "svelte": ">5.0.0" } }, "sha512-zHmsIPmnIhGd5gc95bNN5FL+GifwMZv7M2rlZEpa7IXYGFJm/XGHdWf6PWQa6OBoC+R69WyiPO9NAj5wjfjbow=="],
+    "@iconify-json/solar": ["@iconify-json/solar@1.2.14", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-/qHbRF7i8NwZH+RIIc3cyzk8RiQT8TA4FcdpDLJVCWr0LCDxXSgpnnayb5aifAvoqNy9NKHENvgZipLELz4m0w=="],
 
     "@iconify/types": ["@iconify/types@2.0.0", "", {}, "sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg=="],
 
