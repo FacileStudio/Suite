@@ -25,13 +25,13 @@ export const CATEGORIES: { id: Category | 'all'; label: string }[] = [
 
 export const APPS: App[] = [
 	{ name: 'Bulle', category: 'agent', icon: 'solar:smile-circle-bold-duotone', url: 'https://bulle.facile.studio', line: 'Compagnon IA autonome dans sa microVM dédiée.' },
-	{ name: 'Prisme', category: 'productivity', icon: 'solar:chat-round-dots-bold-duotone', url: 'https://prisme.facile.studio', line: "Messagerie d'équipe et salons connectés sur Matrix." },
+	{ name: 'Prisme', category: 'productivity', icon: 'solar:chat-round-bold-duotone', url: 'https://prisme.facile.studio', line: "Messagerie d'équipe et salons connectés sur Matrix." },
 	{ name: 'Courrier', category: 'productivity', icon: 'solar:letter-opened-bold-duotone', url: 'https://courrier.facile.studio', line: 'Votre email chez vous, IMAP et SMTP natifs.' },
 	{ name: 'Agenda', category: 'productivity', icon: 'solar:calendar-add-bold-duotone', url: 'https://agenda.facile.studio', line: 'Le calendrier partagé du studio, en CalDAV.' },
 	{ name: 'Echo', category: 'productivity', icon: 'solar:videocamera-record-bold-duotone', url: 'https://echo.facile.studio', line: 'Visioconférence chiffrée sans installation.' },
-	{ name: 'Feuilles', category: 'productivity', icon: 'solar:clipboard-list-bold-duotone', url: 'https://feuilles.facile.studio', line: 'Tableur collaboratif IronCalc, xlsx et MCP.' },
-	{ name: 'Docs', category: 'productivity', icon: 'solar:document-text-bold-duotone', url: 'https://docs.facile.studio', line: 'Documents écrits à plusieurs en temps réel, export PDF.' },
-	{ name: 'Toile', category: 'productivity', icon: 'solar:pallete-2-bold-duotone', url: 'https://toile.facile.studio', line: 'Un tableau blanc infini à partager.' },
+	{ name: 'Feuilles', category: 'productivity', icon: 'solar:table-minimalistic-bold-duotone', url: 'https://feuilles.facile.studio', line: 'Tableur collaboratif IronCalc, xlsx et MCP.' },
+	{ name: 'Docs', category: 'productivity', icon: 'solar:documents-bold-duotone', url: 'https://docs.facile.studio', line: 'Documents écrits à plusieurs en temps réel, export PDF.' },
+	{ name: 'Toile', category: 'productivity', icon: 'solar:tablet-bold-duotone', url: 'https://toile.facile.studio', line: 'Un tableau blanc infini à partager.' },
 	{ name: 'Nuage', category: 'infra', icon: 'solar:cloud-bold-duotone', url: 'https://nuage.facile.studio', line: 'Le stockage fichiers du studio, compatible S3.' },
 	{ name: 'Opus', category: 'productivity', icon: 'solar:slider-vertical-minimalistic-bold-duotone', url: 'https://opus.facile.studio', line: 'La gestion de projet qui ne vous ralentit pas.' },
 	{ name: 'Sablier', category: 'productivity', icon: 'solar:hourglass-bold-duotone', url: 'https://sablier.facile.studio', line: 'Vos heures facturables, suivies en un clic.' },
@@ -48,7 +48,7 @@ export const APPS: App[] = [
 	{ name: 'Sonde', category: 'infra', icon: 'solar:radar-bold-duotone', url: 'https://sonde.facile.studio', line: 'Surveillance de disponibilité et page de statut.' },
 	{ name: 'Registre', category: 'infra', icon: 'solar:key-square-bold-duotone', url: 'https://sso.facile.studio', line: "Un seul compte pour tout l'écosystème." },
 	{ name: 'Boîte', category: 'infra', icon: 'solar:box-minimalistic-bold-duotone', url: 'https://boite.facile.studio', line: 'Paquets, images Docker et artéfacts privés.' },
-	{ name: 'Place', category: 'productivity', icon: 'solar:users-group-rounded-bold-duotone', url: 'https://place.facile.studio', line: 'Le forum de la communauté Facile, relié à Discord.' }
+	{ name: 'Place', category: 'productivity', icon: 'solar:cup-hot-bold-duotone', url: 'https://place.facile.studio', line: 'Le forum de la communauté Facile, relié à Discord.' }
 ];
 
 export const COUNT = APPS.length;
