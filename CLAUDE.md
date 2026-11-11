@@ -43,7 +43,6 @@ src/
     +page.svelte          Section composition and page meta
 scripts/gen-icons.ts      Writes icons-data.json from APPS and UI_ICONS
 static/                   Favicons, og-image, fonts, robots.txt
-INTERCONNECTIVITY.md      Older architecture notes on inter-tool communication
 ```
 
 ## Conventions
