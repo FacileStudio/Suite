@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.1] - 2026-11-11
+
+### Fixed
+
+- Dependencies: vite 8.3.8, svelte 5.57.3 and @sveltejs/kit 2.70.4, with source-map-js and cookie pinned to patched versions. Clears the vite, devalue, postcss, nanoid and svelte advisories.
+
 ## [0.1.0] - 2026-11-06
 
 ### Added
