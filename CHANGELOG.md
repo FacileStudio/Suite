@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.2.0] - 2026-11-11
+
+### Added
+
+- Hero demo built with mise-en-scene: an Opus task starts a Sablier timer, Ardoise bills it and Plume gets the signature, with the Antenne feed alongside.
+- Apps grid of all 25 apps with category filters, a circular graph around Antenne, a Registre account section and a light/dark theme toggle.
+
+### Changed
+
+- Rebuilt the landing on muse v0.18.1 (LandingHeader, Page, LandingFooter) with borderless fills, and the theme now follows the system setting.
+
+### Removed
+
+- The hand-written header, InterconnectivityGraph.svelte, WorkflowDiagram.svelte, `@iconify/svelte` and the light-theme pin.
+
 ## [0.1.1] - 2026-11-11
 
 ### Fixed
