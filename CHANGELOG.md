@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.4.0] - 2026-11-14
+
+### Added
+
+- Account demo built with mise-en-scene: one click on "Se connecter avec Facile" opens every app with the same account. It replaces the hand-drawn account panel.
+
+### Changed
+
+- muse v0.22.0: titles and body use Magnetik from muse. Headings and emphasis use `font-bold`.
+- mise-en-scene v0.2.1. The hero demo's rows, cards and buttons follow the window's surface steps, so they stay visible in dark mode.
+- Shorter copy in every section. The hero line is one sentence.
+
+### Removed
+
+- The unused Goga font files in `static/fonts`.
+
 ## [0.3.1] - 2026-11-13
 
 ### Changed
