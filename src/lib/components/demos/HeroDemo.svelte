@@ -88,8 +88,9 @@
 
 {#snippet tasks()}
 	<div class="hd-list">
-		<div class="hd-row"><Bar w="46%" /><Bar w="14%" /></div>
-		<div class="hd-row"><Bar w="34%" /><Bar w="18%" /></div>
+		{#each DEMO.rows as row (row.title)}
+			<div class="hd-row"><span class="hd-title">{row.title}</span><span class="hd-row-time tabular-nums">{row.time}</span></div>
+		{/each}
 		{#if created}
 			<div class="hd-pad" transition:grow={{ duration: 320 }}>
 				<div class="hd-task">
@@ -99,8 +100,14 @@
 							<Icon icon={icon('Sablier')} size={14} />
 							<span class="tabular-nums">{time}</span>
 						</span>
-						<button bind:this={startButton} type="button" tabindex="-1" class="hd-btn">{DEMO.start}</button>
-						<button bind:this={billButton} type="button" tabindex="-1" class="hd-btn">{DEMO.bill}</button>
+						{#if signed}
+							<span class="hd-chip hd-signed"><Icon icon="solar:check-circle-bold" size={14} />{DEMO.signed}</span>
+						{:else if invoiced}
+							<span class="hd-chip"><Icon icon={icon('Ardoise')} size={14} />{DEMO.invoice}</span>
+						{:else}
+							<button bind:this={startButton} type="button" tabindex="-1" class="hd-btn">{DEMO.start}</button>
+							<button bind:this={billButton} type="button" tabindex="-1" class="hd-btn">{DEMO.bill}</button>
+						{/if}
 					</div>
 				</div>
 			</div>
@@ -108,35 +115,10 @@
 	</div>
 {/snippet}
 
-{#snippet cards()}
-	<div class="hd-list">
-		{#if invoiced}
-			<div class="hd-pad" transition:grow={{ duration: 320 }}>
-				<div class="hd-card">
-					<span class="hd-app"><Icon icon={icon('Ardoise')} size={16} /></span>
-					<div class="hd-card-text">
-						<b>{DEMO.invoice}</b>
-						<span>{DEMO.invoiceLine}</span>
-					</div>
-				</div>
-			</div>
-		{/if}
-		{#if signed}
-			<div class="hd-pad" transition:grow={{ duration: 320 }}>
-				<div class="hd-card">
-					<span class="hd-app"><Icon icon={icon('Plume')} size={16} /></span>
-					<div class="hd-card-text"><b>{DEMO.signature}</b></div>
-					<span class="hd-ok"><Icon icon="solar:check-circle-bold" size={18} /></span>
-				</div>
-			</div>
-		{/if}
-	</div>
-{/snippet}
-
-{#snippet feed()}
+{#snippet feed(compact: boolean)}
 	<div class="hd-feed-title"><Icon icon={ANTENNE_ICON} size={16} />{DEMO.feed}</div>
 	<div class="hd-list">
-		{#each EVENTS.slice(0, events) as event (event.id)}
+		{#each EVENTS.slice(compact ? Math.max(0, events - 2) : 0, events) as event (event.id)}
 			<div class="hd-pad" transition:grow={{ duration: 260 }}>
 				<div class="hd-event">
 					<span class="hd-app hd-small"><Icon icon={icon(event.app)} size={14} /></span>
@@ -153,26 +135,24 @@
 	</div>
 {/snippet}
 
-<Stage width={960} height={500} compact={{ below: 640, width: 358, height: 620 }} {script} {reset} {poster} label={DEMO.label}>
+<Stage width={1120} height={364} compact={{ below: 640, width: 358, height: 492 }} {script} {reset} {poster} label={DEMO.label}>
 	{#snippet children({ compact })}
 		{#if compact}
-			<Window style="top:12px;left:12px;width:334px;height:596px">
+			<Window style="top:8px;left:0;width:358px;height:476px">
 				<div class="hd-compact">
 					{@render header()}
 					{@render tasks()}
-					{@render cards()}
-					<div class="hd-feed">{@render feed()}</div>
+					<div class="hd-feed">{@render feed(true)}</div>
 				</div>
 			</Window>
 		{:else}
-			<Window style="top:16px;left:40px;width:880px;height:460px">
+			<Window style="top:8px;left:0;width:1120px;height:340px">
 				<div class="hd-body">
 					<div class="hd-main">
 						{@render header()}
 						{@render tasks()}
-						{@render cards()}
-					</div>
-					<aside class="hd-feed">{@render feed()}</aside>
+						</div>
+					<aside class="hd-feed">{@render feed(false)}</aside>
 				</div>
 			</Window>
 		{/if}
@@ -184,7 +164,8 @@
 	.hd-body {
 		display: grid;
 		flex: 1;
-		grid-template-columns: minmax(0, 1fr) 280px;
+		grid-template-columns: minmax(0, 1fr) 320px;
+		align-items: start;
 		gap: 8px;
 		min-height: 0;
 		padding: 8px;
@@ -267,8 +248,9 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 12px;
-		height: 40px;
+		height: 44px;
 		margin-bottom: 8px;
+		font-size: 13px;
 		padding: 0 14px;
 		border-radius: 12px;
 		background: var(--mes-w-side);
@@ -283,6 +265,10 @@
 		border-radius: 12px;
 		background: var(--mes-w-side);
 		font-size: 13px;
+	}
+	.hd-row-time {
+		color: var(--color-fc-fg-muted);
+		font-size: 12px;
 	}
 	.hd-title {
 		font-weight: 500;
@@ -319,7 +305,6 @@
 		background: var(--color-fc-accent);
 		color: var(--color-fc-accent-fg);
 	}
-	.hd-card,
 	.hd-event {
 		display: flex;
 		align-items: center;
@@ -348,7 +333,6 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
-	.hd-card-text span,
 	.hd-card-text code {
 		color: var(--color-fc-fg-muted);
 		white-space: nowrap;
@@ -359,7 +343,19 @@
 		font-family: var(--font-fc-mono);
 		font-size: 11px;
 	}
-	.hd-ok {
+	.hd-chip {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		height: 30px;
+		padding: 0 12px;
+		border-radius: 999px;
+		background: var(--mes-w-body);
+		font-size: 12px;
+		font-weight: 500;
+		white-space: nowrap;
+	}
+	.hd-signed {
 		color: var(--color-fc-success);
 	}
 	.hd-feed {
@@ -372,11 +368,10 @@
 		background: var(--mes-w-side);
 	}
 	.hd-compact .hd-feed {
-		flex: 1;
 		gap: 8px;
 		padding: 10px;
 	}
-	.hd-compact .hd-row,
+	.hd-compact .hd-row:nth-of-type(3),
 	.hd-compact .hd-event code {
 		display: none;
 	}

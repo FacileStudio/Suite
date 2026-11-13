@@ -90,9 +90,13 @@ export const DEMO = {
 	start: 'Lancer',
 	bill: 'Facturer',
 	invoice: 'Facture F-041',
-	invoiceLine: '2 h 30 · Refonte de la page d’accueil',
-	signature: 'Devis signé par Atelier Martin',
+	signed: 'Signé',
 	feed: 'Antenne',
+	rows: [
+		{ title: 'Maquettes mobile', time: '3 h 20' },
+		{ title: 'Rédaction des contenus', time: '1 h 45' },
+		{ title: 'Logo et charte', time: '2 h 10' }
+	],
 	events: {
 		task: 'Tâche créée',
 		timer: 'Chrono lancé',
