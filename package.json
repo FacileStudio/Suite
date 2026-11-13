@@ -25,7 +25,7 @@
 	},
 	"dependencies": {
 		"@facile/journal": "github:FacileStudio/Journal#ts",
-		"@facile/mise-en-scene": "github:FacileStudio/mise-en-scene#v0.2.0",
+		"@facile/mise-en-scene": "github:FacileStudio/mise-en-scene#v0.2.1",
 		"@facile/muse": "github:FacileStudio/muse#v0.22.0"
 	},
 	"overrides": {
