@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.1] - 2026-11-14
+
+### Fixed
+
+- The hero demo lines up with the hero text instead of sitting centered off to the right.
+- The hero demo no longer leaves half the window empty: real task rows replace the grey bars, the invoice and signature show as a status on the task, and the window fits its content.
+- On phones the hero demo keeps a fixed height and the event feed shows the last two events.
+
 ## [0.4.0] - 2026-11-14
 
 ### Added
