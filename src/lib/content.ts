@@ -64,8 +64,8 @@ export const UI_ICONS = [
 	'solar:user-circle-bold-duotone',
 	'solar:server-square-bold-duotone',
 	'solar:code-square-linear',
-	'solar:link-round-angle-bold-duotone',
-	'solar:shield-user-bold-duotone'
+	'solar:shield-user-bold-duotone',
+	'solar:login-3-bold-duotone'
 ];
 
 export const NAV = [
@@ -77,7 +77,7 @@ export const NAV = [
 export const HERO = {
 	eyebrow: ['Auto-hébergé', 'Open source', 'Un seul compte'],
 	title: 'On simplifie, vous créez.',
-	sub: `${COUNT} outils qui se parlent, sur votre serveur. Projets, temps, factures, signatures, fichiers et logs avec un seul compte.`,
+	sub: `${COUNT} outils qui se parlent, sur votre serveur, avec un seul compte.`,
 	primary: 'Voir les tarifs',
 	secondary: 'Parcourir les apps'
 };
@@ -103,44 +103,45 @@ export const DEMO = {
 
 export const APPS_SECTION = {
 	title: 'Une app par métier',
-	text: 'Chaque outil fait une chose bien. Prenez ceux dont vous avez besoin, ils partagent le même compte.',
+	text: 'Prenez celles qu’il vous faut. Elles partagent le même compte.',
 	filter: 'Filtrer par catégorie',
 	open: 'Ouvrir'
 };
 
 export const GRAPH = {
 	title: 'Tout est relié',
-	text: 'Antenne est le bus d’événements de la suite. Une app publie ce qui se passe, les autres réagissent : une tâche lance un chrono, un chrono devient une facture, une facture attend sa signature.',
+	text: 'Antenne fait circuler les événements. Une tâche lance un chrono, le chrono devient une facture.',
 	label: `Graphe des ${COUNT} apps de la suite reliées à Antenne, au centre`,
 	points: [
-		{ title: 'Des événements, pas des exports', text: 'Les données passent d’une app à l’autre au moment où elles changent.' },
-		{ title: 'Des API ouvertes', text: 'Chaque app expose une API et un serveur MCP, pour vos scripts comme pour vos agents.' }
+		{ title: 'Des événements, pas des exports', text: 'Les données passent d’une app à l’autre dès qu’elles changent.' },
+		{ title: 'Des API ouvertes', text: 'Chaque app a une API et un serveur MCP pour vos scripts et vos agents.' }
 	]
 };
 
 export const SSO = {
 	title: 'Une connexion. Toutes les apps.',
-	text: 'Registre gère l’identité de toute la suite en OpenID Connect. Vous vous connectez une fois et passez d’Opus à Ardoise sans revoir un écran de login.',
+	text: 'Registre gère l’identité de la suite en OpenID Connect. Connectez-vous une fois.',
+	label: 'Un clic sur « Se connecter avec Facile » ouvre chaque app de la suite avec le même compte.',
+	signIn: 'Se connecter avec Facile',
 	account: 'Vous',
 	space: 'Studio Martin',
 	connected: 'Connecté',
 	points: [
-		{ icon: 'solar:link-round-angle-bold-duotone', title: 'SSO intégré', text: 'Un seul jeton OpenID Connect pour toute la suite.' },
-		{ icon: 'solar:shield-user-bold-duotone', title: 'Équipe centralisée', text: 'Ajoutez un membre une fois, il a accès partout. Retirez-le, c’est fini partout.' },
-		{ icon: 'solar:server-square-bold-duotone', title: 'Votre serveur, vos règles', text: 'Aucun tiers dans la boucle. Vos identifiants restent chez vous.' }
+		{ icon: 'solar:shield-user-bold-duotone', title: 'Équipe centralisée', text: 'Ajoutez un membre une fois, retirez-le une fois.' },
+		{ icon: 'solar:server-square-bold-duotone', title: 'Votre serveur', text: 'Aucun tiers. Vos identifiants restent chez vous.' }
 	],
 	apps: ['Opus', 'Sablier', 'Ardoise', 'Plume', 'Nuage', 'Courrier']
 };
 
 export const TARIFS = {
 	title: 'Un compte. Toute la suite.',
-	text: 'Votre compte Facile ouvre chaque outil de la suite. Créer votre espace est gratuit et prend une minute.',
+	text: 'Votre compte Facile ouvre chaque outil. Créer votre espace est gratuit.',
 	cta: 'Créer mon espace'
 };
 
 export const ABOUT = {
 	title: 'Quatre humains. Zéro bullshit.',
-	text: 'Deux devs, deux designers. On construit les outils qu’on utilise tous les jours. Pas de roadmap à rallonge, pas de features pour les investisseurs. Juste ce qui marche, en open source.',
+	text: 'Deux devs, deux designers. On construit les outils qu’on utilise tous les jours, en open source.',
 	studio: 'Découvrir Facile',
 	code: 'Voir le code'
 };

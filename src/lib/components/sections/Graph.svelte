@@ -54,7 +54,7 @@
 >
 	<div data-reveal-item class="flex flex-col gap-6">
 		<div class="flex flex-col gap-2">
-			<h2 id="connexions-title" class="text-fc-xl font-semibold tracking-tight text-fc-fg sm:text-fc-2xl">
+			<h2 id="connexions-title" class="text-fc-xl font-bold tracking-tight text-fc-fg sm:text-fc-2xl">
 				{GRAPH.title}
 			</h2>
 			<p class="text-fc-md text-fc-fg-muted">{GRAPH.text}</p>
@@ -62,7 +62,7 @@
 		<dl class="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
 			{#each GRAPH.points as point (point.title)}
 				<div class="flex flex-col gap-1 rounded-fc-lg bg-fc-component p-4">
-					<dt class="text-fc-sm font-semibold text-fc-fg">{point.title}</dt>
+					<dt class="text-fc-sm font-bold text-fc-fg">{point.title}</dt>
 					<dd class="text-fc-sm text-fc-fg-muted">{point.text}</dd>
 				</div>
 			{/each}

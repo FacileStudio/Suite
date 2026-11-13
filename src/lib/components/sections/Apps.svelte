@@ -11,7 +11,7 @@
 
 <section id="apps" aria-labelledby="apps-title" use:scrollReveal class="flex scroll-mt-24 flex-col gap-6">
 	<div data-reveal-item class="flex max-w-2xl flex-col gap-2">
-		<h2 id="apps-title" class="text-fc-xl font-semibold tracking-tight text-fc-fg sm:text-fc-2xl">
+		<h2 id="apps-title" class="text-fc-xl font-bold tracking-tight text-fc-fg sm:text-fc-2xl">
 			{APPS_SECTION.title}
 		</h2>
 		<p class="text-fc-md text-fc-fg-muted">{APPS_SECTION.text}</p>
@@ -47,7 +47,7 @@
 					</span>
 					<span class="flex min-w-0 flex-col gap-1">
 						<span class="flex items-center gap-2">
-							<span class="text-fc-md font-semibold text-fc-fg">{app.name}</span>
+							<span class="text-fc-md font-bold text-fc-fg">{app.name}</span>
 							<span class="truncate text-fc-xs text-fc-fg-muted">{label(app.category)}</span>
 						</span>
 						<span class="text-fc-sm text-fc-fg-muted">{app.line}</span>

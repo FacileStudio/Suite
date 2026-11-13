@@ -12,7 +12,7 @@
 		{/each}
 	</div>
 	<div data-reveal-item class="flex max-w-3xl flex-col gap-4">
-		<h1 class="text-fc-2xl font-semibold tracking-tight text-fc-fg sm:text-fc-3xl">{HERO.title}</h1>
+		<h1 class="text-fc-2xl font-bold tracking-tight text-fc-fg sm:text-fc-3xl">{HERO.title}</h1>
 		<p class="text-fc-md text-fc-fg-muted sm:text-fc-lg">{HERO.sub}</p>
 	</div>
 	<div data-reveal-item class="flex flex-wrap items-center gap-3">

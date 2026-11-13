@@ -6,7 +6,7 @@ Landing page for the Facile Suite (suite.facile.studio): the self-hosted, interc
 
 - **Framework**: SvelteKit (Svelte 5, runes API), `@sveltejs/adapter-static`, fully prerendered
 - **Styling**: Tailwind CSS v4 (`@tailwindcss/vite`) with `@facile/muse` tokens and components
-- **Demos**: `@facile/mise-en-scene` (Stage, Window, Cursor) for the hero animation
+- **Demos**: `@facile/mise-en-scene` (Stage, Window, Cursor, Roll) for the hero and account demos
 - **Icons**: muse `Icon`; Solar glyphs the site needs are generated into `src/lib/icons-data.json`
 - **Package manager and runtime**: bun; Docker builds with `oven/bun:1` and nginx serves `build/`
 
@@ -37,12 +37,13 @@ src/
       SiteShell.svelte    LandingHeader, Page width="xl", LandingFooter
       ThemeButton.svelte  Light/dark toggle, stored in localStorage `suite-theme`
       demos/HeroDemo.svelte   Opus task, Sablier timer, Ardoise invoice, Plume signature
+      demos/SsoDemo.svelte    Sign in with Facile once, every app opens
       sections/           Hero, Apps (#apps), Graph (#connexions), Sso (#compte), Tarifs (#tarifs), About
   routes/
     +layout.svelte        app.css, provideLocale('fr'), icon registration
     +page.svelte          Section composition and page meta
 scripts/gen-icons.ts      Writes icons-data.json from APPS and UI_ICONS
-static/                   Favicons, og-image, fonts, robots.txt
+static/                   Favicons, og-image, robots.txt (fonts come from muse)
 ```
 
 ## Conventions

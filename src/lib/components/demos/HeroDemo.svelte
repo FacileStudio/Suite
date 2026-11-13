@@ -215,7 +215,7 @@
 		flex: 1;
 		min-width: 0;
 		font-size: 15px;
-		font-weight: 600;
+		font-weight: 700;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -228,8 +228,12 @@
 		width: 32px;
 		height: 32px;
 		border-radius: 10px;
-		background: var(--color-fc-surface);
+		background: var(--mes-w-body);
 		color: var(--color-fc-fg);
+	}
+	.hd-head .hd-app,
+	.hd-event .hd-app {
+		background: var(--mes-w-side);
 	}
 	.hd-small {
 		width: 28px;
@@ -240,7 +244,7 @@
 		height: 30px;
 		padding: 0 14px;
 		border-radius: 999px;
-		background: var(--color-fc-surface);
+		background: var(--mes-w-body);
 		color: var(--color-fc-fg);
 		font-size: 12px;
 		font-weight: 500;
@@ -267,7 +271,7 @@
 		margin-bottom: 8px;
 		padding: 0 14px;
 		border-radius: 12px;
-		background: var(--color-fc-component);
+		background: var(--mes-w-side);
 	}
 	.hd-task {
 		display: flex;
@@ -277,7 +281,7 @@
 		gap: 10px;
 		padding: 12px 14px;
 		border-radius: 12px;
-		background: var(--color-fc-component);
+		background: var(--mes-w-side);
 		font-size: 13px;
 	}
 	.hd-title {
@@ -307,7 +311,7 @@
 		height: 30px;
 		padding: 0 12px;
 		border-radius: 999px;
-		background: var(--color-fc-surface);
+		background: var(--mes-w-body);
 		font-size: 12px;
 		transition: background 0.25s ease, color 0.25s ease;
 	}
@@ -322,13 +326,13 @@
 		gap: 12px;
 		padding: 10px 12px;
 		border-radius: 12px;
-		background: var(--color-fc-component);
+		background: var(--mes-w-side);
 		font-size: 13px;
 	}
 	.hd-event {
 		gap: 10px;
 		padding: 8px 10px;
-		background: var(--color-fc-page);
+		background: var(--mes-w-body);
 		font-size: 12px;
 	}
 	.hd-card-text {
@@ -365,7 +369,7 @@
 		min-height: 0;
 		padding: 14px;
 		border-radius: 12px;
-		background: var(--color-fc-component);
+		background: var(--mes-w-side);
 	}
 	.hd-compact .hd-feed {
 		flex: 1;
