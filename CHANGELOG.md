@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.3.1] - 2026-11-13
+
+### Changed
+
+- muse v0.21.0. The theme toggle shows its label as a muse tooltip on hover and keyboard focus.
+
 ## [0.3.0] - 2026-11-11
 
 ### Changed
