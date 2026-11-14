@@ -15,7 +15,7 @@ export const fr = {
 		"chips": [
 			"Un seul compte",
 			"Gratuit pour commencer",
-			"Open source"
+			"Code ouvert"
 		],
 		"title": "On simplifie, vous créez.",
 		"sub": "{count} apps pour travailler, un seul compte Facile. On les héberge, vous commencez en une minute."

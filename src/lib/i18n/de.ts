@@ -17,7 +17,7 @@ export const de: Messages = {
 		"chips": [
 			"Ein Konto",
 			"Kostenlos starten",
-			"Open Source"
+			"Offener Code"
 		],
 		"title": "Wir vereinfachen, Sie gestalten.",
 		"sub": "{count} Apps für Ihre Arbeit, ein Facile-Konto. Wir hosten sie, Sie starten in einer Minute."
