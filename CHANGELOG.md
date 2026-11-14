@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.6.3] - 2026-11-14
+
+### Changed
+
+- The hero chip says "Code ouvert" instead of "Open source" (en "Open code", de "Offener Code", es unchanged "Código abierto"), matching the about block. Scribe's repository is private.
+
 ## [0.6.2] - 2026-11-14
 
 ### Changed
