@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.2] - 2026-11-14
+
+### Changed
+
+- The self-hosting page says the code of our apps is open, instead of "Les apps Facile sont open source" and "restent open source pour tout le monde", in fr, en, es and de. Scribe's repository is private.
+- muse v0.25.1. New og-image.png and site.webmanifest description from the muse brand catalog: "26 apps for your work, one Facile account".
+
 ## [0.6.1] - 2026-11-14
 
 ### Changed
