@@ -1,80 +1,78 @@
 <script lang="ts">
-	import { Bar, Cursor, Roll, Stage, Window, cursorAt, type Act } from '@facile/mise-en-scene';
-	import { Icon } from '@facile/muse';
+	import { Cursor, Roll, Stage, Window, cursorAt, grow, type Act } from '@facile/mise-en-scene';
+	import { Avatar, Icon } from '@facile/muse';
 	import { APPS, SSO } from '$lib/content';
 
 	const apps = APPS.filter((app) => SSO.apps.includes(app.name));
 	const registre = APPS.find((app) => app.name === 'Registre');
 
-	let signed = $state(false);
+	let added = $state(false);
 	let opened = $state(0);
-	let cursor = $state(cursorAt(440, 300));
+	let cursor = $state(cursorAt(300, 320));
 	let button = $state<HTMLElement>();
 
 	function reset() {
-		signed = false;
+		added = false;
 		opened = 0;
-		cursor = cursorAt(440, 300);
+		cursor = cursorAt(300, 320);
 	}
 
 	function poster() {
-		signed = true;
+		added = true;
 		opened = apps.length;
 	}
 
 	async function script(act: Act) {
 		await act.wait(700);
 		cursor.visible = true;
-		await act.move(cursor, act.point(button, 0.7, 0.7));
-		await act.click(cursor, () => (signed = true));
-		await act.wait(300);
+		await act.move(cursor, act.point(button, 0.6, 0.65));
+		await act.click(cursor, () => (added = true));
+		await act.wait(500);
 		cursor.visible = false;
-		await act.count(apps.length, (v) => (opened = v), 260);
+		await act.count(apps.length, (v) => (opened = v), 240);
 		await act.wait(2200);
 		reset();
 		await act.wait(500);
 	}
 </script>
 
-{#snippet mark()}
-	<svg width="16" height="16" viewBox="0 0 217 225" fill="currentColor" aria-hidden="true">
-		<path
-			d="M21.6 2.10177L23.4 2.70176C19.5 17.4018 27.9 37.8018 42 37.8018C71.4 37.8018 95.1 -0.298234 137.1 0.00176235C170.1 0.00176235 177.3 29.4018 177.3 43.5018V64.8018H131.7L131.4 46.5018C131.4 25.5018 120.3 20.7018 107.7 20.7018C65.7 20.7018 49.8 80.1018 27.3 80.1018C14.7 80.1018 11.4 62.7018 11.4 49.2018C11.4 29.1018 16.5 10.5018 21.6 2.10177ZM53.4 109.202L81.9 46.2018H121.2C109.8 68.1018 100.2 89.4018 91.5 109.202H94.8C129.9 109.202 157.8 117.902 157.8 163.802L112.8 163.202C113.1 121.202 111.9 114.002 95.1 114.002H89.1C60.6 177.902 40.2 225.002 0 225.002L0.3 175.802V109.202H53.4ZM2.7 138.302V175.802C18.3 174.902 32.1 156.902 40.8 137.102L51 114.302C12.3 115.802 2.7 120.602 2.7 138.302Z"
-		/>
-		<path d="M179.198 223.502V186.902H216.098V223.502H179.198Z" />
-	</svg>
-{/snippet}
-
-{#snippet scene()}
-	<div class="sd-body">
-		<div class="sd-login" class:sd-gone={signed}>
-			{#if registre}<span class="sd-logo"><Icon icon={registre.icon} size={26} /></span>{/if}
-			<div class="sd-bars"><Bar w="60%" /><Bar w="40%" /></div>
-			<span bind:this={button} class="sd-signin">{@render mark()}{SSO.signIn}</span>
-		</div>
-		<div class="sd-account" class:sd-gone={!signed}>
-			<div class="sd-user">
-				<span class="sd-avatar"><Icon icon="solar:user-circle-bold-duotone" size={22} /></span>
-				<span class="sd-who"><b>{SSO.account}</b><span>{SSO.space}</span></span>
-				{#if registre}<span class="sd-idp"><Icon icon={registre.icon} size={16} />{registre.name}</span>{/if}
-			</div>
-			<ul class="sd-apps">
-				{#each apps as app, i (app.name)}
-					<li class="sd-app" class:sd-on={opened > i}>
-						<Icon icon={app.icon} size={18} />
-						<span class="sd-name">{app.name}</span>
-						<span class="sd-check"><Icon icon="solar:check-circle-bold" size={16} /></span>
-					</li>
-				{/each}
-			</ul>
-			<p class="sd-count">{SSO.connected} · <Roll value={String(opened)} class="sd-num" /> / {APPS.length}</p>
-		</div>
+{#snippet member(person: { name: string; email: string; role: string })}
+	<div class="sd-member">
+		<Avatar name={person.name} size="sm" />
+		<span class="sd-who"><b>{person.name}</b><code>{person.email}</code></span>
+		<span class="sd-role">{person.role}</span>
 	</div>
 {/snippet}
 
-<Stage width={560} height={340} compact={{ below: 480, width: 358, height: 372 }} {script} {reset} {poster} label={SSO.label}>
+{#snippet scene()}
+	<div class="sd-head">
+		{#if registre}<span class="sd-logo"><Icon icon={registre.icon} size={18} /></span>{/if}
+		<b>{SSO.space}</b>
+		<span bind:this={button} class="sd-invite"><Icon icon="solar:user-plus-linear" size={16} />{SSO.invite}</span>
+	</div>
+	<div class="sd-list">
+		{@render member(SSO.owner)}
+		{#if added}
+			<div class="sd-grow" transition:grow={{ duration: 320 }}>{@render member(SSO.member)}</div>
+		{/if}
+	</div>
+	<div class="sd-access" class:sd-dim={!added}>
+		<p class="sd-count">{SSO.access} · <Roll value={String(opened)} class="sd-num" /> / {APPS.length}</p>
+		<ul class="sd-apps">
+			{#each apps as app, i (app.name)}
+				<li class="sd-app" class:sd-on={opened > i}>
+					<Icon icon={app.icon} size={18} />
+					<span class="sd-name">{app.name}</span>
+					<span class="sd-check"><Icon icon="solar:check-circle-bold" size={16} /></span>
+				</li>
+			{/each}
+		</ul>
+	</div>
+{/snippet}
+
+<Stage width={560} height={440} compact={{ below: 480, width: 358, height: 520 }} {script} {reset} {poster} label={SSO.label}>
 	{#snippet children({ compact })}
-		<Window style={compact ? 'top:12px;left:12px;width:334px;height:348px' : 'top:20px;left:20px;width:520px;height:300px'}>
+		<Window title={registre?.name} style={compact ? 'top:12px;left:12px;width:334px;height:440px' : 'top:20px;left:20px;width:520px;height:352px'}>
 			<div class="sd-wrap" class:sd-compact={compact}>{@render scene()}</div>
 		</Window>
 		<Cursor {cursor} />
@@ -83,84 +81,64 @@
 
 <style>
 	.sd-wrap {
-		position: relative;
-		flex: 1;
-		min-height: 0;
-		color: var(--color-fc-fg);
-		font-family: var(--font-sans);
-	}
-	.sd-body {
-		position: absolute;
-		inset: 0;
-	}
-	.sd-login,
-	.sd-account {
-		position: absolute;
-		inset: 0;
 		display: flex;
+		flex: 1;
 		flex-direction: column;
-		transition:
-			opacity 0.35s ease,
-			translate 0.35s ease;
+		gap: 14px;
+		min-height: 0;
+		padding: 18px 20px;
+		color: var(--color-fc-fg);
+		font-family: var(--font-fc-body);
 	}
-	.sd-gone {
-		opacity: 0;
-		translate: 0 8px;
+	.sd-compact {
+		padding: 16px;
 	}
-	.sd-login {
+	.sd-head {
+		display: flex;
 		align-items: center;
-		justify-content: center;
-		gap: 18px;
+		gap: 10px;
+	}
+	.sd-head b {
+		flex: 1;
+		font-family: var(--font-fc-title);
+		font-size: 15px;
+		font-weight: 700;
 	}
 	.sd-logo {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 52px;
-		height: 52px;
-		border-radius: 16px;
-		background: var(--color-fc-surface);
+		width: 32px;
+		height: 32px;
+		border-radius: 10px;
+		background: var(--mes-w-side);
 	}
-	.sd-bars {
-		display: grid;
-		justify-items: center;
-		gap: 8px;
-		width: 200px;
-	}
-	.sd-signin {
+	.sd-invite {
 		display: inline-flex;
 		align-items: center;
-		gap: 10px;
-		height: 44px;
-		padding: 0 20px;
+		gap: 6px;
+		height: 32px;
+		padding: 0 14px;
 		border-radius: 999px;
 		background: var(--color-fc-accent);
 		color: var(--color-fc-accent-fg);
-		font-size: 14px;
+		font-size: 12px;
 		font-weight: 600;
-		white-space: nowrap;
 	}
-	.sd-account {
-		gap: 12px;
-		padding: 20px;
+	.sd-list {
+		display: flex;
+		flex-direction: column;
 	}
-	.sd-user {
+	.sd-grow {
+		padding-top: 6px;
+	}
+	.sd-member {
 		display: flex;
 		align-items: center;
 		gap: 12px;
-		padding: 10px 12px;
-		border-radius: 14px;
-		background: var(--color-fc-surface);
-	}
-	.sd-avatar {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 38px;
-		height: 38px;
-		border-radius: 999px;
-		background: var(--color-fc-accent);
-		color: var(--color-fc-accent-fg);
+		padding: 8px 12px;
+		border-radius: 12px;
+		background: var(--mes-w-side);
 	}
 	.sd-who {
 		display: flex;
@@ -170,18 +148,43 @@
 		font-size: 13px;
 	}
 	.sd-who b {
-		font-weight: 700;
+		font-weight: 600;
 	}
-	.sd-who span,
-	.sd-idp,
+	.sd-who code {
+		overflow: hidden;
+		color: var(--color-fc-fg-muted);
+		font-family: var(--font-fc-mono);
+		font-size: 11px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.sd-role {
+		padding: 2px 10px;
+		border-radius: 999px;
+		background: var(--mes-w-body);
+		color: var(--color-fc-fg-muted);
+		font-size: 11px;
+		white-space: nowrap;
+	}
+	.sd-access {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		margin-top: auto;
+		transition: opacity 0.3s ease;
+	}
+	.sd-dim {
+		opacity: 0.5;
+	}
 	.sd-count {
+		margin: 0;
 		color: var(--color-fc-fg-muted);
 		font-size: 12px;
 	}
-	.sd-idp {
-		display: inline-flex;
-		align-items: center;
-		gap: 6px;
+	.sd-count :global(.sd-num) {
+		min-width: 1ch;
+		vertical-align: bottom;
+		font-variant-numeric: tabular-nums;
 	}
 	.sd-apps {
 		display: grid;
@@ -198,10 +201,10 @@
 		display: flex;
 		align-items: center;
 		gap: 8px;
-		height: 48px;
+		height: 44px;
 		padding: 0 12px;
 		border-radius: 12px;
-		background: var(--color-fc-surface);
+		background: var(--mes-w-side);
 		font-size: 13px;
 		opacity: 0.55;
 		transition: opacity 0.3s ease;
@@ -229,17 +232,8 @@
 		opacity: 1;
 		scale: 1;
 	}
-	.sd-count {
-		margin: auto 0 0;
-	}
-	.sd-count :global(.sd-num) {
-		min-width: 1ch;
-		vertical-align: bottom;
-		font-variant-numeric: tabular-nums;
-	}
 	@media (prefers-reduced-motion: reduce) {
-		.sd-login,
-		.sd-account,
+		.sd-access,
 		.sd-app,
 		.sd-check {
 			transition: none;

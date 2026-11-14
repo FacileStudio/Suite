@@ -19,7 +19,7 @@
 		<Button variant="primary" size="lg" href="#tarifs" iconRight="solar:arrow-right-linear">{HERO.primary}</Button>
 		<Button variant="secondary" size="lg" href="#apps" iconRight="solar:arrow-down-linear">{HERO.secondary}</Button>
 	</div>
-	<div data-reveal-item class="pt-2">
+	<div data-reveal-item class="-mx-4 max-w-[880px] pt-2 md:-mx-10">
 		<HeroDemo />
 	</div>
 </section>

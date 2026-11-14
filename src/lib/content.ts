@@ -65,7 +65,12 @@ export const UI_ICONS = [
 	'solar:server-square-bold-duotone',
 	'solar:code-square-linear',
 	'solar:shield-user-bold-duotone',
-	'solar:login-3-bold-duotone'
+	'solar:login-3-bold-duotone',
+	'solar:folder-linear',
+	'solar:file-text-linear',
+	'solar:gallery-linear',
+	'solar:archive-linear',
+	'solar:user-plus-linear'
 ];
 
 export const NAV = [
@@ -83,26 +88,31 @@ export const HERO = {
 };
 
 export const DEMO = {
-	label: 'Une tâche Opus lance un chrono Sablier, le temps part en facture Ardoise, puis Plume reçoit la signature du client.',
-	project: 'Atelier Martin',
-	task: 'Refonte de la page d’accueil',
-	newTask: 'Nouvelle tâche',
-	start: 'Lancer',
-	bill: 'Facturer',
-	invoice: 'Facture F-041',
-	signed: 'Signé',
-	feed: 'Antenne',
-	rows: [
-		{ title: 'Maquettes mobile', time: '3 h 20' },
-		{ title: 'Rédaction des contenus', time: '1 h 45' },
-		{ title: 'Logo et charte', time: '2 h 10' }
+	label: 'Léa se connecte une fois avec Facile, ouvre Nuage, puis passe à Agenda sans se reconnecter.',
+	signIn: 'Se connecter avec Facile',
+	home: 'Facile',
+	hello: 'Bonjour Léa',
+	user: 'Léa',
+	connected: 'Connectée',
+	apps: ['Nuage', 'Agenda', 'Courrier', 'Opus', 'Sablier', 'Ardoise', 'Plume', 'Docs', 'Feuilles', 'Prisme', 'Echo', 'Bulle'],
+	rail: ['Nuage', 'Agenda', 'Courrier', 'Opus', 'Docs'],
+	folder: 'Studio Martin',
+	columns: ['Nom', 'Taille', 'Modifié'],
+	files: [
+		{ name: 'Maquettes', icon: 'solar:folder-linear', size: '—', date: 'Aujourd’hui' },
+		{ name: 'brief-client.pdf', icon: 'solar:file-text-linear', size: '1,2 Mo', date: 'Hier' },
+		{ name: 'logo.svg', icon: 'solar:gallery-linear', size: '48 Ko', date: '12 nov.' },
+		{ name: 'photos-atelier.zip', icon: 'solar:archive-linear', size: '86 Mo', date: '10 nov.' }
 	],
-	events: {
-		task: 'Tâche créée',
-		timer: 'Chrono lancé',
-		invoice: 'Facture émise',
-		signed: 'Document signé'
-	}
+	week: 'Semaine 46',
+	days: ['Lun 9', 'Mar 10', 'Mer 11', 'Jeu 12', 'Ven 13'],
+	events: [
+		{ day: 0, top: 1, length: 2, title: 'Point client' },
+		{ day: 1, top: 4, length: 2, title: 'Atelier logo' },
+		{ day: 2, top: 0, length: 3, title: 'Maquettes' },
+		{ day: 3, top: 3, length: 2, title: 'Revue sprint' },
+		{ day: 4, top: 1, length: 2, title: 'Envoi devis' }
+	]
 };
 
 export const APPS_SECTION = {
@@ -123,13 +133,14 @@ export const GRAPH = {
 };
 
 export const SSO = {
-	title: 'Une connexion. Toutes les apps.',
-	text: 'Registre gère l’identité de la suite en OpenID Connect. Connectez-vous une fois.',
-	label: 'Un clic sur « Se connecter avec Facile » ouvre chaque app de la suite avec le même compte.',
-	signIn: 'Se connecter avec Facile',
-	account: 'Vous',
+	title: 'Votre équipe, réglée une fois.',
+	text: 'Registre gère les comptes de la suite en OpenID Connect. Un membre ajouté à l’espace ouvre toutes les apps.',
+	label: 'Hugo est ajouté une fois à l’espace Studio Martin dans Registre, et chaque app de la suite lui est ouverte.',
 	space: 'Studio Martin',
-	connected: 'Connecté',
+	invite: 'Inviter',
+	owner: { name: 'Léa', email: 'lea@studio-martin.fr', role: 'Propriétaire' },
+	member: { name: 'Hugo', email: 'hugo@studio-martin.fr', role: 'Membre' },
+	access: 'Accès de Hugo',
 	points: [
 		{ icon: 'solar:shield-user-bold-duotone', title: 'Équipe centralisée', text: 'Ajoutez un membre une fois, retirez-le une fois.' },
 		{ icon: 'solar:server-square-bold-duotone', title: 'Votre serveur', text: 'Aucun tiers. Vos identifiants restent chez vous.' }

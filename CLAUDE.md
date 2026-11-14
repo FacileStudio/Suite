@@ -36,8 +36,8 @@ src/
     components/
       SiteShell.svelte    LandingHeader, Page width="xl", LandingFooter
       ThemeButton.svelte  Light/dark toggle, stored in localStorage `suite-theme`
-      demos/HeroDemo.svelte   Opus task, Sablier timer, Ardoise invoice, Plume signature
-      demos/SsoDemo.svelte    Sign in with Facile once, every app opens
+      demos/HeroDemo.svelte   Sign in once, launcher, Nuage then Agenda (HeroHome, HeroApps)
+      demos/SsoDemo.svelte    Registre: add a member once, every app opens to them
       sections/           Hero, Apps (#apps), Graph (#connexions), Sso (#compte), Tarifs (#tarifs), About
   routes/
     +layout.svelte        app.css, provideLocale('fr'), icon registration
