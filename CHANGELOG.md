@@ -1,5 +1,26 @@
 # Changelog
 
+## [0.6.0] - 2026-11-14
+
+### Added
+
+- French, English, Spanish and German for the whole page, at `/`, `/en`, `/es` and `/de`. The footer language switch changes the page.
+- `/auto-hebergement` (and `/en/auto-hebergement`, `/es/…`, `/de/…`): the hosted offer first, a hosted versus self-hosted table, what self-hosting takes, and links to the code.
+- "Vos apps travaillent ensemble": three animated cards for a contract signed in Plume, Opus deadlines in Agenda and Sablier, and Bulle working across the apps (Pro plan).
+- Gare in the app grid.
+
+### Changed
+
+- The hero leads with a free account: "Créer un compte gratuit" first, sign-in second. The subtitle and chips say Facile hosts the apps.
+- The hero demo draws Agenda the way Agenda does: calendar colours, "09:00" times, striped hours and today's circle. Screens fade out before the next one fades in, the window title follows, the side rail slides in from the left, and the loop restarts with a soft fade.
+- Every app line in the grid matches the suite copy. Nuage moves to Productivité.
+- "Tout est relié" names only connections that exist: a contract signed in Plume, Opus tasks in Agenda and Sablier, and 17 apps with an MCP server.
+- Pricing marks Pro as recommended and says the free plan needs no card.
+
+### Removed
+
+- "Auto-hébergé", "sur votre serveur" and the "chrono devient une facture" claim.
+
 ## [0.5.0] - 2026-11-14
 
 ### Added
