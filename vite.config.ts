@@ -4,5 +4,5 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
 	plugins: [tailwindcss(), sveltekit()],
-	optimizeDeps: { exclude: ['@facile/muse', '@facile/mise-en-scene'] }
+	optimizeDeps: { exclude: ['@facile/muse'] }
 });
