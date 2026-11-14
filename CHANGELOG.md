@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.2] - 2026-11-14
+
+### Changed
+
+- muse v0.23.0: the footer is left-aligned on phones.
+- mise-en-scene v0.2.2. The kit needs no Vite config, so `@facile/mise-en-scene` leaves `optimizeDeps.exclude`.
+
 ## [0.4.1] - 2026-11-14
 
 ### Fixed
