@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.6.1] - 2026-11-14
+
+### Changed
+
+- The Vision line in the app grid now says "sans cookies" instead of "sans bandeau cookies", in fr, en, es and de. Vision's tracker keeps a visitor id in localStorage, so the no-banner claim waits until it is verified.
+- The about block says the code of our apps is open, instead of "Tout est open source".
+- The web manifest no longer says the apps run on your own server.
+
 ## [0.6.0] - 2026-11-14
 
 ### Added
