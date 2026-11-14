@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.5.0] - 2026-11-14
+
+### Added
+
+- Hero demo: sign in once with Facile, pick Nuage in the app launcher, then hop to Agenda without signing in again.
+
+### Changed
+
+- The account demo shows the team side: add a member once in Registre and every app opens to them.
+- The hero and account demos leave room for the window shadow, so no edge is cut.
+
+### Removed
+
+- The Opus, Sablier, Ardoise and Plume event demo in the hero.
+
 ## [0.4.2] - 2026-11-14
 
 ### Changed
