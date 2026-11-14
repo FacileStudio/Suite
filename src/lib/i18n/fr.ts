@@ -206,7 +206,7 @@ export const fr = {
 	},
 	"self": {
 		"eyebrow": "Auto-hébergement",
-		"intro": "Les apps Facile sont open source. Vous pouvez les installer sur votre propre serveur.",
+		"intro": "Le code de nos apps est ouvert. Vous pouvez les installer sur votre propre serveur.",
 		"compare": "Hébergé ou auto-hébergé",
 		"topic": "Sujet",
 		"repos": "Par où commencer",
@@ -262,7 +262,7 @@ export const fr = {
 			"Les mises à jour de chaque app, à suivre et à appliquer.",
 			"Les noms de domaine, les certificats HTTPS et l'envoi de mails."
 		],
-		"funding": "Les abonnements financent le développement des apps, qui restent open source pour tout le monde.",
+		"funding": "Les abonnements financent le développement des apps, dont le code reste ouvert.",
 		"cta": "Créer un compte gratuit",
 		"secondary": "Voir le code sur GitHub"
 	}

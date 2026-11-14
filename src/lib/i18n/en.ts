@@ -208,7 +208,7 @@ export const en: Messages = {
 	},
 	"self": {
 		"eyebrow": "Self-hosting",
-		"intro": "The Facile apps are open source. You can install them on your own server.",
+		"intro": "Our apps' code is open. You can install them on your own server.",
 		"compare": "Hosted or self-hosted",
 		"topic": "Topic",
 		"repos": "Where to start",
@@ -264,7 +264,7 @@ export const en: Messages = {
 			"Updates for every app, to follow and apply.",
 			"Domain names, HTTPS certificates and outgoing mail."
 		],
-		"funding": "Subscriptions fund the development of the apps, which stay open source for everyone.",
+		"funding": "Subscriptions fund the development of the apps, whose code stays open.",
 		"cta": "Create a free account",
 		"secondary": "See the code on GitHub"
 	}

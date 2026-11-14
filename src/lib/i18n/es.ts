@@ -208,7 +208,7 @@ export const es: Messages = {
 	},
 	"self": {
 		"eyebrow": "Autoalojamiento",
-		"intro": "Las apps de Facile son de código abierto. Puedes instalarlas en tu propio servidor.",
+		"intro": "El código de nuestras apps es abierto. Puedes instalarlas en tu propio servidor.",
 		"compare": "Alojado o autoalojado",
 		"topic": "Tema",
 		"repos": "Por dónde empezar",
@@ -264,7 +264,7 @@ export const es: Messages = {
 			"Las actualizaciones de cada app, que sigues y aplicas.",
 			"Los dominios, los certificados HTTPS y el envío de correo."
 		],
-		"funding": "Las suscripciones financian el desarrollo de las apps, que siguen siendo de código abierto para todos.",
+		"funding": "Las suscripciones financian el desarrollo de las apps, cuyo código sigue abierto.",
 		"cta": "Crear una cuenta gratis",
 		"secondary": "Ver el código en GitHub"
 	}
