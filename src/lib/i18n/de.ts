@@ -100,7 +100,7 @@ export const de: Messages = {
 			"Sablier": "Ihre abrechenbaren Stunden, mit einem Klick erfasst.",
 			"Pastille": "Ein runder 42-mm-Anstecker für Bulle. Jetzt vorbestellen.",
 			"Fusible": "Prüfen Sie Ihre Platine, bevor Sie sie bestellen.",
-			"Vision": "Die Besucher Ihrer Website, ohne Cookie-Banner.",
+			"Vision": "Die Besuche Ihrer Website, ohne Cookies.",
 			"Glouton": "Ihre nächsten Kunden, gefunden, während Sie schlafen.",
 			"Ardoise": "Angebote, korrekte Rechnungen und Zahlungen im Blick.",
 			"Plume": "Ein PDF per Link unterschreiben lassen.",
@@ -194,7 +194,7 @@ export const de: Messages = {
 		"studio": "Facile kennenlernen",
 		"selfHost": "Self-Hosting",
 		"code": "Code ansehen",
-		"dev": "Alles ist Open Source. Sie können es auch selbst betreiben: siehe Self-Hosting."
+		"dev": "Der Code unserer Apps ist offen. Sie können sie auch selbst betreiben: siehe Self-Hosting."
 	},
 	"footer": {
 		"suite": "Die Suite",

@@ -100,7 +100,7 @@ export const en: Messages = {
 			"Sablier": "Your billable hours, tracked in one click.",
 			"Pastille": "A round 42 mm charm linked to Bulle. Pre-order open.",
 			"Fusible": "Check your circuit board before you order it.",
-			"Vision": "Your site's visitors, with no cookie banner.",
+			"Vision": "Your site's visitors, without cookies.",
 			"Glouton": "Your next clients, found while you sleep.",
 			"Ardoise": "Quotes, compliant invoices and payments tracked, no paperwork.",
 			"Plume": "Get a PDF signed with one link.",
@@ -194,7 +194,7 @@ export const en: Messages = {
 		"studio": "Meet Facile",
 		"selfHost": "Self-hosting",
 		"code": "See the code",
-		"dev": "Everything is open source. You can also run it yourself: see self-hosting."
+		"dev": "Our apps' code is open. You can also run them yourself: see self-hosting."
 	},
 	"footer": {
 		"suite": "The suite",

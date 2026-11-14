@@ -1,7 +1,7 @@
 {
   "name": "Facile Suite",
   "short_name": "Facile Suite",
-  "description": "Tools that talk to each other on your own server: time, projects, invoices and monitoring behind one login.",
+  "description": "All your work tools, one Facile account. We host them, you start in a minute.",
   "icons": [
     {
       "src": "/icon-192.png",

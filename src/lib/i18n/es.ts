@@ -100,7 +100,7 @@ export const es: Messages = {
 			"Sablier": "Tus horas facturables, registradas con un clic.",
 			"Pastille": "Una insignia redonda de 42 mm conectada a Bulle. En reserva.",
 			"Fusible": "Revisa tu placa electrónica antes de pedirla.",
-			"Vision": "Las visitas de tu web, sin banner de cookies.",
+			"Vision": "Las visitas de tu sitio, sin cookies.",
 			"Glouton": "Tus próximos clientes, encontrados mientras duermes.",
 			"Ardoise": "Presupuestos, facturas conformes y pagos al día, sin papeleo.",
 			"Plume": "Haz firmar un PDF con un enlace.",
@@ -194,7 +194,7 @@ export const es: Messages = {
 		"studio": "Conoce Facile",
 		"selfHost": "Autoalojamiento",
 		"code": "Ver el código",
-		"dev": "Todo es de código abierto. También puedes instalarlo tú mismo: ver autoalojamiento."
+		"dev": "El código de nuestras apps es abierto. También puedes instalarlas tú mismo: ver autoalojamiento."
 	},
 	"footer": {
 		"suite": "La suite",

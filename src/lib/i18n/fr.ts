@@ -98,7 +98,7 @@ export const fr = {
 			"Sablier": "Vos heures facturables, suivies en un clic.",
 			"Pastille": "Un badge rond de 42 mm relié à Bulle. En précommande.",
 			"Fusible": "Vérifiez votre carte électronique avant de la commander.",
-			"Vision": "Les visites de votre site, sans bandeau cookies.",
+			"Vision": "Les visites de votre site, sans cookies.",
 			"Glouton": "Vos prochains clients, trouvés pendant que vous dormez.",
 			"Ardoise": "Devis, factures conformes et paiements suivis, sans paperasse.",
 			"Plume": "Faites signer un PDF en un lien.",
@@ -192,7 +192,7 @@ export const fr = {
 		"studio": "Découvrir Facile",
 		"selfHost": "Auto-hébergement",
 		"code": "Voir le code",
-		"dev": "Tout est open source. Vous pouvez aussi l'installer chez vous : voir l'auto-hébergement."
+		"dev": "Le code de nos apps est ouvert. Vous pouvez aussi les installer chez vous : voir l'auto-hébergement."
 	},
 	"footer": {
 		"suite": "La suite",
