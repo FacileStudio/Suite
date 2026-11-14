@@ -12,7 +12,10 @@ const config = {
 			fallback: undefined,
 			precompress: false,
 			strict: true
-		})
+		}),
+		prerender: {
+			entries: ['*', '/en', '/es', '/de', '/auto-hebergement', '/en/auto-hebergement', '/es/auto-hebergement', '/de/auto-hebergement']
+		}
 	}
 };
 

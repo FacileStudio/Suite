@@ -5,50 +5,46 @@ export interface App {
 	category: Category;
 	icon: string;
 	url: string;
-	line: string;
 }
 
 export const LOGO = 'solar:widget-5-bold-duotone';
 export const ANTENNE_ICON = 'solar:station-bold-duotone';
 export const STUDIO_URL = 'https://facile.studio';
 export const GITHUB_URL = 'https://github.com/FacileStudio';
+export const REGISTRE_REPO = 'https://github.com/FacileStudio/Registre';
 export const SPACES_URL = 'https://sso.facile.studio/spaces';
+export const PLACE_URL = 'https://place.facile.studio';
+export const SELF_HOST_PATH = '/auto-hebergement';
 
-export const CATEGORIES: { id: Category | 'all'; label: string }[] = [
-	{ id: 'all', label: 'Tout' },
-	{ id: 'productivity', label: 'Productivité' },
-	{ id: 'business', label: 'Business' },
-	{ id: 'agent', label: 'IA & agents' },
-	{ id: 'infra', label: 'Infrastructure' },
-	{ id: 'hardware', label: 'Hardware' }
-];
+export const CATEGORIES: (Category | 'all')[] = ['all', 'productivity', 'business', 'agent', 'infra', 'hardware'];
 
 export const APPS: App[] = [
-	{ name: 'Bulle', category: 'agent', icon: 'solar:smile-circle-bold-duotone', url: 'https://bulle.facile.studio', line: 'Compagnon IA autonome dans sa microVM dédiée.' },
-	{ name: 'Prisme', category: 'productivity', icon: 'solar:chat-round-bold-duotone', url: 'https://prisme.facile.studio', line: "Messagerie d'équipe et salons connectés sur Matrix." },
-	{ name: 'Courrier', category: 'productivity', icon: 'solar:letter-opened-bold-duotone', url: 'https://courrier.facile.studio', line: 'Votre email chez vous, IMAP et SMTP natifs.' },
-	{ name: 'Agenda', category: 'productivity', icon: 'solar:calendar-add-bold-duotone', url: 'https://agenda.facile.studio', line: 'Le calendrier partagé du studio, en CalDAV.' },
-	{ name: 'Echo', category: 'productivity', icon: 'solar:videocamera-record-bold-duotone', url: 'https://echo.facile.studio', line: 'Visioconférence chiffrée sans installation.' },
-	{ name: 'Feuilles', category: 'productivity', icon: 'solar:table-minimalistic-bold-duotone', url: 'https://feuilles.facile.studio', line: 'Tableur collaboratif IronCalc, xlsx et MCP.' },
-	{ name: 'Docs', category: 'productivity', icon: 'solar:documents-bold-duotone', url: 'https://docs.facile.studio', line: 'Documents écrits à plusieurs en temps réel, export PDF.' },
-	{ name: 'Toile', category: 'productivity', icon: 'solar:tablet-bold-duotone', url: 'https://toile.facile.studio', line: 'Un tableau blanc infini à partager.' },
-	{ name: 'Nuage', category: 'infra', icon: 'solar:cloud-bold-duotone', url: 'https://nuage.facile.studio', line: 'Le stockage fichiers du studio, compatible S3.' },
-	{ name: 'Opus', category: 'productivity', icon: 'solar:slider-vertical-minimalistic-bold-duotone', url: 'https://opus.facile.studio', line: 'La gestion de projet qui ne vous ralentit pas.' },
-	{ name: 'Sablier', category: 'productivity', icon: 'solar:hourglass-bold-duotone', url: 'https://sablier.facile.studio', line: 'Vos heures facturables, suivies en un clic.' },
-	{ name: 'Pastille', category: 'hardware', icon: 'solar:circle-dot-bold-duotone', url: 'https://pastille.facile.studio', line: 'Balise vocale et capteur connecté libre de 38 mm.' },
-	{ name: 'Fusible', category: 'hardware', icon: 'solar:cpu-bolt-bold-duotone', url: 'https://fusible.facile.studio', line: 'Cartes, firmware et boîtiers dans un seul projet vérifié.' },
-	{ name: 'Vision', category: 'business', icon: 'solar:panorama-bold-duotone', url: 'https://vision.facile.studio', line: "L'analytique web sans cookie, conforme RGPD." },
-	{ name: 'Glouton', category: 'business', icon: 'solar:magnet-wave-bold-duotone', url: 'https://glouton.facile.studio', line: 'Vos prochains clients trouvés pendant que vous dormez.' },
-	{ name: 'Ardoise', category: 'business', icon: 'solar:bill-list-bold-duotone', url: 'https://ardoise.facile.studio', line: 'Facturez, encaissez, oubliez.' },
-	{ name: 'Plume', category: 'business', icon: 'solar:pen-new-square-bold-duotone', url: 'https://plume.facile.studio', line: 'La signature électronique, sans usine à gaz.' },
-	{ name: 'Casier', category: 'infra', icon: 'solar:key-minimalistic-square-bold-duotone', url: 'https://casier.facile.studio', line: "Coffre-fort à secrets pour toute l'équipe." },
-	{ name: 'Capsule', category: 'infra', icon: 'solar:pill-bold-duotone', url: 'https://capsule.facile.studio', line: "Partagez un secret qui s'autodétruit." },
-	{ name: 'Scribe', category: 'agent', icon: 'solar:microphone-2-bold-duotone', url: 'https://scribe.facile.studio', line: 'Transcription audio et comptes-rendus de réunion.' },
-	{ name: 'Journal', category: 'infra', icon: 'solar:notebook-bold-duotone', url: 'https://journal.facile.studio', line: "Logs centralisés pour toute l'infrastructure." },
-	{ name: 'Sonde', category: 'infra', icon: 'solar:radar-bold-duotone', url: 'https://sonde.facile.studio', line: 'Surveillance de disponibilité et page de statut.' },
-	{ name: 'Registre', category: 'infra', icon: 'solar:key-square-bold-duotone', url: 'https://sso.facile.studio', line: "Un seul compte pour tout l'écosystème." },
-	{ name: 'Boîte', category: 'infra', icon: 'solar:box-minimalistic-bold-duotone', url: 'https://boite.facile.studio', line: 'Paquets, images Docker et artéfacts privés.' },
-	{ name: 'Place', category: 'productivity', icon: 'solar:cup-hot-bold-duotone', url: 'https://place.facile.studio', line: 'Le forum de la communauté Facile, relié à Discord.' }
+	{ name: 'Bulle', category: 'agent', icon: 'solar:smile-circle-bold-duotone', url: 'https://bulle.facile.studio' },
+	{ name: 'Prisme', category: 'productivity', icon: 'solar:chat-round-bold-duotone', url: 'https://prisme.facile.studio' },
+	{ name: 'Courrier', category: 'productivity', icon: 'solar:letter-opened-bold-duotone', url: 'https://courrier.facile.studio' },
+	{ name: 'Agenda', category: 'productivity', icon: 'solar:calendar-add-bold-duotone', url: 'https://agenda.facile.studio' },
+	{ name: 'Echo', category: 'productivity', icon: 'solar:videocamera-record-bold-duotone', url: 'https://echo.facile.studio' },
+	{ name: 'Feuilles', category: 'productivity', icon: 'solar:table-minimalistic-bold-duotone', url: 'https://feuilles.facile.studio' },
+	{ name: 'Docs', category: 'productivity', icon: 'solar:documents-bold-duotone', url: 'https://docs.facile.studio' },
+	{ name: 'Toile', category: 'productivity', icon: 'solar:tablet-bold-duotone', url: 'https://toile.facile.studio' },
+	{ name: 'Nuage', category: 'productivity', icon: 'solar:cloud-bold-duotone', url: 'https://nuage.facile.studio' },
+	{ name: 'Opus', category: 'productivity', icon: 'solar:slider-vertical-minimalistic-bold-duotone', url: 'https://opus.facile.studio' },
+	{ name: 'Sablier', category: 'productivity', icon: 'solar:hourglass-bold-duotone', url: 'https://sablier.facile.studio' },
+	{ name: 'Pastille', category: 'hardware', icon: 'solar:circle-dot-bold-duotone', url: 'https://pastille.facile.studio' },
+	{ name: 'Fusible', category: 'hardware', icon: 'solar:cpu-bolt-bold-duotone', url: 'https://fusible.facile.studio' },
+	{ name: 'Vision', category: 'business', icon: 'solar:panorama-bold-duotone', url: 'https://vision.facile.studio' },
+	{ name: 'Glouton', category: 'business', icon: 'solar:magnet-wave-bold-duotone', url: 'https://glouton.facile.studio' },
+	{ name: 'Ardoise', category: 'business', icon: 'solar:bill-list-bold-duotone', url: 'https://ardoise.facile.studio' },
+	{ name: 'Plume', category: 'business', icon: 'solar:pen-new-square-bold-duotone', url: 'https://plume.facile.studio' },
+	{ name: 'Casier', category: 'infra', icon: 'solar:key-minimalistic-square-bold-duotone', url: 'https://casier.facile.studio' },
+	{ name: 'Capsule', category: 'infra', icon: 'solar:pill-bold-duotone', url: 'https://capsule.facile.studio' },
+	{ name: 'Scribe', category: 'agent', icon: 'solar:microphone-2-bold-duotone', url: 'https://scribe.facile.studio' },
+	{ name: 'Journal', category: 'infra', icon: 'solar:notebook-bold-duotone', url: 'https://journal.facile.studio' },
+	{ name: 'Sonde', category: 'infra', icon: 'solar:radar-bold-duotone', url: 'https://sonde.facile.studio' },
+	{ name: 'Registre', category: 'infra', icon: 'solar:key-square-bold-duotone', url: 'https://sso.facile.studio' },
+	{ name: 'Boîte', category: 'infra', icon: 'solar:box-minimalistic-bold-duotone', url: 'https://boite.facile.studio' },
+	{ name: 'Place', category: 'productivity', icon: 'solar:cup-hot-bold-duotone', url: 'https://place.facile.studio' },
+	{ name: 'Gare', category: 'infra', icon: 'solar:tram-bold-duotone', url: 'https://garev2.facile.studio' }
 ];
 
 export const COUNT = APPS.length;
@@ -58,116 +54,58 @@ export const UI_ICONS = [
 	ANTENNE_ICON,
 	'solar:arrow-right-up-linear',
 	'solar:arrow-right-linear',
-	'solar:arrow-down-linear',
-	'solar:play-bold',
 	'solar:check-circle-bold',
 	'solar:user-circle-bold-duotone',
 	'solar:server-square-bold-duotone',
 	'solar:code-square-linear',
 	'solar:shield-user-bold-duotone',
-	'solar:login-3-bold-duotone',
 	'solar:folder-linear',
 	'solar:file-text-linear',
 	'solar:gallery-linear',
 	'solar:archive-linear',
-	'solar:user-plus-linear'
+	'solar:user-plus-linear',
+	'solar:calendar-linear',
+	'solar:database-bold-duotone',
+	'solar:refresh-circle-bold-duotone',
+	'solar:global-bold-duotone'
 ];
 
 export const NAV = [
-	{ label: 'Apps', href: '#apps' },
-	{ label: 'Connexions', href: '#connexions' },
-	{ label: 'Tarifs', href: '#tarifs' }
+	{ key: 'apps', href: '/#apps' },
+	{ key: 'together', href: '/#connexions' },
+	{ key: 'pricing', href: '/#tarifs' }
+] as const;
+
+export const COMMITMENT_ICONS = [
+	'solar:server-square-bold-duotone',
+	'solar:key-square-bold-duotone',
+	'solar:database-bold-duotone',
+	'solar:refresh-circle-bold-duotone',
+	'solar:global-bold-duotone'
 ];
 
-export const HERO = {
-	eyebrow: ['Auto-hébergé', 'Open source', 'Un seul compte'],
-	title: 'On simplifie, vous créez.',
-	sub: `${COUNT} outils qui se parlent, sur votre serveur, avec un seul compte.`,
-	primary: 'Voir les tarifs',
-	secondary: 'Parcourir les apps'
-};
+export const CALENDAR = { personal: '#3b82f6', space: '#8b5cf6' };
 
 export const DEMO = {
-	label: 'Léa se connecte une fois avec Facile, ouvre Nuage, puis passe à Agenda sans se reconnecter.',
-	signIn: 'Se connecter avec Facile',
-	home: 'Facile',
-	hello: 'Bonjour Léa',
 	user: 'Léa',
-	connected: 'Connectée',
 	apps: ['Nuage', 'Agenda', 'Courrier', 'Opus', 'Sablier', 'Ardoise', 'Plume', 'Docs', 'Feuilles', 'Prisme', 'Echo', 'Bulle'],
 	rail: ['Nuage', 'Agenda', 'Courrier', 'Opus', 'Docs'],
-	folder: 'Studio Martin',
-	columns: ['Nom', 'Taille', 'Modifié'],
-	files: [
-		{ name: 'Maquettes', icon: 'solar:folder-linear', size: '—', date: 'Aujourd’hui' },
-		{ name: 'brief-client.pdf', icon: 'solar:file-text-linear', size: '1,2 Mo', date: 'Hier' },
-		{ name: 'logo.svg', icon: 'solar:gallery-linear', size: '48 Ko', date: '12 nov.' },
-		{ name: 'photos-atelier.zip', icon: 'solar:archive-linear', size: '86 Mo', date: '10 nov.' }
-	],
-	week: 'Semaine 46',
-	days: ['Lun 9', 'Mar 10', 'Mer 11', 'Jeu 12', 'Ven 13'],
+	fileIcons: ['solar:folder-linear', 'solar:file-text-linear', 'solar:gallery-linear', 'solar:archive-linear'],
+	today: 2,
+	firstDay: 9,
+	hours: [9, 10, 11, 12, 13, 14, 15],
 	events: [
-		{ day: 0, top: 1, length: 2, title: 'Point client' },
-		{ day: 1, top: 4, length: 2, title: 'Atelier logo' },
-		{ day: 2, top: 0, length: 3, title: 'Maquettes' },
-		{ day: 3, top: 3, length: 2, title: 'Revue sprint' },
-		{ day: 4, top: 1, length: 2, title: 'Envoi devis' }
-	]
-};
-
-export const APPS_SECTION = {
-	title: 'Une app par métier',
-	text: 'Prenez celles qu’il vous faut. Elles partagent le même compte.',
-	filter: 'Filtrer par catégorie',
-	open: 'Ouvrir'
-};
-
-export const GRAPH = {
-	title: 'Tout est relié',
-	text: 'Antenne fait circuler les événements. Une tâche lance un chrono, le chrono devient une facture.',
-	label: `Graphe des ${COUNT} apps de la suite reliées à Antenne, au centre`,
-	points: [
-		{ title: 'Des événements, pas des exports', text: 'Les données passent d’une app à l’autre dès qu’elles changent.' },
-		{ title: 'Des API ouvertes', text: 'Chaque app a une API et un serveur MCP pour vos scripts et vos agents.' }
+		{ day: 0, top: 1, length: 2, color: CALENDAR.personal },
+		{ day: 1, top: 4, length: 2, color: CALENDAR.space },
+		{ day: 2, top: 0, length: 3, color: CALENDAR.space },
+		{ day: 3, top: 3, length: 2, color: CALENDAR.personal },
+		{ day: 4, top: 1, length: 2, color: CALENDAR.personal }
 	]
 };
 
 export const SSO = {
-	title: 'Votre équipe, réglée une fois.',
-	text: 'Registre gère les comptes de la suite en OpenID Connect. Un membre ajouté à l’espace ouvre toutes les apps.',
-	label: 'Hugo est ajouté une fois à l’espace Studio Martin dans Registre, et chaque app de la suite lui est ouverte.',
 	space: 'Studio Martin',
-	invite: 'Inviter',
-	owner: { name: 'Léa', email: 'lea@studio-martin.fr', role: 'Propriétaire' },
-	member: { name: 'Hugo', email: 'hugo@studio-martin.fr', role: 'Membre' },
-	access: 'Accès de Hugo',
-	points: [
-		{ icon: 'solar:shield-user-bold-duotone', title: 'Équipe centralisée', text: 'Ajoutez un membre une fois, retirez-le une fois.' },
-		{ icon: 'solar:server-square-bold-duotone', title: 'Votre serveur', text: 'Aucun tiers. Vos identifiants restent chez vous.' }
-	],
+	owner: { name: 'Léa', email: 'lea@studio-martin.fr' },
+	member: { name: 'Hugo', email: 'hugo@studio-martin.fr' },
 	apps: ['Opus', 'Sablier', 'Ardoise', 'Plume', 'Nuage', 'Courrier']
 };
-
-export const TARIFS = {
-	title: 'Un compte. Toute la suite.',
-	text: 'Votre compte Facile ouvre chaque outil. Créer votre espace est gratuit.',
-	cta: 'Créer mon espace'
-};
-
-export const ABOUT = {
-	title: 'Quatre humains. Zéro bullshit.',
-	text: 'Deux devs, deux designers. On construit les outils qu’on utilise tous les jours, en open source.',
-	studio: 'Découvrir Facile',
-	code: 'Voir le code'
-};
-
-export const FOOTER = {
-	tagline: 'Les outils du studio, sur votre serveur.',
-	suite: 'La suite',
-	facile: 'Facile',
-	studio: 'facile.studio',
-	github: 'GitHub',
-	community: 'Communauté'
-};
-
-export const THEME = { toLight: 'Passer en thème clair', toDark: 'Passer en thème sombre' };

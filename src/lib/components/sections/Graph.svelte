@@ -1,9 +1,14 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { prefersReducedMotion } from '@facile/muse';
-	import { ANTENNE_ICON, APPS, GRAPH } from '$lib/content';
+	import { ANTENNE_ICON, APPS, COUNT } from '$lib/content';
+	import { format, useI18n } from '$lib/i18n';
 	import { ICON_DATA } from '$lib/icons';
 	import { scrollReveal } from '$lib/motion';
+
+	const i18n = useI18n();
+	const graph = $derived(i18n.t.graph);
+	const points = $derived([graph.events, { title: graph.mcpTitle, text: graph.mcp }]);
 
 	const S = 720;
 	const C = S / 2;
@@ -55,12 +60,12 @@
 	<div data-reveal-item class="flex flex-col gap-6">
 		<div class="flex flex-col gap-2">
 			<h2 id="connexions-title" class="text-fc-xl font-bold tracking-tight text-fc-fg sm:text-fc-2xl">
-				{GRAPH.title}
+				{graph.title}
 			</h2>
-			<p class="text-fc-md text-fc-fg-muted">{GRAPH.text}</p>
+			<p class="text-fc-md text-fc-fg-muted">{graph.text}</p>
 		</div>
 		<dl class="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
-			{#each GRAPH.points as point (point.title)}
+			{#each points as point (point.title)}
 				<div class="flex flex-col gap-1 rounded-fc-lg bg-fc-component p-4">
 					<dt class="text-fc-sm font-bold text-fc-fg">{point.title}</dt>
 					<dd class="text-fc-sm text-fc-fg-muted">{point.text}</dd>
@@ -70,7 +75,7 @@
 	</div>
 
 	<div data-reveal-item bind:this={root} class="graph rounded-fc-lg bg-fc-component p-2 sm:p-6" class:active>
-		<svg viewBox="0 0 {S} {S}" xmlns="http://www.w3.org/2000/svg" class="mx-auto block aspect-square h-auto w-full max-w-xl" role="img" aria-label={GRAPH.label}>
+		<svg viewBox="0 0 {S} {S}" xmlns="http://www.w3.org/2000/svg" class="mx-auto block aspect-square h-auto w-full max-w-xl" role="img" aria-label={format(graph.label, { count: COUNT })}>
 			{#each nodes as n (n.name)}
 				<line x1={C} y1={C} x2={n.x} y2={n.y} class="spoke" style="--delay:{n.i * 30}ms" />
 			{/each}

@@ -1,6 +1,6 @@
 # Suite
 
-Landing page for the Facile Suite (suite.facile.studio): the self-hosted, interconnected apps of Facile, one Registre account, the Antenne event bus, and the suite pricing.
+Landing page for the Facile Suite (suite.facile.studio): the hosted, interconnected apps of Facile, one Registre account, the suite pricing, and the self-hosting page.
 
 ## Tech stack
 
@@ -29,19 +29,25 @@ src/
   app.html                HTML shell, theme bootstrap, og image, Vision script
   hooks.client.ts         Journal telemetry
   lib/
-    content.ts            All French copy and the APPS list (source of every app count)
+    content.ts            The APPS list (source of every app count), URLs, demo data; no copy
+    i18n/                 fr.ts, en.ts, es.ts, de.ts catalogs; index.ts (locale routing helpers, useI18n)
+    ink.ts                Agenda's inkOn: event text colour on a calendar colour
     icons.ts              Registers icons-data.json with muse
     icons-data.json       Generated Solar glyphs (scripts/gen-icons.ts)
     motion.ts             scrollReveal action (IntersectionObserver, reduced motion aware)
     components/
       SiteShell.svelte    LandingHeader, Page width="xl", LandingFooter
       ThemeButton.svelte  Light/dark toggle, stored in localStorage `suite-theme`
-      demos/HeroDemo.svelte   Sign in once, launcher, Nuage then Agenda (HeroHome, HeroApps)
+      demos/HeroDemo.svelte   Sign in once, launcher, Nuage then Agenda (HeroHome, HeroNuage, HeroAgenda)
+      tiles/              The three cards after the grid (ContractTile, DeadlineTile, BulleTile)
       demos/SsoDemo.svelte    Registre: add a member once, every app opens to them
-      sections/           Hero, Apps (#apps), Graph (#connexions), Sso (#compte), Tarifs (#tarifs), About
+      sections/           Hero, Apps (#apps), Cards, Graph (#connexions), Sso (#compte), Tarifs (#tarifs), About, SelfTable
   routes/
-    +layout.svelte        app.css, provideLocale('fr'), icon registration
-    +page.svelte          Section composition and page meta
+    +layout.svelte        app.css, locale from the route, muse provideLocale, hreflang links, SiteShell
+    [[lang=lang]]/+page.svelte                  Home sections and page meta
+    [[lang=lang]]/auto-hebergement/+page.svelte Self-hosting page
+  params/lang.ts          en, es, de prefixes (French has none)
+  hooks.server.ts         Writes <html lang> at prerender
 scripts/gen-icons.ts      Writes icons-data.json from APPS and UI_ICONS
 static/                   Favicons, og-image, robots.txt (fonts come from muse)
 ```
@@ -53,7 +59,8 @@ static/                   Favicons, og-image, robots.txt (fonts come from muse)
 - The theme follows `prefers-color-scheme`; the header button forces light or dark through `applyTheme` and `localStorage`.
 - Never hard-code an app count. Render `APPS.length` (`COUNT` in `content.ts`).
 - Pricing is never hard-coded: `#tarifs` renders muse's `PricingPlans`, which reads Ardoise's public catalog in the browser.
-- All copy is French and lives in `content.ts`. No em dashes.
+- All copy lives in `src/lib/i18n/{fr,en,es,de}.ts`, in all four locales. The canonical wording comes from the landing-review `copy.json`; keep the grid lines equal to it. No em dashes.
+- nginx (`nginx.conf`) serves `/en` from `en.html` with `try_files`.
 
 ## Notes
 

@@ -6,21 +6,26 @@
 	import { Bar } from '@facile/mise-en-scene';
 	import { Icon } from '@facile/muse';
 	import { APPS, DEMO, LOGO } from '$lib/content';
+	import { useI18n } from '$lib/i18n';
 
 	let {
 		view,
 		compact,
+		pressed,
 		signIn = $bindable(),
 		nuageTile = $bindable(),
 		agendaRail = $bindable()
 	}: {
 		view: View;
 		compact: boolean;
+		pressed: string | null;
 		signIn?: HTMLElement;
 		nuageTile?: HTMLElement;
 		agendaRail?: HTMLElement;
 	} = $props();
 
+	const i18n = useI18n();
+	const t = $derived(i18n.t.demo);
 	const pick = (names: string[]) => names.map((name) => APPS.find((app) => app.name === name)).filter((app) => !!app);
 	const apps = pick(DEMO.apps);
 	const rail = pick(DEMO.rail);
@@ -39,18 +44,18 @@
 <div class="hh-login" class:hh-gone={view !== 'login'}>
 	<span class="hh-logo"><Icon icon={LOGO} size={28} /></span>
 	<div class="hh-bars"><Bar w="70%" /><Bar w="45%" /></div>
-	<span bind:this={signIn} class="hh-signin">{@render mark()}{DEMO.signIn}</span>
+	<span bind:this={signIn} class="hh-signin" class:hh-press={pressed === 'signin'}>{@render mark()}{t.signIn}</span>
 </div>
 
 <div class="hh-home" class:hh-gone={view !== 'home'} class:hh-compact={compact}>
 	<div class="hh-hello">
-		<b>{DEMO.hello}</b>
+		<b>{t.hello}</b>
 		<Bar w={compact ? '60%' : '28%'} />
 	</div>
 	<ul class="hh-grid">
 		{#each apps as app (app.name)}
 			{#if app.name === 'Nuage'}
-				<li bind:this={nuageTile} class="hh-tile">
+				<li bind:this={nuageTile} class="hh-tile" class:hh-press={pressed === 'nuage'}>
 					<span class="hh-icon"><Icon icon={app.icon} size={22} /></span>{app.name}
 				</li>
 			{:else}
@@ -66,7 +71,7 @@
 	<span class="hh-slot"><Icon icon={LOGO} size={20} /></span>
 	{#each rail as app (app.name)}
 		{#if app.name === 'Agenda'}
-			<span bind:this={agendaRail} class="hh-slot" class:hh-active={view === 'agenda'}><Icon icon={app.icon} size={20} /></span>
+			<span bind:this={agendaRail} class="hh-slot" class:hh-active={view === 'agenda'} class:hh-press={pressed === 'agenda'}><Icon icon={app.icon} size={20} /></span>
 		{:else}
 			<span class="hh-slot" class:hh-active={view === app.name.toLowerCase()}><Icon icon={app.icon} size={20} /></span>
 		{/if}
@@ -79,12 +84,23 @@
 	.hh-rail {
 		position: absolute;
 		transition:
-			opacity 0.35s ease,
-			translate 0.35s ease;
+			opacity 0.25s ease 0.15s,
+			translate 0.3s ease 0.15s;
 	}
 	.hh-gone {
 		opacity: 0;
-		translate: 0 8px;
+		transition:
+			opacity 0.15s ease,
+			translate 0.15s ease;
+	}
+	.hh-rail.hh-gone {
+		translate: -12px 0;
+	}
+	.hh-dock.hh-gone {
+		translate: 0 12px;
+	}
+	.hh-press {
+		scale: 0.95;
 	}
 	.hh-login {
 		inset: 0;
@@ -121,6 +137,7 @@
 		font-size: 14px;
 		font-weight: 600;
 		white-space: nowrap;
+		transition: scale 0.12s ease;
 	}
 	.hh-home {
 		inset: 0;
@@ -163,6 +180,12 @@
 		background: var(--mes-w-side);
 		font-size: 12px;
 		font-weight: 500;
+		transition:
+			scale 0.12s ease,
+			background 0.12s ease;
+	}
+	.hh-tile.hh-press {
+		background: var(--mes-w-body);
 	}
 	.hh-icon {
 		display: flex;
@@ -204,7 +227,8 @@
 		color: var(--color-fc-fg-muted);
 		transition:
 			background 0.25s ease,
-			color 0.25s ease;
+			color 0.25s ease,
+			scale 0.12s ease;
 	}
 	.hh-active {
 		background: var(--mes-w-body);

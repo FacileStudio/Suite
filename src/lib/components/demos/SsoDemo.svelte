@@ -2,7 +2,12 @@
 	import { Cursor, Roll, Stage, Window, cursorAt, grow, type Act } from '@facile/mise-en-scene';
 	import { Avatar, Icon } from '@facile/muse';
 	import { APPS, SSO } from '$lib/content';
+	import { useI18n } from '$lib/i18n';
 
+	const i18n = useI18n();
+	const t = $derived(i18n.t.sso);
+	const ownerRow = $derived({ ...SSO.owner, role: t.owner });
+	const memberRow = $derived({ ...SSO.member, role: t.member });
 	const apps = APPS.filter((app) => SSO.apps.includes(app.name));
 	const registre = APPS.find((app) => app.name === 'Registre');
 
@@ -48,16 +53,16 @@
 	<div class="sd-head">
 		{#if registre}<span class="sd-logo"><Icon icon={registre.icon} size={18} /></span>{/if}
 		<b>{SSO.space}</b>
-		<span bind:this={button} class="sd-invite"><Icon icon="solar:user-plus-linear" size={16} />{SSO.invite}</span>
+		<span bind:this={button} class="sd-invite"><Icon icon="solar:user-plus-linear" size={16} />{t.invite}</span>
 	</div>
 	<div class="sd-list">
-		{@render member(SSO.owner)}
+		{@render member(ownerRow)}
 		{#if added}
-			<div class="sd-grow" transition:grow={{ duration: 320 }}>{@render member(SSO.member)}</div>
+			<div class="sd-grow" transition:grow={{ duration: 320 }}>{@render member(memberRow)}</div>
 		{/if}
 	</div>
 	<div class="sd-access" class:sd-dim={!added}>
-		<p class="sd-count">{SSO.access} · <Roll value={String(opened)} class="sd-num" /> / {APPS.length}</p>
+		<p class="sd-count">{t.access} · <Roll value={String(opened)} class="sd-num" /> / {APPS.length}</p>
 		<ul class="sd-apps">
 			{#each apps as app, i (app.name)}
 				<li class="sd-app" class:sd-on={opened > i}>
@@ -70,7 +75,7 @@
 	</div>
 {/snippet}
 
-<Stage width={560} height={440} compact={{ below: 480, width: 358, height: 520 }} {script} {reset} {poster} label={SSO.label}>
+<Stage width={560} height={440} compact={{ below: 480, width: 358, height: 520 }} {script} {reset} {poster} label={t.label}>
 	{#snippet children({ compact })}
 		<Window title={registre?.name} style={compact ? 'top:12px;left:12px;width:334px;height:440px' : 'top:20px;left:20px;width:520px;height:352px'}>
 			<div class="sd-wrap" class:sd-compact={compact}>{@render scene()}</div>
