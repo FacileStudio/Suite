@@ -4,7 +4,7 @@
 	import { page } from '$app/state';
 	import { LandingFooter, LandingHeader, Page, SignInWithFacile } from '@facile/muse';
 	import { GITHUB_URL, LOGO, NAV, PLACE_URL, SELF_HOST_PATH, SPACES_URL, STUDIO_URL } from '$lib/content';
-	import { localizeHref, stripLocale, toLocale, useI18n } from '$lib/i18n';
+	import { localizeHref, rememberLocale, stripLocale, toLocale, useI18n } from '$lib/i18n';
 	import ThemeButton from './ThemeButton.svelte';
 
 	let { children }: { children: Snippet } = $props();
@@ -25,8 +25,10 @@
 		}
 	]);
 
-	const switchLocale = (next: string) =>
-		goto(`${localizeHref(stripLocale(page.url.pathname), toLocale(next))}${page.url.hash}`, { noScroll: true });
+	const switchLocale = (next: string) => {
+		rememberLocale(toLocale(next));
+		return goto(`${localizeHref(stripLocale(page.url.pathname), toLocale(next))}${page.url.hash}`, { noScroll: true });
+	};
 </script>
 
 <div class="flex min-h-dvh w-full flex-col bg-fc-page text-fc-fg">

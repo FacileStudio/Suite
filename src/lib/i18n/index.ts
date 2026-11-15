@@ -25,6 +25,13 @@ export function toLocale(value: string | undefined): Locale {
 	return LOCALES.find((locale) => locale === value) ?? DEFAULT_LOCALE;
 }
 
+export const LOCALE_COOKIE = 'fc_locale';
+
+/** Stores the visitor's explicit choice for a year; nginx reads it on the next unprefixed request. */
+export function rememberLocale(locale: Locale): void {
+	document.cookie = `${LOCALE_COOKIE}=${locale}; path=/; max-age=31536000; samesite=lax`;
+}
+
 /** Prefixes an internal path such as `/auto-hebergement` or `/#apps` with the locale. French keeps no prefix. */
 export function localizeHref(path: string, locale: Locale): string {
 	if (locale === DEFAULT_LOCALE) return path;
