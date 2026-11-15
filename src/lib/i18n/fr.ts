@@ -22,6 +22,7 @@ export const fr = {
 		"sub": "{count} apps pour travailler, un seul compte Facile. On les héberge, vous commencez en une minute."
 	},
 	"apps": {
+		"more": "Voir les {count} apps",
 		"title": "Une app par métier",
 		"text": "Prenez celles qu'il vous faut. Un seul compte Facile ouvre les apps hébergées.",
 		"filter": "Filtrer par catégorie",

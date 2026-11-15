@@ -24,6 +24,7 @@ export const es: Messages = {
 		"sub": "{count} apps para trabajar, una sola cuenta de Facile. Nosotros las alojamos, tú empiezas en un minuto."
 	},
 	"apps": {
+		"more": "Ver las {count} apps",
 		"title": "Una app para cada trabajo",
 		"text": "Elige las que necesites. Una sola cuenta de Facile abre las apps alojadas.",
 		"filter": "Filtrar por categoría",

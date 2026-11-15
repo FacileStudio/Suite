@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { Icon } from '@facile/muse';
+	import { Button, Icon } from '@facile/muse';
 	import { tick } from 'svelte';
-	import { APPS, CATEGORIES, slug, type Category } from '$lib/content';
-	import { useI18n } from '$lib/i18n';
+	import { APPS, CATEGORIES, COUNT, slug, type Category } from '$lib/content';
+	import { format, useI18n } from '$lib/i18n';
 	import { scrollReveal } from '$lib/motion';
 
 	const i18n = useI18n();
@@ -12,14 +12,17 @@
 	let filter = $state<Category | 'all'>('all');
 
 	let picked = $state('');
+	let expanded = $state(false);
 
 	const shown = $derived(filter === 'all' ? APPS : APPS.filter((app) => app.category === filter));
+	const folded = $derived(filter === 'all' && !expanded);
 
 	async function pick() {
 		const id = location.hash.slice(1);
 		if (!id.startsWith('app-')) return;
 		picked = id;
 		filter = 'all';
+		expanded = true;
 		await tick();
 		document.getElementById(id)?.scrollIntoView();
 	}
@@ -51,8 +54,8 @@
 	</div>
 
 	<ul data-reveal-item class="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-3 lg:grid-cols-3 xl:grid-cols-4">
-		{#each shown as app (app.name)}
-			<li>
+		{#each shown as app, i (app.name)}
+			<li class={folded && i >= 8 ? (i === 8 ? 'hidden lg:block xl:hidden' : 'hidden') : ''}>
 				<a
 					id="app-{slug(app.name)}"
 					href={app.url}
@@ -81,4 +84,9 @@
 			</li>
 		{/each}
 	</ul>
+	{#if folded}
+		<div data-reveal-item>
+			<Button variant="secondary" size="lg" iconRight="solar:alt-arrow-down-linear" onclick={() => (expanded = true)}>{format(t.more, { count: COUNT })}</Button>
+		</div>
+	{/if}
 </section>

@@ -38,7 +38,7 @@ src/
     components/
       SiteShell.svelte    LandingHeader, Page width="xl", LandingFooter
       ThemeButton.svelte  Light/dark toggle, stored in localStorage `suite-theme`
-      sections/           Hero, AppWall (26 icon tiles linking to #app-<slug> cards), Apps (#apps), Cards, Graph (#connexions), Sso (#compte), Tarifs (#tarifs), About, SelfTable
+      sections/           Hero, AppWall (26 icon tiles linking to #app-<slug> cards, a spotlight that moves every 2.4 s with the app's line under it), Apps (#apps, first 8 cards until expanded), Cards, Graph (#connexions), Sso (#compte), Tarifs (#tarifs), About, SelfTable
   routes/
     +layout.svelte        app.css, locale from the route, muse provideLocale, hreflang links, SiteShell
     [[lang=lang]]/+page.svelte                  Home sections and page meta

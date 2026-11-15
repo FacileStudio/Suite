@@ -24,6 +24,7 @@ export const de: Messages = {
 		"sub": "{count} Apps für Ihre Arbeit, ein Facile-Konto. Wir hosten sie, Sie starten in einer Minute."
 	},
 	"apps": {
+		"more": "Alle {count} Apps ansehen",
 		"title": "Eine App für jede Aufgabe",
 		"text": "Nehmen Sie, was Sie brauchen. Ein Facile-Konto öffnet die gehosteten Apps.",
 		"filter": "Nach Kategorie filtern",

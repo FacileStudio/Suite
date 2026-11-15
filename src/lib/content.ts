@@ -57,6 +57,7 @@ export const UI_ICONS = [
 	ANTENNE_ICON,
 	'solar:arrow-right-up-linear',
 	'solar:arrow-right-linear',
+	'solar:alt-arrow-down-linear',
 	'solar:check-circle-bold',
 	'solar:user-circle-bold-duotone',
 	'solar:server-square-bold-duotone',
