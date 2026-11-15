@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+
+- The AGPL-3.0-only licence file, the `license` field and a README section.
+
 ## [0.8.0] - 2026-11-15
 
 ### Added

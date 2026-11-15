@@ -18,3 +18,7 @@ Copy and the list of apps live in `src/lib/content.ts`. After adding an app or a
 ## Deploy
 
 `docker compose up --build` builds the static site and serves it on port 80. Production deploys from `main` on Dokploy.
+
+## License
+
+Suite is licensed under the GNU Affero General Public License v3.0 only (`AGPL-3.0-only`); see [LICENSE](LICENSE). A commercial license is available from Facile Studio for use that cannot meet the AGPL's terms.
