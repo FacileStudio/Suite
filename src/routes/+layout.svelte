@@ -25,7 +25,7 @@
 	{#each LOCALES as target (target)}
 		<link rel="alternate" hreflang={target} href={pageUrl(target)} />
 	{/each}
-	<link rel="alternate" hreflang="x-default" href={pageUrl('fr')} />
+	<link rel="alternate" hreflang="x-default" href={pageUrl('en')} />
 	<meta property="og:url" content={pageUrl(locale)} />
 	<meta property="og:locale" content={OG_LOCALES[locale]} />
 </svelte:head>
