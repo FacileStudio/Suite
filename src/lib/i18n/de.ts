@@ -14,6 +14,7 @@ export const de: Messages = {
 		"selfHost": "Self-Hosting"
 	},
 	"hero": {
+		"wall": "Die {count} Apps der Suite",
 		"chips": [
 			"Ein Konto",
 			"Kostenlos starten",
@@ -21,57 +22,6 @@ export const de: Messages = {
 		],
 		"title": "Wir vereinfachen, Sie gestalten.",
 		"sub": "{count} Apps für Ihre Arbeit, ein Facile-Konto. Wir hosten sie, Sie starten in einer Minute."
-	},
-	"demo": {
-		"label": "Léa meldet sich einmal mit Facile an, öffnet Nuage und wechselt dann ohne neue Anmeldung zu Agenda.",
-		"signIn": "Mit Facile anmelden",
-		"hello": "Hallo Léa",
-		"connected": "Angemeldet",
-		"folder": "Studio Martin",
-		"columns": [
-			"Name",
-			"Größe",
-			"Geändert"
-		],
-		"files": [
-			{
-				"name": "Entwürfe",
-				"size": "6 Dateien",
-				"date": "Heute"
-			},
-			{
-				"name": "kunden-briefing.pdf",
-				"size": "1,2 MB",
-				"date": "Gestern"
-			},
-			{
-				"name": "logo.svg",
-				"size": "48 KB",
-				"date": "12. Nov."
-			},
-			{
-				"name": "werkstatt-fotos.zip",
-				"size": "86 MB",
-				"date": "10. Nov."
-			}
-		],
-		"week": "Woche 46",
-		"days": [
-			"Mo.",
-			"Di.",
-			"Mi.",
-			"Do.",
-			"Fr.",
-			"Sa.",
-			"So."
-		],
-		"events": [
-			"Kundentermin",
-			"Logo-Workshop",
-			"Entwürfe",
-			"Sprint-Review",
-			"Angebot senden"
-		]
 	},
 	"apps": {
 		"title": "Eine App für jede Aufgabe",
@@ -169,11 +119,6 @@ export const de: Messages = {
 	"sso": {
 		"title": "Ihr Team, einmal eingerichtet.",
 		"text": "Registre verwaltet die Konten der Suite. Wer zum Bereich hinzugefügt wird, erhält die Apps des Teams.",
-		"label": "Hugo wird einmal im Bereich Studio Martin in Registre hinzugefügt, und die Apps des Teams stehen ihm offen.",
-		"invite": "Einladen",
-		"owner": "Inhaberin",
-		"member": "Mitglied",
-		"access": "Hugos Zugriff",
 		"team": {
 			"title": "Ein Team, ein Ort",
 			"text": "Einmal hinzufügen, einmal entfernen."

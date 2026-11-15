@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Icon } from '@facile/muse';
-	import { APPS, CATEGORIES, type Category } from '$lib/content';
+	import { tick } from 'svelte';
+	import { APPS, CATEGORIES, slug, type Category } from '$lib/content';
 	import { useI18n } from '$lib/i18n';
 	import { scrollReveal } from '$lib/motion';
 
@@ -10,8 +11,23 @@
 
 	let filter = $state<Category | 'all'>('all');
 
+	let picked = $state('');
+
 	const shown = $derived(filter === 'all' ? APPS : APPS.filter((app) => app.category === filter));
+
+	async function pick() {
+		const id = location.hash.slice(1);
+		if (!id.startsWith('app-')) return;
+		picked = id;
+		filter = 'all';
+		await tick();
+		document.getElementById(id)?.scrollIntoView();
+	}
+
+	$effect(() => void pick());
 </script>
+
+<svelte:window onhashchange={pick} />
 
 <section id="apps" aria-labelledby="apps-title" use:scrollReveal class="flex scroll-mt-24 flex-col gap-6">
 	<div data-reveal-item class="flex max-w-2xl flex-col gap-2">
@@ -38,13 +54,20 @@
 		{#each shown as app (app.name)}
 			<li>
 				<a
+					id="app-{slug(app.name)}"
 					href={app.url}
 					target="_blank"
 					rel="noopener noreferrer"
 					aria-label="{t.open} {app.name}"
-					class="group flex h-full items-start gap-3 rounded-fc-lg bg-fc-component p-3 sm:gap-4 sm:p-4 transition-colors hover:bg-fc-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fc-ring"
+					class="group flex h-full scroll-mt-24 items-start gap-3 rounded-fc-lg p-3 transition-colors hover:bg-fc-surface sm:gap-4 sm:p-4 {picked === `app-${slug(app.name)}`
+						? 'bg-fc-surface'
+						: 'bg-fc-component'} focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fc-ring"
 				>
-					<span class="flex size-11 shrink-0 items-center justify-center rounded-fc-lg bg-fc-surface text-fc-fg transition-colors group-hover:bg-fc-page">
+					<span
+						class="flex size-11 shrink-0 items-center justify-center rounded-fc-lg text-fc-fg transition-colors group-hover:bg-fc-page {picked === `app-${slug(app.name)}`
+							? 'bg-fc-page'
+							: 'bg-fc-surface'}"
+					>
 						<Icon icon={app.icon} size={22} />
 					</span>
 					<span class="flex min-w-0 flex-col gap-1">

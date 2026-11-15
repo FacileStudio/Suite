@@ -49,6 +49,9 @@ export const APPS: App[] = [
 
 export const COUNT = APPS.length;
 
+/** The anchor name of an app's card in the grid: `Boîte` gives `boite`. */
+export const slug = (name: string) => name.normalize('NFD').replace(/[^a-zA-Z]/g, '').toLowerCase();
+
 export const UI_ICONS = [
 	LOGO,
 	ANTENNE_ICON,
@@ -59,11 +62,6 @@ export const UI_ICONS = [
 	'solar:server-square-bold-duotone',
 	'solar:code-square-linear',
 	'solar:shield-user-bold-duotone',
-	'solar:folder-linear',
-	'solar:file-text-linear',
-	'solar:gallery-linear',
-	'solar:archive-linear',
-	'solar:user-plus-linear',
 	'solar:calendar-linear',
 	'solar:database-bold-duotone',
 	'solar:refresh-circle-bold-duotone',
@@ -79,33 +77,10 @@ export const NAV = [
 export const COMMITMENT_ICONS = [
 	'solar:server-square-bold-duotone',
 	'solar:key-square-bold-duotone',
+	'solar:calendar-linear',
 	'solar:database-bold-duotone',
 	'solar:refresh-circle-bold-duotone',
 	'solar:global-bold-duotone'
 ];
 
 export const CALENDAR = { personal: '#3b82f6', space: '#8b5cf6' };
-
-export const DEMO = {
-	user: 'Léa',
-	apps: ['Nuage', 'Agenda', 'Courrier', 'Opus', 'Sablier', 'Ardoise', 'Plume', 'Docs', 'Feuilles', 'Prisme', 'Echo', 'Bulle'],
-	rail: ['Nuage', 'Agenda', 'Courrier', 'Opus', 'Docs'],
-	fileIcons: ['solar:folder-linear', 'solar:file-text-linear', 'solar:gallery-linear', 'solar:archive-linear'],
-	today: 2,
-	firstDay: 9,
-	hours: [9, 10, 11, 12, 13, 14, 15],
-	events: [
-		{ day: 0, top: 1, length: 2, color: CALENDAR.personal },
-		{ day: 1, top: 4, length: 2, color: CALENDAR.space },
-		{ day: 2, top: 0, length: 3, color: CALENDAR.space },
-		{ day: 3, top: 3, length: 2, color: CALENDAR.personal },
-		{ day: 4, top: 1, length: 2, color: CALENDAR.personal }
-	]
-};
-
-export const SSO = {
-	space: 'Studio Martin',
-	owner: { name: 'Léa', email: 'lea@studio-martin.fr' },
-	member: { name: 'Hugo', email: 'hugo@studio-martin.fr' },
-	apps: ['Opus', 'Sablier', 'Ardoise', 'Plume', 'Nuage', 'Courrier']
-};

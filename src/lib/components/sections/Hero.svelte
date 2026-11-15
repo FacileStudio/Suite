@@ -3,7 +3,7 @@
 	import { COUNT, SPACES_URL } from '$lib/content';
 	import { format, useI18n } from '$lib/i18n';
 	import { scrollReveal } from '$lib/motion';
-	import HeroDemo from '../demos/HeroDemo.svelte';
+	import AppWall from './AppWall.svelte';
 
 	const i18n = useI18n();
 	const hero = $derived(i18n.t.hero);
@@ -22,7 +22,7 @@
 	<div data-reveal-item>
 		<LandingCta signInHref={SPACES_URL} />
 	</div>
-	<div data-reveal-item class="-mx-4 max-w-[880px] pt-2 md:-mx-10">
-		<HeroDemo />
+	<div data-reveal-item class="pt-4 md:pt-8">
+		<AppWall />
 	</div>
 </section>

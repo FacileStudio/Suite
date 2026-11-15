@@ -6,7 +6,7 @@ Landing page for the Facile Suite (suite.facile.studio): the hosted, interconnec
 
 - **Framework**: SvelteKit (Svelte 5, runes API), `@sveltejs/adapter-static`, fully prerendered
 - **Styling**: Tailwind CSS v4 (`@tailwindcss/vite`) with `@facile/muse` tokens and components
-- **Demos**: `@facile/mise-en-scene` (Stage, Window, Cursor, Roll) for the hero and account demos
+- **Demos**: `@facile/mise-en-scene` (Stage, Tile, Cursor, Roll) for the three connection tiles only. The hero has no demo: it shows the wall of real apps
 - **Icons**: muse `Icon`; Solar glyphs the site needs are generated into `src/lib/icons-data.json`
 - **Package manager and runtime**: bun; Docker builds with `oven/bun:1` and nginx serves `build/`
 
@@ -29,7 +29,7 @@ src/
   app.html                HTML shell, theme bootstrap, og image, Vision script
   hooks.client.ts         Journal telemetry
   lib/
-    content.ts            The APPS list (source of every app count), URLs, demo data; no copy
+    content.ts            The APPS list (source of every app count), URLs, `slug`; no copy
     i18n/                 fr.ts, en.ts, es.ts, de.ts catalogs; index.ts (locale routing helpers, useI18n)
     ink.ts                Agenda's inkOn: event text colour on a calendar colour
     icons.ts              Registers icons-data.json with muse
@@ -38,10 +38,7 @@ src/
     components/
       SiteShell.svelte    LandingHeader, Page width="xl", LandingFooter
       ThemeButton.svelte  Light/dark toggle, stored in localStorage `suite-theme`
-      demos/HeroDemo.svelte   Sign in once, launcher, Nuage then Agenda (HeroHome, HeroNuage, HeroAgenda)
-      tiles/              The three cards after the grid (ContractTile, DeadlineTile, BulleTile)
-      demos/SsoDemo.svelte    Registre: add a member once, every app opens to them
-      sections/           Hero, Apps (#apps), Cards, Graph (#connexions), Sso (#compte), Tarifs (#tarifs), About, SelfTable
+      sections/           Hero, AppWall (26 icon tiles linking to #app-<slug> cards), Apps (#apps), Cards, Graph (#connexions), Sso (#compte), Tarifs (#tarifs), About, SelfTable
   routes/
     +layout.svelte        app.css, locale from the route, muse provideLocale, hreflang links, SiteShell
     [[lang=lang]]/+page.svelte                  Home sections and page meta

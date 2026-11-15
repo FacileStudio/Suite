@@ -12,6 +12,7 @@ export const fr = {
 		"selfHost": "Auto-hébergement"
 	},
 	"hero": {
+		"wall": "Les {count} apps de la suite",
 		"chips": [
 			"Un seul compte",
 			"Gratuit pour commencer",
@@ -19,57 +20,6 @@ export const fr = {
 		],
 		"title": "On simplifie, vous créez.",
 		"sub": "{count} apps pour travailler, un seul compte Facile. On les héberge, vous commencez en une minute."
-	},
-	"demo": {
-		"label": "Léa se connecte une fois avec Facile, ouvre Nuage, puis passe à Agenda sans se reconnecter.",
-		"signIn": "Se connecter avec Facile",
-		"hello": "Bonjour Léa",
-		"connected": "Connectée",
-		"folder": "Studio Martin",
-		"columns": [
-			"Nom",
-			"Taille",
-			"Modifié"
-		],
-		"files": [
-			{
-				"name": "Maquettes",
-				"size": "6 fichiers",
-				"date": "Aujourd'hui"
-			},
-			{
-				"name": "brief-client.pdf",
-				"size": "1,2 Mo",
-				"date": "Hier"
-			},
-			{
-				"name": "logo.svg",
-				"size": "48 Ko",
-				"date": "12 nov."
-			},
-			{
-				"name": "photos-atelier.zip",
-				"size": "86 Mo",
-				"date": "10 nov."
-			}
-		],
-		"week": "Semaine 46",
-		"days": [
-			"lun.",
-			"mar.",
-			"mer.",
-			"jeu.",
-			"ven.",
-			"sam.",
-			"dim."
-		],
-		"events": [
-			"Point client",
-			"Atelier logo",
-			"Maquettes",
-			"Revue sprint",
-			"Envoi devis"
-		]
 	},
 	"apps": {
 		"title": "Une app par métier",
@@ -167,11 +117,6 @@ export const fr = {
 	"sso": {
 		"title": "Votre équipe, réglée une fois.",
 		"text": "Registre gère les comptes de la suite. Un membre ajouté à l'espace a accès aux apps de l'équipe.",
-		"label": "Hugo est ajouté une fois à l'espace Studio Martin dans Registre, et les apps de l'équipe lui sont ouvertes.",
-		"invite": "Inviter",
-		"owner": "Propriétaire",
-		"member": "Membre",
-		"access": "Accès de Hugo",
 		"team": {
 			"title": "Équipe centralisée",
 			"text": "Ajoutez un membre une fois, retirez-le une fois."

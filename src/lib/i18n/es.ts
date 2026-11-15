@@ -14,6 +14,7 @@ export const es: Messages = {
 		"selfHost": "Autoalojamiento"
 	},
 	"hero": {
+		"wall": "Las {count} apps de la suite",
 		"chips": [
 			"Una sola cuenta",
 			"Gratis para empezar",
@@ -21,57 +22,6 @@ export const es: Messages = {
 		],
 		"title": "Nosotros simplificamos, tú creas.",
 		"sub": "{count} apps para trabajar, una sola cuenta de Facile. Nosotros las alojamos, tú empiezas en un minuto."
-	},
-	"demo": {
-		"label": "Léa inicia sesión una vez con Facile, abre Nuage y pasa a Agenda sin volver a iniciar sesión.",
-		"signIn": "Iniciar sesión con Facile",
-		"hello": "Hola, Léa",
-		"connected": "Conectada",
-		"folder": "Studio Martin",
-		"columns": [
-			"Nombre",
-			"Tamaño",
-			"Modificado"
-		],
-		"files": [
-			{
-				"name": "Maquetas",
-				"size": "6 archivos",
-				"date": "Hoy"
-			},
-			{
-				"name": "brief-cliente.pdf",
-				"size": "1,2 MB",
-				"date": "Ayer"
-			},
-			{
-				"name": "logo.svg",
-				"size": "48 KB",
-				"date": "12 nov."
-			},
-			{
-				"name": "fotos-taller.zip",
-				"size": "86 MB",
-				"date": "10 nov."
-			}
-		],
-		"week": "Semana 46",
-		"days": [
-			"lun.",
-			"mar.",
-			"mié.",
-			"jue.",
-			"vie.",
-			"sáb.",
-			"dom."
-		],
-		"events": [
-			"Llamada cliente",
-			"Taller de logo",
-			"Maquetas",
-			"Revisión sprint",
-			"Enviar presupuesto"
-		]
 	},
 	"apps": {
 		"title": "Una app para cada trabajo",
@@ -169,11 +119,6 @@ export const es: Messages = {
 	"sso": {
 		"title": "Tu equipo, configurado una vez.",
 		"text": "Registre gestiona las cuentas de la suite. Añade a alguien al espacio y tendrá las apps del equipo.",
-		"label": "Hugo se añade una vez al espacio Studio Martin en Registre y las apps del equipo se le abren.",
-		"invite": "Invitar",
-		"owner": "Propietaria",
-		"member": "Miembro",
-		"access": "Acceso de Hugo",
 		"team": {
 			"title": "Equipo centralizado",
 			"text": "Añade a alguien una vez, quítalo una vez."

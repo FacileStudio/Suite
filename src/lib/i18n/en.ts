@@ -14,6 +14,7 @@ export const en: Messages = {
 		"selfHost": "Self-hosting"
 	},
 	"hero": {
+		"wall": "The {count} apps of the suite",
 		"chips": [
 			"One account",
 			"Free to start",
@@ -21,57 +22,6 @@ export const en: Messages = {
 		],
 		"title": "We keep it simple, you create.",
 		"sub": "{count} apps for your work, one Facile account. We host them, you start in a minute."
-	},
-	"demo": {
-		"label": "Léa signs in once with Facile, opens Nuage, then moves to Agenda without signing in again.",
-		"signIn": "Sign in with Facile",
-		"hello": "Hi Léa",
-		"connected": "Signed in",
-		"folder": "Studio Martin",
-		"columns": [
-			"Name",
-			"Size",
-			"Modified"
-		],
-		"files": [
-			{
-				"name": "Mockups",
-				"size": "6 files",
-				"date": "Today"
-			},
-			{
-				"name": "client-brief.pdf",
-				"size": "1.2 MB",
-				"date": "Yesterday"
-			},
-			{
-				"name": "logo.svg",
-				"size": "48 KB",
-				"date": "Nov 12"
-			},
-			{
-				"name": "workshop-photos.zip",
-				"size": "86 MB",
-				"date": "Nov 10"
-			}
-		],
-		"week": "Week 46",
-		"days": [
-			"Mon",
-			"Tue",
-			"Wed",
-			"Thu",
-			"Fri",
-			"Sat",
-			"Sun"
-		],
-		"events": [
-			"Client call",
-			"Logo workshop",
-			"Mockups",
-			"Sprint review",
-			"Send quote"
-		]
 	},
 	"apps": {
 		"title": "An app for every job",
@@ -169,11 +119,6 @@ export const en: Messages = {
 	"sso": {
 		"title": "Your team, set up once.",
 		"text": "Registre runs the suite's accounts. Add someone to the space and they get the team's apps.",
-		"label": "Hugo is added once to the Studio Martin space in Registre, and the team's apps open to him.",
-		"invite": "Invite",
-		"owner": "Owner",
-		"member": "Member",
-		"access": "Hugo's access",
 		"team": {
 			"title": "One team list",
 			"text": "Add someone once, remove them once."
