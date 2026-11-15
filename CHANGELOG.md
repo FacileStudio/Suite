@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.7.0] - 2026-11-15
+
+### Added
+
+- The hero shows a wall of the 26 apps as icon tiles. A tile jumps to that app's card in the grid, highlights it, and resets the category filter.
+
+### Changed
+
+- The account section shows its two points as cards instead of a faux Registre window.
+
+### Removed
+
+- The hero demo (sign in, launcher, Nuage, Agenda). It showed a launcher and an app rail that the apps do not have.
+- The account demo, and the demo copy in fr, en, es and de.
+
 ## [0.6.3] - 2026-11-14
 
 ### Changed
