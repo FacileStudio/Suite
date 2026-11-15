@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.8.0] - 2026-11-15
+
+### Added
+
+- The hero wall has a spotlight: one tile lights up at a time and a line under the wall says what that app does. It moves every 2.4 seconds, follows hover and keyboard focus, and stays still under reduced motion.
+
+### Changed
+
+- The app grid shows its first 8 apps (9 on the three-column layout) and a "Voir les 26 apps" button. A category filter or a click on a wall tile opens the full grid.
+
 ## [0.7.0] - 2026-11-15
 
 ### Added
