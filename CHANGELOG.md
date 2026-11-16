@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.8.2] - 2026-11-16
+
+### Changed
+
+- Bump muse to v0.32.0 (Tabs and segmented option cards match the 36px button height, 44px on touch).
+
 ## [Unreleased]
 
 ### Added
