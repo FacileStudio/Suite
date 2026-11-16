@@ -12,7 +12,6 @@
 ### Changed
 
 - The hero wall lays its 28 tiles out in 14 columns on wide screens and 7 from 390px, so every row is full. The spotlight steps by 9, which reaches every tile of 28.
-
 - Bump muse to v0.32.0 (Tabs and segmented option cards match the 36px button height, 44px on touch).
 
 ## [0.8.1] - 2026-11-16
