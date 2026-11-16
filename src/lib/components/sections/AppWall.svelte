@@ -3,7 +3,7 @@
 	import { APPS, COUNT, slug } from '$lib/content';
 	import { format, useI18n } from '$lib/i18n';
 
-	const STEP = 7;
+	const STEP = 9;
 	const EVERY = 2400;
 
 	const i18n = useI18n();
@@ -28,7 +28,7 @@
 </script>
 
 <div class="flex flex-col gap-4">
-	<ul aria-label={label} class="wall grid grid-cols-6 gap-1.5 min-[390px]:grid-cols-7 sm:grid-cols-9 sm:gap-2 lg:grid-cols-13">
+	<ul aria-label={label} class="wall grid grid-cols-6 gap-1.5 min-[390px]:grid-cols-7 sm:max-w-2xl sm:gap-2 lg:max-w-none lg:grid-cols-14">
 		{#each APPS as item, i (item.name)}
 			<li style="--i:{i}">
 				<a

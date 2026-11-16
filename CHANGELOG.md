@@ -5,6 +5,11 @@
 ### Added
 
 - The AGPL-3.0-only licence file, the `license` field and a README section.
+- Diapo (slides as one text file) and Clap (video editor) in the app grid and the hero wall, in all four languages.
+
+### Changed
+
+- The hero wall lays its 28 tiles out in 14 columns on wide screens and 7 from 390px, so every row is full. The spotlight steps by 9, which reaches every tile of 28.
 
 ## [0.8.1] - 2026-11-16
 
