@@ -30,6 +30,8 @@ export const APPS: App[] = [
 	{ name: 'Nuage', category: 'productivity', icon: 'solar:cloud-bold-duotone', url: 'https://nuage.facile.studio' },
 	{ name: 'Opus', category: 'productivity', icon: 'solar:slider-vertical-minimalistic-bold-duotone', url: 'https://opus.facile.studio' },
 	{ name: 'Sablier', category: 'productivity', icon: 'solar:hourglass-bold-duotone', url: 'https://sablier.facile.studio' },
+	{ name: 'Diapo', category: 'productivity', icon: 'solar:presentation-graph-bold-duotone', url: 'https://diapo.facile.studio' },
+	{ name: 'Clap', category: 'productivity', icon: 'solar:clapperboard-open-bold-duotone', url: 'https://clap.facile.studio' },
 	{ name: 'Pastille', category: 'hardware', icon: 'solar:circle-dot-bold-duotone', url: 'https://pastille.facile.studio' },
 	{ name: 'Fusible', category: 'hardware', icon: 'solar:cpu-bolt-bold-duotone', url: 'https://fusible.facile.studio' },
 	{ name: 'Vision', category: 'business', icon: 'solar:panorama-bold-duotone', url: 'https://vision.facile.studio' },

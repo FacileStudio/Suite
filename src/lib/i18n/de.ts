@@ -49,6 +49,8 @@ export const de: Messages = {
 			"Nuage": "Ihre Dateien überall, geteilt mit einem Link.",
 			"Opus": "Die Projekte des Teams, klar und live verfolgt.",
 			"Sablier": "Ihre abrechenbaren Stunden, mit einem Klick erfasst.",
+			"Diapo": "Präsentationen als eine Textdatei, live gezeigt oder als PowerPoint exportiert.",
+			"Clap": "Videos auf einer Zeitleiste schneiden, als MP4 auf unseren Servern gerendert.",
 			"Pastille": "Ein runder 42-mm-Anstecker für Bulle. Jetzt vorbestellen.",
 			"Fusible": "Prüfen Sie Ihre Platine, bevor Sie sie bestellen.",
 			"Vision": "Die Besuche Ihrer Website, ohne Cookies.",

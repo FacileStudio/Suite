@@ -47,6 +47,8 @@ export const fr = {
 			"Nuage": "Vos fichiers partout, partagés en un lien.",
 			"Opus": "Les projets de l'équipe, clairs et suivis en direct.",
 			"Sablier": "Vos heures facturables, suivies en un clic.",
+			"Diapo": "Vos présentations en un fichier texte, exportées en PowerPoint.",
+			"Clap": "Le montage vidéo sur une timeline, rendu en MP4 sur nos serveurs.",
 			"Pastille": "Un badge rond de 42 mm relié à Bulle. En précommande.",
 			"Fusible": "Vérifiez votre carte électronique avant de la commander.",
 			"Vision": "Les visites de votre site, sans cookies.",
