@@ -81,7 +81,7 @@ export const es: Messages = {
 			},
 			{
 				"title": "Bulle hace el trabajo en tus apps",
-				"text": "Pide y Bulle guarda, planifica y responde en 17 apps. Con el plan Pro.",
+				"text": "Pide y Bulle guarda, planifica y responde en 19 apps. Con el plan Pro.",
 				"badge": "Plan Pro"
 			}
 		],
@@ -117,7 +117,7 @@ export const es: Messages = {
 		},
 		"mcpTitle": "Servidores MCP",
 		"text": "Antenne lleva los eventos entre las apps: una tarea de Opus llega a Agenda y Sablier, un contrato firmado en Plume vuelve a Ardoise.",
-		"mcp": "17 apps tienen un servidor MCP para tus agentes y para Bulle."
+		"mcp": "19 apps tienen un servidor MCP para tus agentes y para Bulle."
 	},
 	"sso": {
 		"title": "Tu equipo, configurado una vez.",
