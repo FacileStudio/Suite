@@ -49,6 +49,8 @@ export const es: Messages = {
 			"Nuage": "Tus archivos en todas partes, compartidos con un enlace.",
 			"Opus": "Los proyectos del equipo, claros y seguidos en directo.",
 			"Sablier": "Tus horas facturables, registradas con un clic.",
+			"Diapo": "Presentaciones en un solo archivo de texto, exportables a PowerPoint.",
+			"Clap": "Edita vídeo en una línea de tiempo, renderizado en MP4 en nuestros servidores.",
 			"Pastille": "Una insignia redonda de 42 mm conectada a Bulle. En reserva.",
 			"Fusible": "Revisa tu placa electrónica antes de pedirla.",
 			"Vision": "Las visitas de tu sitio, sin cookies.",

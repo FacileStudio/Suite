@@ -49,6 +49,8 @@ export const en: Messages = {
 			"Nuage": "Your files everywhere, shared with a link.",
 			"Opus": "Your team's projects, clear and followed live.",
 			"Sablier": "Your billable hours, tracked in one click.",
+			"Diapo": "Slides as one text file, presented live or exported to PowerPoint.",
+			"Clap": "Edit video on a timeline, rendered to MP4 on our servers.",
 			"Pastille": "A round 42 mm charm linked to Bulle. Pre-order open.",
 			"Fusible": "Check your circuit board before you order it.",
 			"Vision": "Your site's visitors, without cookies.",
