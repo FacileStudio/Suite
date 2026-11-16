@@ -6,6 +6,12 @@
 
 - The AGPL-3.0-only licence file, the `license` field and a README section.
 
+## [0.8.1] - 2026-11-16
+
+### Security
+
+- The site no longer loads a script from another origin. The Vision tracker is a pinned copy served from `/vision-tracker.js`. It still sends its page-view beacons to Vision as images.
+
 ## [0.8.0] - 2026-11-15
 
 ### Added
