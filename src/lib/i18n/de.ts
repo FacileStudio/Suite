@@ -81,7 +81,7 @@ export const de: Messages = {
 			},
 			{
 				"title": "Bulle erledigt die Arbeit in Ihren Apps",
-				"text": "Fragen Sie, und Bulle sortiert, plant und antwortet in 17 Apps. Mit dem Pro-Tarif.",
+				"text": "Fragen Sie, und Bulle sortiert, plant und antwortet in 19 Apps. Mit dem Pro-Tarif.",
 				"badge": "Pro-Tarif"
 			}
 		],
@@ -117,7 +117,7 @@ export const de: Messages = {
 		},
 		"mcpTitle": "MCP-Server",
 		"text": "Antenne trägt Ereignisse zwischen den Apps: Eine Opus-Aufgabe erreicht Agenda und Sablier, ein in Plume unterschriebener Vertrag kommt zurück zu Ardoise.",
-		"mcp": "17 Apps haben einen MCP-Server für Ihre Agenten und für Bulle."
+		"mcp": "19 Apps haben einen MCP-Server für Ihre Agenten und für Bulle."
 	},
 	"sso": {
 		"title": "Ihr Team, einmal eingerichtet.",

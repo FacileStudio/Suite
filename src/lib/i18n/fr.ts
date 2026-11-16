@@ -79,7 +79,7 @@ export const fr = {
 			},
 			{
 				"title": "Bulle fait le travail dans vos apps",
-				"text": "Demandez, et Bulle range, planifie et répond dans 17 apps. Avec l'offre Pro.",
+				"text": "Demandez, et Bulle range, planifie et répond dans 19 apps. Avec l'offre Pro.",
 				"badge": "Offre Pro"
 			}
 		],
@@ -115,7 +115,7 @@ export const fr = {
 		},
 		"mcpTitle": "Des serveurs MCP",
 		"text": "Antenne fait circuler les événements entre les apps : une tâche Opus arrive dans Agenda et Sablier, un contrat signé dans Plume revient dans Ardoise.",
-		"mcp": "17 apps ont un serveur MCP pour vos agents et pour Bulle."
+		"mcp": "19 apps ont un serveur MCP pour vos agents et pour Bulle."
 	},
 	"sso": {
 		"title": "Votre équipe, réglée une fois.",
